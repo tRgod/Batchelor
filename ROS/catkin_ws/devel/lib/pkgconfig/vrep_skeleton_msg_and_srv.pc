@@ -1,1 +1,0 @@
-/home/madaeu/catkin_ws/devel/.private/vrep_skeleton_msg_and_srv/lib/pkgconfig/vrep_skeleton_msg_and_srv.pc
