@@ -9,6 +9,8 @@ project(lidarsub)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   pcl_ros
+  pcl_conversions
+  pcl_msgs
   roscpp
   std_msgs
 )
