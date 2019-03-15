@@ -8,11 +8,12 @@ project(lidarsub)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  pcl_ros
-  pcl_conversions
-  pcl_msgs
-  roscpp
-  std_msgs
+ pcl_ros
+ pcl_conversions
+ pcl_msgs
+ roscpp
+ std_msgs
+ sensor_msgs
 )
 
 ## System dependencies are found with CMake's conventions

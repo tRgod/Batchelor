@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/thor/Batchelor/Thor_ROS/catkin_ws/src/lidarsub/src/listner.cpp
+ros/ros.h
+-
+pcl_ros/point_cloud.h
+-
+pcl/point_types.h
+-
+boost/foreach.hpp
+-
+

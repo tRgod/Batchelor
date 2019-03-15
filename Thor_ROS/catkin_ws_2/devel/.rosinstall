@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/devel/setup.sh
