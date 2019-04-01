@@ -117,6 +117,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/gtest/cmake_install.cmake")
+  include("/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior/cmake_install.cmake")
   include("/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/lidarsubmsg/cmake_install.cmake")
 
 endif()

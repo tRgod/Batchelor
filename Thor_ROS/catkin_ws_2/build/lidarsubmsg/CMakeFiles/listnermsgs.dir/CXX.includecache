@@ -21,6 +21,8 @@ pcl/point_cloud.h
 -
 pcl/point_types.h
 -
+pcl/surface/bilateral_upsampling.h
+-
 
 /opt/ros/kinetic/include/geometry_msgs/Point32.h
 string
@@ -2241,6 +2243,22 @@ boost/type_traits.hpp
 -
 stddef.h
 -
+
+/usr/include/pcl-1.7/pcl/surface/bilateral_upsampling.h
+pcl/surface/processing.h
+-
+
+/usr/include/pcl-1.7/pcl/surface/impl/processing.hpp
+
+/usr/include/pcl-1.7/pcl/surface/processing.h
+pcl/pcl_base.h
+-
+pcl/point_cloud.h
+-
+pcl/PolygonMesh.h
+-
+pcl/surface/impl/processing.hpp
+/usr/include/pcl-1.7/pcl/surface/pcl/surface/impl/processing.hpp
 
 /usr/include/x86_64-linux-gnu/bits/mman-linux.h
 

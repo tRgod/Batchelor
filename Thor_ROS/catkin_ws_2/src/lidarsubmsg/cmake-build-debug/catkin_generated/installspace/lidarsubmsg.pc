@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: lidarsubmsg
+Description: Description of lidarsubmsg
+Version: 0.0.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

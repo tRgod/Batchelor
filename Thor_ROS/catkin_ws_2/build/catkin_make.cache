@@ -1,2 +1,2 @@
-lidarsubmsg
+feature_ekstractior:lidarsubmsg
 -DCATKIN_DEVEL_PREFIX=/home/thor/Batchelor/Thor_ROS/catkin_ws_2/devel -DCMAKE_INSTALL_PREFIX=/home/thor/Batchelor/Thor_ROS/catkin_ws_2/install -G Unix Makefiles

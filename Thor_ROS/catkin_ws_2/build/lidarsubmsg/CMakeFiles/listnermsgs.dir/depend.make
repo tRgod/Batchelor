@@ -284,6 +284,9 @@ lidarsubmsg/CMakeFiles/listnermsgs.dir/src/listnermsgs.cpp.o: /usr/include/pcl-1
 lidarsubmsg/CMakeFiles/listnermsgs.dir/src/listnermsgs.cpp.o: /usr/include/pcl-1.7/pcl/point_traits.h
 lidarsubmsg/CMakeFiles/listnermsgs.dir/src/listnermsgs.cpp.o: /usr/include/pcl-1.7/pcl/point_types.h
 lidarsubmsg/CMakeFiles/listnermsgs.dir/src/listnermsgs.cpp.o: /usr/include/pcl-1.7/pcl/register_point_struct.h
+lidarsubmsg/CMakeFiles/listnermsgs.dir/src/listnermsgs.cpp.o: /usr/include/pcl-1.7/pcl/surface/bilateral_upsampling.h
+lidarsubmsg/CMakeFiles/listnermsgs.dir/src/listnermsgs.cpp.o: /usr/include/pcl-1.7/pcl/surface/impl/processing.hpp
+lidarsubmsg/CMakeFiles/listnermsgs.dir/src/listnermsgs.cpp.o: /usr/include/pcl-1.7/pcl/surface/processing.h
 lidarsubmsg/CMakeFiles/listnermsgs.dir/src/listnermsgs.cpp.o: /usr/include/x86_64-linux-gnu/bits/mman-linux.h
 lidarsubmsg/CMakeFiles/listnermsgs.dir/src/listnermsgs.cpp.o: /usr/include/x86_64-linux-gnu/bits/mman.h
 lidarsubmsg/CMakeFiles/listnermsgs.dir/src/listnermsgs.cpp.o: /usr/include/x86_64-linux-gnu/bits/select.h

@@ -1,4 +1,4 @@
-/home/thor/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/thor/Batchelor/Thor_ROS/catkin_ws/src/lidarsub
+/home/thor/Downloads/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/thor/Batchelor/Thor_ROS/catkin_ws/src/lidarsub
 CMake Error at CMakeLists.txt:10 (find_package):
   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
   asked CMake to find a package configuration file provided by "catkin", but

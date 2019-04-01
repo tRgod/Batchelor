@@ -285,6 +285,9 @@ lidarsubmsg/CMakeFiles/listnermsgs.dir/src/listnermsgs.cpp.o
  /usr/include/pcl-1.7/pcl/point_traits.h
  /usr/include/pcl-1.7/pcl/point_types.h
  /usr/include/pcl-1.7/pcl/register_point_struct.h
+ /usr/include/pcl-1.7/pcl/surface/bilateral_upsampling.h
+ /usr/include/pcl-1.7/pcl/surface/impl/processing.hpp
+ /usr/include/pcl-1.7/pcl/surface/processing.h
  /usr/include/x86_64-linux-gnu/bits/mman-linux.h
  /usr/include/x86_64-linux-gnu/bits/mman.h
  /usr/include/x86_64-linux-gnu/bits/select.h

@@ -1,0 +1,4 @@
+/home/thor/Downloads/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ekstractior
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ekstractior/cmake-build-debug
