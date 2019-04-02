@@ -14,6 +14,12 @@
 # EXTERNAL cache entries
 ########################
 
+//Builds the googlemock subproject
+BUILD_GMOCK:BOOL=ON
+
+//Builds the googletest subproject
+BUILD_GTEST:BOOL=OFF
+
 //Build shared libraries (DLLs).
 BUILD_SHARED_LIBS:BOOL=ON
 
@@ -49,6 +55,14 @@ CMAKE_COLOR_MAKEFILE:BOOL=ON
 //CXX compiler
 CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
 
+//A wrapper around 'ar' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-7
+
+//A wrapper around 'ranlib' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-7
+
 //Flags used by the compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
 
@@ -67,6 +81,14 @@ CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
 CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+
+//A wrapper around 'ar' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-7
+
+//A wrapper around 'ranlib' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-7
 
 //Flags used by the compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -241,8 +263,14 @@ RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
 //Enable debian style python package layout
 SETUPTOOLS_DEB_LAYOUT:BOOL=ON
 
+//Name of the computer/site where compile is being run
+SITE:STRING=thor-Alienware-13-R3
+
 //LSB Distrib tag
 UBUNTU:BOOL=TRUE
+
+//LSB Distrib - codename tag
+UBUNTU_BIONIC:BOOL=TRUE
 
 //LSB Distrib - codename tag
 UBUNTU_XENIAL:BOOL=TRUE
@@ -260,28 +288,28 @@ _gtest_INCLUDES:FILEPATH=/usr/include/gtest/gtest.h
 _gtest_SOURCES:FILEPATH=/usr/src/gtest/src/gtest.cc
 
 //The directory containing a CMake configuration file for actionlib.
-actionlib_DIR:PATH=/opt/ros/kinetic/share/actionlib/cmake
+actionlib_DIR:PATH=/opt/ros/melodic/share/actionlib/cmake
 
 //The directory containing a CMake configuration file for actionlib_msgs.
-actionlib_msgs_DIR:PATH=/opt/ros/kinetic/share/actionlib_msgs/cmake
+actionlib_msgs_DIR:PATH=/opt/ros/melodic/share/actionlib_msgs/cmake
 
 //The directory containing a CMake configuration file for bond.
-bond_DIR:PATH=/opt/ros/kinetic/share/bond/cmake
+bond_DIR:PATH=/opt/ros/melodic/share/bond/cmake
 
 //The directory containing a CMake configuration file for bondcpp.
-bondcpp_DIR:PATH=/opt/ros/kinetic/share/bondcpp/cmake
+bondcpp_DIR:PATH=/opt/ros/melodic/share/bondcpp/cmake
 
 //The directory containing a CMake configuration file for catkin.
-catkin_DIR:PATH=/opt/ros/kinetic/share/catkin/cmake
+catkin_DIR:PATH=/opt/ros/melodic/share/catkin/cmake
 
 //The directory containing a CMake configuration file for class_loader.
-class_loader_DIR:PATH=/opt/ros/kinetic/share/class_loader/cmake
+class_loader_DIR:PATH=/opt/ros/melodic/share/class_loader/cmake
 
 //The directory containing a CMake configuration file for cpp_common.
-cpp_common_DIR:PATH=/opt/ros/kinetic/share/cpp_common/cmake
+cpp_common_DIR:PATH=/opt/ros/melodic/share/cpp_common/cmake
 
 //The directory containing a CMake configuration file for dynamic_reconfigure.
-dynamic_reconfigure_DIR:PATH=/opt/ros/kinetic/share/dynamic_reconfigure/cmake
+dynamic_reconfigure_DIR:PATH=/opt/ros/melodic/share/dynamic_reconfigure/cmake
 
 //Value Computed by CMake
 feature_ekstractior_BINARY_DIR:STATIC=/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior
@@ -289,35 +317,41 @@ feature_ekstractior_BINARY_DIR:STATIC=/home/thor/Batchelor/Thor_ROS/catkin_ws_2/
 //Value Computed by CMake
 feature_ekstractior_SOURCE_DIR:STATIC=/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ekstractior
 
-//The directory containing a CMake configuration file for gencpp.
-gencpp_DIR:PATH=/opt/ros/kinetic/share/gencpp/cmake
-
-//The directory containing a CMake configuration file for geneus.
-geneus_DIR:PATH=/opt/ros/kinetic/share/geneus/cmake
-
-//The directory containing a CMake configuration file for genlisp.
-genlisp_DIR:PATH=/opt/ros/kinetic/share/genlisp/cmake
-
-//The directory containing a CMake configuration file for genmsg.
-genmsg_DIR:PATH=/opt/ros/kinetic/share/genmsg/cmake
-
-//The directory containing a CMake configuration file for gennodejs.
-gennodejs_DIR:PATH=/opt/ros/kinetic/share/gennodejs/cmake
-
-//The directory containing a CMake configuration file for genpy.
-genpy_DIR:PATH=/opt/ros/kinetic/share/genpy/cmake
-
-//The directory containing a CMake configuration file for geometry_msgs.
-geometry_msgs_DIR:PATH=/opt/ros/kinetic/share/geometry_msgs/cmake
+//Value Computed by CMake
+feature_ex_BINARY_DIR:STATIC=/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior
 
 //Value Computed by CMake
-gmock_BINARY_DIR:STATIC=/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/gtest
+feature_ex_SOURCE_DIR:STATIC=/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ekstractior
+
+//The directory containing a CMake configuration file for gencpp.
+gencpp_DIR:PATH=/opt/ros/melodic/share/gencpp/cmake
+
+//The directory containing a CMake configuration file for geneus.
+geneus_DIR:PATH=/opt/ros/melodic/share/geneus/cmake
+
+//The directory containing a CMake configuration file for genlisp.
+genlisp_DIR:PATH=/opt/ros/melodic/share/genlisp/cmake
+
+//The directory containing a CMake configuration file for genmsg.
+genmsg_DIR:PATH=/opt/ros/melodic/share/genmsg/cmake
+
+//The directory containing a CMake configuration file for gennodejs.
+gennodejs_DIR:PATH=/opt/ros/melodic/share/gennodejs/cmake
+
+//The directory containing a CMake configuration file for genpy.
+genpy_DIR:PATH=/opt/ros/melodic/share/genpy/cmake
+
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/opt/ros/melodic/share/geometry_msgs/cmake
+
+//Value Computed by CMake
+gmock_BINARY_DIR:STATIC=/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/gtest/googlemock
 
 //Dependencies for the target
 gmock_LIB_DEPENDS:STATIC=general;-lpthread;
 
 //Value Computed by CMake
-gmock_SOURCE_DIR:STATIC=/usr/src/gmock
+gmock_SOURCE_DIR:STATIC=/usr/src/googletest/googlemock
 
 //Build all of Google Mock's own tests.
 gmock_build_tests:BOOL=OFF
@@ -326,13 +360,19 @@ gmock_build_tests:BOOL=OFF
 gmock_main_LIB_DEPENDS:STATIC=general;-lpthread;
 
 //Value Computed by CMake
-gtest_BINARY_DIR:STATIC=/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/gtest/gtest
+googletest-distribution_BINARY_DIR:STATIC=/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/gtest
+
+//Value Computed by CMake
+googletest-distribution_SOURCE_DIR:STATIC=/usr/src/googletest
+
+//Value Computed by CMake
+gtest_BINARY_DIR:STATIC=/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/gtest/googlemock/gtest
 
 //Dependencies for the target
 gtest_LIB_DEPENDS:STATIC=general;-lpthread;
 
 //Value Computed by CMake
-gtest_SOURCE_DIR:STATIC=/usr/src/gtest
+gtest_SOURCE_DIR:STATIC=/usr/src/googletest/googletest
 
 //Build gtest's sample programs.
 gtest_build_samples:BOOL=OFF
@@ -347,11 +387,14 @@ gtest_disable_pthreads:BOOL=OFF
 // as static lib.
 gtest_force_shared_crt:BOOL=OFF
 
+//Build gtest with internal symbols hidden in shared libraries.
+gtest_hide_internal_symbols:BOOL=OFF
+
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/kinetic/lib/libtf2.so
+lib:FILEPATH=/opt/ros/melodic/lib/libtf2.so
 
 //Value Computed by CMake
 lidarsubmsg_BINARY_DIR:STATIC=/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/lidarsubmsg
@@ -360,103 +403,103 @@ lidarsubmsg_BINARY_DIR:STATIC=/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/li
 lidarsubmsg_SOURCE_DIR:STATIC=/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg
 
 //The directory containing a CMake configuration file for message_filters.
-message_filters_DIR:PATH=/opt/ros/kinetic/share/message_filters/cmake
+message_filters_DIR:PATH=/opt/ros/melodic/share/message_filters/cmake
 
 //The directory containing a CMake configuration file for message_generation.
-message_generation_DIR:PATH=/opt/ros/kinetic/share/message_generation/cmake
+message_generation_DIR:PATH=/opt/ros/melodic/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
-message_runtime_DIR:PATH=/opt/ros/kinetic/share/message_runtime/cmake
+message_runtime_DIR:PATH=/opt/ros/melodic/share/message_runtime/cmake
 
 //The directory containing a CMake configuration file for nodelet.
-nodelet_DIR:PATH=/opt/ros/kinetic/share/nodelet/cmake
+nodelet_DIR:PATH=/opt/ros/melodic/share/nodelet/cmake
 
 //The directory containing a CMake configuration file for nodelet_topic_tools.
-nodelet_topic_tools_DIR:PATH=/opt/ros/kinetic/share/nodelet_topic_tools/cmake
+nodelet_topic_tools_DIR:PATH=/opt/ros/melodic/share/nodelet_topic_tools/cmake
 
 //The directory containing a CMake configuration file for pcl_conversions.
-pcl_conversions_DIR:PATH=/opt/ros/kinetic/share/pcl_conversions/cmake
+pcl_conversions_DIR:PATH=/opt/ros/melodic/share/pcl_conversions/cmake
 
 //The directory containing a CMake configuration file for pcl_msgs.
-pcl_msgs_DIR:PATH=/opt/ros/kinetic/share/pcl_msgs/cmake
+pcl_msgs_DIR:PATH=/opt/ros/melodic/share/pcl_msgs/cmake
 
 //The directory containing a CMake configuration file for pcl_ros.
-pcl_ros_DIR:PATH=/opt/ros/kinetic/share/pcl_ros/cmake
+pcl_ros_DIR:PATH=/opt/ros/melodic/share/pcl_ros/cmake
 
 //The directory containing a CMake configuration file for pluginlib.
-pluginlib_DIR:PATH=/opt/ros/kinetic/share/pluginlib/cmake
+pluginlib_DIR:PATH=/opt/ros/melodic/share/pluginlib/cmake
 
 //The directory containing a CMake configuration file for rosbag.
-rosbag_DIR:PATH=/opt/ros/kinetic/share/rosbag/cmake
+rosbag_DIR:PATH=/opt/ros/melodic/share/rosbag/cmake
 
 //The directory containing a CMake configuration file for rosbag_storage.
-rosbag_storage_DIR:PATH=/opt/ros/kinetic/share/rosbag_storage/cmake
+rosbag_storage_DIR:PATH=/opt/ros/melodic/share/rosbag_storage/cmake
 
 //The directory containing a CMake configuration file for rosconsole.
-rosconsole_DIR:PATH=/opt/ros/kinetic/share/rosconsole/cmake
+rosconsole_DIR:PATH=/opt/ros/melodic/share/rosconsole/cmake
 
 //The directory containing a CMake configuration file for roscpp.
-roscpp_DIR:PATH=/opt/ros/kinetic/share/roscpp/cmake
+roscpp_DIR:PATH=/opt/ros/melodic/share/roscpp/cmake
 
 //The directory containing a CMake configuration file for roscpp_serialization.
-roscpp_serialization_DIR:PATH=/opt/ros/kinetic/share/roscpp_serialization/cmake
+roscpp_serialization_DIR:PATH=/opt/ros/melodic/share/roscpp_serialization/cmake
 
 //The directory containing a CMake configuration file for roscpp_traits.
-roscpp_traits_DIR:PATH=/opt/ros/kinetic/share/roscpp_traits/cmake
+roscpp_traits_DIR:PATH=/opt/ros/melodic/share/roscpp_traits/cmake
 
 //The directory containing a CMake configuration file for rosgraph.
-rosgraph_DIR:PATH=/opt/ros/kinetic/share/rosgraph/cmake
+rosgraph_DIR:PATH=/opt/ros/melodic/share/rosgraph/cmake
 
 //The directory containing a CMake configuration file for rosgraph_msgs.
-rosgraph_msgs_DIR:PATH=/opt/ros/kinetic/share/rosgraph_msgs/cmake
+rosgraph_msgs_DIR:PATH=/opt/ros/melodic/share/rosgraph_msgs/cmake
 
 //The directory containing a CMake configuration file for roslib.
-roslib_DIR:PATH=/opt/ros/kinetic/share/roslib/cmake
+roslib_DIR:PATH=/opt/ros/melodic/share/roslib/cmake
 
 //The directory containing a CMake configuration file for roslz4.
-roslz4_DIR:PATH=/opt/ros/kinetic/share/roslz4/cmake
+roslz4_DIR:PATH=/opt/ros/melodic/share/roslz4/cmake
 
 //The directory containing a CMake configuration file for rospack.
-rospack_DIR:PATH=/opt/ros/kinetic/share/rospack/cmake
+rospack_DIR:PATH=/opt/ros/melodic/share/rospack/cmake
 
 //The directory containing a CMake configuration file for rospy.
-rospy_DIR:PATH=/opt/ros/kinetic/share/rospy/cmake
+rospy_DIR:PATH=/opt/ros/melodic/share/rospy/cmake
 
 //The directory containing a CMake configuration file for rostime.
-rostime_DIR:PATH=/opt/ros/kinetic/share/rostime/cmake
+rostime_DIR:PATH=/opt/ros/melodic/share/rostime/cmake
 
 //The directory containing a CMake configuration file for sensor_msgs.
-sensor_msgs_DIR:PATH=/opt/ros/kinetic/share/sensor_msgs/cmake
+sensor_msgs_DIR:PATH=/opt/ros/melodic/share/sensor_msgs/cmake
 
 //The directory containing a CMake configuration file for smclib.
-smclib_DIR:PATH=/opt/ros/kinetic/share/smclib/cmake
+smclib_DIR:PATH=/opt/ros/melodic/share/smclib/cmake
 
 //The directory containing a CMake configuration file for std_msgs.
-std_msgs_DIR:PATH=/opt/ros/kinetic/share/std_msgs/cmake
+std_msgs_DIR:PATH=/opt/ros/melodic/share/std_msgs/cmake
 
 //The directory containing a CMake configuration file for std_srvs.
-std_srvs_DIR:PATH=/opt/ros/kinetic/share/std_srvs/cmake
+std_srvs_DIR:PATH=/opt/ros/melodic/share/std_srvs/cmake
 
 //The directory containing a CMake configuration file for tf2.
-tf2_DIR:PATH=/opt/ros/kinetic/share/tf2/cmake
+tf2_DIR:PATH=/opt/ros/melodic/share/tf2/cmake
 
 //The directory containing a CMake configuration file for tf2_msgs.
-tf2_msgs_DIR:PATH=/opt/ros/kinetic/share/tf2_msgs/cmake
+tf2_msgs_DIR:PATH=/opt/ros/melodic/share/tf2_msgs/cmake
 
 //The directory containing a CMake configuration file for tf2_py.
-tf2_py_DIR:PATH=/opt/ros/kinetic/share/tf2_py/cmake
+tf2_py_DIR:PATH=/opt/ros/melodic/share/tf2_py/cmake
 
 //The directory containing a CMake configuration file for tf2_ros.
-tf2_ros_DIR:PATH=/opt/ros/kinetic/share/tf2_ros/cmake
+tf2_ros_DIR:PATH=/opt/ros/melodic/share/tf2_ros/cmake
 
 //The directory containing a CMake configuration file for tf.
-tf_DIR:PATH=/opt/ros/kinetic/share/tf/cmake
+tf_DIR:PATH=/opt/ros/melodic/share/tf/cmake
 
 //The directory containing a CMake configuration file for topic_tools.
-topic_tools_DIR:PATH=/opt/ros/kinetic/share/topic_tools/cmake
+topic_tools_DIR:PATH=/opt/ros/melodic/share/topic_tools/cmake
 
 //The directory containing a CMake configuration file for xmlrpcpp.
-xmlrpcpp_DIR:PATH=/opt/ros/kinetic/share/xmlrpcpp/cmake
+xmlrpcpp_DIR:PATH=/opt/ros/melodic/share/xmlrpcpp/cmake
 
 
 ########################
@@ -473,9 +516,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=5
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=10
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=2
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -486,6 +529,10 @@ CMAKE_CPACK_COMMAND:INTERNAL=/usr/bin/cpack
 CMAKE_CTEST_COMMAND:INTERNAL=/usr/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER
 CMAKE_CXX_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CXX_COMPILER_AR
+CMAKE_CXX_COMPILER_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CXX_COMPILER_RANLIB
+CMAKE_CXX_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS
 CMAKE_CXX_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_DEBUG
@@ -498,6 +545,10 @@ CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER
 CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER_AR
+CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
+CMAKE_C_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS
 CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
@@ -560,15 +611,17 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
 CMAKE_OBJDUMP-ADVANCED:INTERNAL=1
+//Platform information initialized
+CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RANLIB
 CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.5
+CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.10
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
@@ -600,7 +653,7 @@ CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.12()]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.15()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 GMOCK_FROM_SOURCE_FOUND:INTERNAL=TRUE

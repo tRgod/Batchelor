@@ -7,7 +7,9 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH="/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu"
-export PKG_CONFIG_PATH="/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig"
+export CMAKE_PREFIX_PATH="/home/thor/Batchelor/Thor_ROS/catkin_ws_2/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/thor/Batchelor/Thor_ROS/catkin_ws_2/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/thor/Batchelor/Thor_ROS/catkin_ws_2/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build"
-export ROS_PACKAGE_PATH="/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src:/opt/ros/kinetic/share"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/thor/Batchelor/Thor_ROS/catkin_ws_2/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src:$ROS_PACKAGE_PATH"
