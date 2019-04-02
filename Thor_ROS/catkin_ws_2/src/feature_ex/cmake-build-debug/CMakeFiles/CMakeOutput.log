@@ -1,4 +1,4 @@
-The system is: Linux - 4.18.0-16-generic - x86_64
+The system is: Linux - 4.15.0-46-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5cde5/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5cde5.dir/build.make CMakeFiles/cmTC_5cde5.dir/build
-make[1]: Entering directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5cde5.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_5cde5.dir/testCCompiler.c.o   -c /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_5cde5
-/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5cde5.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_5cde5.dir/testCCompiler.c.o  -o cmTC_5cde5 
-make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_d7471/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d7471.dir/build.make CMakeFiles/cmTC_d7471.dir/build
+make[1]: Entering directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d7471.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_d7471.dir/testCCompiler.c.o   -c /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_d7471
+/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d7471.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_d7471.dir/testCCompiler.c.o  -o cmTC_d7471 
+make[1]: Leaving directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b311d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b311d.dir/build.make CMakeFiles/cmTC_b311d.dir/build
-make[1]: Entering directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b311d.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_b311d.dir/CMakeCCompilerABI.c.o   -c /home/thor/clion-2019.1/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_b311d
-/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b311d.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_b311d.dir/CMakeCCompilerABI.c.o  -o cmTC_b311d 
+Run Build Command:"/usr/bin/make" "cmTC_0cd6c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0cd6c.dir/build.make CMakeFiles/cmTC_0cd6c.dir/build
+make[1]: Entering directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0cd6c.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_0cd6c.dir/CMakeCCompilerABI.c.o   -c /home/thor/clion-2019.1/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_0cd6c
+/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0cd6c.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_0cd6c.dir/CMakeCCompilerABI.c.o  -o cmTC_0cd6c 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -61,24 +61,24 @@ Thread model: posix
 gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_b311d' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccwENGYA.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_b311d /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_b311d.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_b311d' '-mtune=generic' '-march=x86-64'
-make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_0cd6c' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccLNXrjJ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_0cd6c /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_0cd6c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_0cd6c' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_b311d/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_b311d.dir/build.make CMakeFiles/cmTC_b311d.dir/build]
-  ignore line: [make[1]: Entering directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_b311d.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_b311d.dir/CMakeCCompilerABI.c.o   -c /home/thor/clion-2019.1/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_b311d]
-  ignore line: [/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b311d.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_b311d.dir/CMakeCCompilerABI.c.o  -o cmTC_b311d ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_0cd6c/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_0cd6c.dir/build.make CMakeFiles/cmTC_0cd6c.dir/build]
+  ignore line: [make[1]: Entering directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_0cd6c.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_0cd6c.dir/CMakeCCompilerABI.c.o   -c /home/thor/clion-2019.1/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_0cd6c]
+  ignore line: [/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0cd6c.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_0cd6c.dir/CMakeCCompilerABI.c.o  -o cmTC_0cd6c ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_b311d' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccwENGYA.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_b311d /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_b311d.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_0cd6c' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccLNXrjJ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_0cd6c /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_0cd6c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccwENGYA.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccLNXrjJ.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -116,7 +116,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_b311d] ==> ignore
+    arg [cmTC_0cd6c] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -128,7 +128,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_b311d.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_0cd6c.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -158,17 +158,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_81167/fast"
-/usr/bin/make -f CMakeFiles/cmTC_81167.dir/build.make CMakeFiles/cmTC_81167.dir/build
-make[1]: Entering directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_81167.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_81167.dir/feature_tests.c.o   -c /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_81167
-/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_81167.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_81167.dir/feature_tests.c.o  -o cmTC_81167 
-make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_6d64d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6d64d.dir/build.make CMakeFiles/cmTC_6d64d.dir/build
+make[1]: Entering directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6d64d.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_6d64d.dir/feature_tests.c.o   -c /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_6d64d
+/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d64d.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_6d64d.dir/feature_tests.c.o  -o cmTC_6d64d 
+make[1]: Leaving directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -178,17 +178,17 @@ make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/featur
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_fdd36/fast"
-/usr/bin/make -f CMakeFiles/cmTC_fdd36.dir/build.make CMakeFiles/cmTC_fdd36.dir/build
-make[1]: Entering directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fdd36.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_fdd36.dir/feature_tests.c.o   -c /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_fdd36
-/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fdd36.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_fdd36.dir/feature_tests.c.o  -o cmTC_fdd36 
-make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_1a73a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1a73a.dir/build.make CMakeFiles/cmTC_1a73a.dir/build
+make[1]: Entering directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1a73a.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_1a73a.dir/feature_tests.c.o   -c /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_1a73a
+/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1a73a.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_1a73a.dir/feature_tests.c.o  -o cmTC_1a73a 
+make[1]: Leaving directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -198,17 +198,17 @@ make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/featur
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_092d0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_092d0.dir/build.make CMakeFiles/cmTC_092d0.dir/build
-make[1]: Entering directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_092d0.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_092d0.dir/feature_tests.c.o   -c /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_092d0
-/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_092d0.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_092d0.dir/feature_tests.c.o  -o cmTC_092d0 
-make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_d957e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d957e.dir/build.make CMakeFiles/cmTC_d957e.dir/build
+make[1]: Entering directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d957e.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_d957e.dir/feature_tests.c.o   -c /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_d957e
+/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d957e.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_d957e.dir/feature_tests.c.o  -o cmTC_d957e 
+make[1]: Leaving directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -216,30 +216,30 @@ make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/featur
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_12a44/fast"
-/usr/bin/make -f CMakeFiles/cmTC_12a44.dir/build.make CMakeFiles/cmTC_12a44.dir/build
-make[1]: Entering directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_12a44.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_12a44.dir/testCXXCompiler.cxx.o -c /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_12a44
-/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12a44.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_12a44.dir/testCXXCompiler.cxx.o  -o cmTC_12a44 
-make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_acb2d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_acb2d.dir/build.make CMakeFiles/cmTC_acb2d.dir/build
+make[1]: Entering directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_acb2d.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_acb2d.dir/testCXXCompiler.cxx.o -c /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_acb2d
+/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_acb2d.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_acb2d.dir/testCXXCompiler.cxx.o  -o cmTC_acb2d 
+make[1]: Leaving directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6737b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6737b.dir/build.make CMakeFiles/cmTC_6737b.dir/build
-make[1]: Entering directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_6737b.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_6737b.dir/CMakeCXXCompilerABI.cpp.o -c /home/thor/clion-2019.1/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_6737b
-/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6737b.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_6737b.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_6737b 
+Run Build Command:"/usr/bin/make" "cmTC_cf18b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cf18b.dir/build.make CMakeFiles/cmTC_cf18b.dir/build
+make[1]: Entering directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_cf18b.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_cf18b.dir/CMakeCXXCompilerABI.cpp.o -c /home/thor/clion-2019.1/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_cf18b
+/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf18b.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_cf18b.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_cf18b 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -251,24 +251,24 @@ Thread model: posix
 gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_6737b' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccqli6uP.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_6737b /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_6737b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_6737b' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_cf18b' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccgDP6T3.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_cf18b /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_cf18b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_cf18b' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_6737b/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_6737b.dir/build.make CMakeFiles/cmTC_6737b.dir/build]
-  ignore line: [make[1]: Entering directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_6737b.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_6737b.dir/CMakeCXXCompilerABI.cpp.o -c /home/thor/clion-2019.1/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_6737b]
-  ignore line: [/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6737b.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_6737b.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_6737b ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_cf18b/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_cf18b.dir/build.make CMakeFiles/cmTC_cf18b.dir/build]
+  ignore line: [make[1]: Entering directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_cf18b.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_cf18b.dir/CMakeCXXCompilerABI.cpp.o -c /home/thor/clion-2019.1/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_cf18b]
+  ignore line: [/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf18b.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_cf18b.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_cf18b ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -280,13 +280,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_6737b' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccqli6uP.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_6737b /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_6737b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_cf18b' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccgDP6T3.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_cf18b /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_cf18b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccqli6uP.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccgDP6T3.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -306,7 +306,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_6737b] ==> ignore
+    arg [cmTC_cf18b] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -318,7 +318,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_6737b.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_cf18b.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -344,17 +344,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9507e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9507e.dir/build.make CMakeFiles/cmTC_9507e.dir/build
-make[1]: Entering directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_9507e.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_9507e.dir/feature_tests.cxx.o -c /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_9507e
-/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9507e.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_9507e.dir/feature_tests.cxx.o  -o cmTC_9507e 
-make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_93944/fast"
+/usr/bin/make -f CMakeFiles/cmTC_93944.dir/build.make CMakeFiles/cmTC_93944.dir/build
+make[1]: Entering directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_93944.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_93944.dir/feature_tests.cxx.o -c /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_93944
+/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93944.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_93944.dir/feature_tests.cxx.o  -o cmTC_93944 
+make[1]: Leaving directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -417,17 +417,17 @@ make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/featur
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d919c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d919c.dir/build.make CMakeFiles/cmTC_d919c.dir/build
-make[1]: Entering directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d919c.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_d919c.dir/feature_tests.cxx.o -c /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_d919c
-/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d919c.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_d919c.dir/feature_tests.cxx.o  -o cmTC_d919c 
-make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_71a9c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_71a9c.dir/build.make CMakeFiles/cmTC_71a9c.dir/build
+make[1]: Entering directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_71a9c.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_71a9c.dir/feature_tests.cxx.o -c /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_71a9c
+/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71a9c.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_71a9c.dir/feature_tests.cxx.o  -o cmTC_71a9c 
+make[1]: Leaving directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -490,17 +490,17 @@ make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/featur
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_123bc/fast"
-/usr/bin/make -f CMakeFiles/cmTC_123bc.dir/build.make CMakeFiles/cmTC_123bc.dir/build
-make[1]: Entering directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_123bc.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_123bc.dir/feature_tests.cxx.o -c /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_123bc
-/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_123bc.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_123bc.dir/feature_tests.cxx.o  -o cmTC_123bc 
-make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_c68ff/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c68ff.dir/build.make CMakeFiles/cmTC_c68ff.dir/build
+make[1]: Entering directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c68ff.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_c68ff.dir/feature_tests.cxx.o -c /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_c68ff
+/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c68ff.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_c68ff.dir/feature_tests.cxx.o  -o cmTC_c68ff 
+make[1]: Leaving directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -563,17 +563,17 @@ make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/featur
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d4022/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d4022.dir/build.make CMakeFiles/cmTC_d4022.dir/build
-make[1]: Entering directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d4022.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_d4022.dir/feature_tests.cxx.o -c /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_d4022
-/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4022.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_d4022.dir/feature_tests.cxx.o  -o cmTC_d4022 
-make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_b93c9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b93c9.dir/build.make CMakeFiles/cmTC_b93c9.dir/build
+make[1]: Entering directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b93c9.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_b93c9.dir/feature_tests.cxx.o -c /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_b93c9
+/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b93c9.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_b93c9.dir/feature_tests.cxx.o  -o cmTC_b93c9 
+make[1]: Leaving directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -634,30 +634,30 @@ make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/featur
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
 Determining if the include file pthread.h exists passed with the following output:
-Change Dir: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5c16e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5c16e.dir/build.make CMakeFiles/cmTC_5c16e.dir/build
-make[1]: Entering directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5c16e.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_5c16e.dir/CheckIncludeFile.c.o   -c /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_5c16e
-/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c16e.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_5c16e.dir/CheckIncludeFile.c.o  -o cmTC_5c16e 
-make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_9a488/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9a488.dir/build.make CMakeFiles/cmTC_9a488.dir/build
+make[1]: Entering directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9a488.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_9a488.dir/CheckIncludeFile.c.o   -c /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_9a488
+/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9a488.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_9a488.dir/CheckIncludeFile.c.o  -o cmTC_9a488 
+make[1]: Leaving directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
-Change Dir: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_56f51/fast"
-/usr/bin/make -f CMakeFiles/cmTC_56f51.dir/build.make CMakeFiles/cmTC_56f51.dir/build
-make[1]: Entering directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_56f51.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_56f51.dir/CheckFunctionExists.c.o   -c /home/thor/clion-2019.1/bin/cmake/linux/share/cmake-3.13/Modules/CheckFunctionExists.c
-Linking C executable cmTC_56f51
-/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56f51.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_56f51.dir/CheckFunctionExists.c.o  -o cmTC_56f51 -lpthread 
-make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_e3d93/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e3d93.dir/build.make CMakeFiles/cmTC_e3d93.dir/build
+make[1]: Entering directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e3d93.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e3d93.dir/CheckFunctionExists.c.o   -c /home/thor/clion-2019.1/bin/cmake/linux/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e3d93
+/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3d93.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_e3d93.dir/CheckFunctionExists.c.o  -o cmTC_e3d93 -lpthread 
+make[1]: Leaving directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 

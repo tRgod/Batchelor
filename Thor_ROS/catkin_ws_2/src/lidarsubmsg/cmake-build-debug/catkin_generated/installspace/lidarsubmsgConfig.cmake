@@ -67,8 +67,8 @@ set(lidarsubmsg_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(lidarsubmsg_SOURCE_PREFIX /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg)
-  set(lidarsubmsg_DEVEL_PREFIX /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/devel)
+  set(lidarsubmsg_SOURCE_PREFIX /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg)
+  set(lidarsubmsg_DEVEL_PREFIX /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/devel)
   set(lidarsubmsg_INSTALL_PREFIX "")
   set(lidarsubmsg_PREFIX ${lidarsubmsg_DEVEL_PREFIX})
 else()
@@ -121,6 +121,8 @@ foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
     list(APPEND lidarsubmsg_LIBRARIES ${library})
+  elseif(${library} MATCHES "^-l")
+    list(APPEND lidarsubmsg_LIBRARIES ${library})
   elseif(TARGET ${library})
     list(APPEND lidarsubmsg_LIBRARIES ${library})
   elseif(IS_ABSOLUTE ${library})
@@ -129,7 +131,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /usr/local/lib;/home/thor/Batchelor/Thor_ROS/catkin_ws_2/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /usr/local/lib;/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/thor/Downloads/clion-2018.3.4/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/thor/clion-2019.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/thor/Downloads/clion-2018.3.4/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg
+CMAKE_SOURCE_DIR = /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug
+CMAKE_BINARY_DIR = /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug
 
 # Utility rule file for bond_generate_messages_nodejs.
 
@@ -67,6 +67,6 @@ CMakeFiles/bond_generate_messages_nodejs.dir/clean:
 .PHONY : CMakeFiles/bond_generate_messages_nodejs.dir/clean
 
 CMakeFiles/bond_generate_messages_nodejs.dir/depend:
-	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/bond_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/bond_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/bond_generate_messages_nodejs.dir/depend
 

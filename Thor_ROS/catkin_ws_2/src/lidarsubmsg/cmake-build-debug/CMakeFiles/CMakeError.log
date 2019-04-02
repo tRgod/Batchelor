@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_409d4/fast"
-/usr/bin/make -f CMakeFiles/cmTC_409d4.dir/build.make CMakeFiles/cmTC_409d4.dir/build
-make[1]: Entering directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_409d4.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_409d4.dir/CheckSymbolExists.c.o   -c /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_409d4
-/home/thor/Downloads/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_409d4.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_409d4.dir/CheckSymbolExists.c.o  -o cmTC_409d4 
-CMakeFiles/cmTC_409d4.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+Run Build Command:"/usr/bin/make" "cmTC_652d1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_652d1.dir/build.make CMakeFiles/cmTC_652d1.dir/build
+make[1]: Entering directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_652d1.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_652d1.dir/CheckSymbolExists.c.o   -c /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_652d1
+/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_652d1.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_652d1.dir/CheckSymbolExists.c.o  -o cmTC_652d1 
+CMakeFiles/cmTC_652d1.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_409d4.dir/build.make:86: recipe for target 'cmTC_409d4' failed
-make[1]: *** [cmTC_409d4] Error 1
-make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_409d4/fast' failed
-make: *** [cmTC_409d4/fast] Error 2
+CMakeFiles/cmTC_652d1.dir/build.make:86: recipe for target 'cmTC_652d1' failed
+make[1]: *** [cmTC_652d1] Error 1
+make[1]: Leaving directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_652d1/fast' failed
+make: *** [cmTC_652d1/fast] Error 2
 
-File /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c00db/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c00db.dir/build.make CMakeFiles/cmTC_c00db.dir/build
-make[1]: Entering directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c00db.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c00db.dir/CheckFunctionExists.c.o   -c /home/thor/Downloads/clion-2018.3.4/bin/cmake/linux/share/cmake-3.13/Modules/CheckFunctionExists.c
-Linking C executable cmTC_c00db
-/home/thor/Downloads/clion-2018.3.4/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c00db.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_c00db.dir/CheckFunctionExists.c.o  -o cmTC_c00db -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_c5ecf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c5ecf.dir/build.make CMakeFiles/cmTC_c5ecf.dir/build
+make[1]: Entering directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c5ecf.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c5ecf.dir/CheckFunctionExists.c.o   -c /home/thor/clion-2019.1/bin/cmake/linux/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c5ecf
+/home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5ecf.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_c5ecf.dir/CheckFunctionExists.c.o  -o cmTC_c5ecf -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_c00db.dir/build.make:86: recipe for target 'cmTC_c00db' failed
-make[1]: *** [cmTC_c00db] Error 1
-make[1]: Leaving directory '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_c00db/fast' failed
-make: *** [cmTC_c00db/fast] Error 2
+CMakeFiles/cmTC_c5ecf.dir/build.make:86: recipe for target 'cmTC_c5ecf' failed
+make[1]: *** [cmTC_c5ecf] Error 1
+make[1]: Leaving directory '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_c5ecf/fast' failed
+make: *** [cmTC_c5ecf/fast] Error 2
 
 

@@ -67,8 +67,8 @@ set(feature_ex_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(feature_ex_SOURCE_PREFIX /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex)
-  set(feature_ex_DEVEL_PREFIX /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/devel)
+  set(feature_ex_SOURCE_PREFIX /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex)
+  set(feature_ex_DEVEL_PREFIX /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/devel)
   set(feature_ex_INSTALL_PREFIX "")
   set(feature_ex_PREFIX ${feature_ex_DEVEL_PREFIX})
 else()
@@ -110,7 +110,7 @@ if(NOT " " STREQUAL " ")
         message(FATAL_ERROR "Project 'feature_ex' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'feature_ex' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'feature_ex' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/${idir}'.  ${_report}")
     endif()
     _list_append_unique(feature_ex_INCLUDE_DIRS ${include})
   endforeach()
@@ -131,7 +131,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/devel/lib;/home/thor/Batchelor/Thor_ROS/catkin_ws_2/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/devel/lib;/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

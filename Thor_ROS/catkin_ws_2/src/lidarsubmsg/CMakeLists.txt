@@ -201,4 +201,3 @@ include_directories(
 # catkin_add_nosetests(test)
  add_executable(listnermsgs src/listnermsgs.cpp)
  target_link_libraries(listnermsgs ${catkin_LIBRARIES})
- add_dependencies(listnermsgs beginner_tutorials_generate_messages_cpp)
