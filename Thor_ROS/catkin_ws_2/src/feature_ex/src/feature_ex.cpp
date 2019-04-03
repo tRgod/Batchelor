@@ -26,21 +26,18 @@ void cloud_cb(const PointCloud::ConstPtr& input )
 {
 
     // Needed defination to get normals and getting the features.
-    pcl::NormalEstimation<PoinT, pcl::Normal> ne;
-    pcl::SACSegmentationFromNormals<PoinT,pcl::Normal> seg;
     pcl::PCDWriter writer;
     pcl::ExtractIndices<PoinT> extract;
     pcl::ExtractIndices<pcl::Normal> extract_normal;
     std::vector<int> inliers;
-    //pcl::KdTreeFLANN<PoinT>::Ptr tree (new pcl::KdTreeFLANN<PoinT>());
-    pcl::search::KdTree<PoinT>::Ptr tree (new pcl::search::KdTree<PoinT> ()); // not using for the
-    pcl::PointCloud<pcl::Normal>::Ptr input_normals(new pcl::PointCloud<pcl::Normal>);
-    // Setting the input cloud and estamation the normals for the points
-    ne.setInputCloud(input);
-    ne.setSearchMethod(tree);
-    ne.setRadiusSearch(0.01);
-    ne.compute(*input_normals);
-    pcl::PointCloud<pcl::PointXYZRGBNormal> cloud2;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>(*input));
+
+
+    pcl::SampleConsensusModelCone<pcl::PointXYZ,pcl::PointNormal>::Ptr model_c(new pcl::SampleConsensusModelCone<pcl::PointXYZ,pcl::PointNormal>(cloud));
+    pcl::RandomSampleConsensus<pcl::PointXYZ> ransac (model_c);
+    ransac.setDistanceThreshold(0.01);
+    ransac.computeModel();
+    ransac.getInliers(inliers);
     /*
     BOOST_FOREACH (const pcl::Normal& pt, input_normals->points)
     printf ("\t(%f, %f, %f)\n", pt.normal_x, pt.normal_y, pt.normal_z);

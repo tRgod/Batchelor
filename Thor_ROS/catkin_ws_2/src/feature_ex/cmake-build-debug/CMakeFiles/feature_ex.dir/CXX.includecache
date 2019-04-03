@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/src/feature_ex.cpp
+/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/src/feature_ex.cpp
 ros/ros.h
 -
 iostream
