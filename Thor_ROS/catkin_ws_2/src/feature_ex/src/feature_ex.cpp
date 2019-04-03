@@ -1,6 +1,7 @@
 
 #include <ros/ros.h>
 #include <iostream>
+#include <thread>
 #include <pcl_ros/point_cloud.h>
 #include <pcl/point_types.h>
 #include <pcl/filters/extract_indices.h>
@@ -15,7 +16,23 @@
 #include <pcl/sample_consensus/model_types.h>
 #include <pcl/sample_consensus/sac_model_cone.h>
 #include <pcl/segmentation/sac_segmentation.h>
+#include <pcl/visualization/pcl_visualizer.h>
 
+using namespace std::chrono_literals;   
+pcl::visualization::PCLVisualizer::Ptr
+simpleVis (pcl::PointCloud<pcl::PointXYZ>::ConstPtr cloud)
+{
+    // --------------------------------------------
+    // -----Open 3D viewer and add point cloud-----
+    // --------------------------------------------
+    pcl::visualization::PCLVisualizer::Ptr viewer (new pcl::visualization::PCLVisualizer ("3D Viewer"));
+    viewer->setBackgroundColor (0, 0, 0);
+    viewer->addPointCloud<pcl::PointXYZ> (cloud, "sample cloud");
+    viewer->setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 3, "sample cloud");
+    //viewer->addCoordinateSystem (1.0, "global");
+    viewer->initCameraParameters ();
+    return (viewer);
+}
 
 
 
@@ -42,6 +59,7 @@ void cloud_cb(const PointCloud::ConstPtr& input )
     BOOST_FOREACH (const pcl::Normal& pt, input_normals->points)
     printf ("\t(%f, %f, %f)\n", pt.normal_x, pt.normal_y, pt.normal_z);
     */
+    pcl::copyPointCloud(*input,inliers,*cloud);
 }
 int main (int argc, char** argv)
 {
