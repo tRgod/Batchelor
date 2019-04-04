@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o"
-  "devel/lib/feature_ex/feature_ex.pdb"
-  "devel/lib/feature_ex/feature_ex"
+  "feature_ex.pdb"
+  "feature_ex"
 )
 
 # Per-language clean rules from dependency scanning.

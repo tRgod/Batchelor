@@ -2,94 +2,94 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="feature_ex" targetName="tf_generate_messages_nodejs" />
-      <config projectName="feature_ex" targetName="tf2_msgs_generate_messages_eus" />
       <config projectName="feature_ex" targetName="roscpp_generate_messages_py" />
-      <config projectName="feature_ex" targetName="tf_generate_messages_eus" />
-      <config projectName="feature_ex" targetName="tf_generate_messages_py" />
-      <config projectName="feature_ex" targetName="clean_test_results" />
-      <config projectName="feature_ex" targetName="dynamic_reconfigure_generate_messages_py" />
-      <config projectName="feature_ex" targetName="actionlib_generate_messages_eus" />
-      <config projectName="feature_ex" targetName="pcl_msgs_generate_messages_py" />
-      <config projectName="feature_ex" targetName="gtest" />
-      <config projectName="feature_ex" targetName="actionlib_msgs_generate_messages_lisp" />
-      <config projectName="feature_ex" targetName="sensor_msgs_generate_messages_lisp" />
-      <config projectName="feature_ex" targetName="rosgraph_msgs_generate_messages_lisp" />
-      <config projectName="feature_ex" targetName="std_srvs_generate_messages_lisp" />
-      <config projectName="feature_ex" targetName="topic_tools_generate_messages_cpp" />
-      <config projectName="feature_ex" targetName="actionlib_generate_messages_lisp" />
-      <config projectName="feature_ex" targetName="download_extra_data" />
-      <config projectName="feature_ex" targetName="pcl_msgs_generate_messages_nodejs" />
-      <config projectName="feature_ex" targetName="actionlib_msgs_generate_messages_py" />
-      <config projectName="feature_ex" targetName="pcl_msgs_generate_messages_eus" />
-      <config projectName="feature_ex" targetName="bond_generate_messages_eus" />
-      <config projectName="feature_ex" targetName="feature_ex" />
+      <config projectName="feature_ex" targetName="tf2_msgs_generate_messages_cpp" />
+      <config projectName="feature_ex" targetName="std_msgs_generate_messages_nodejs" />
       <config projectName="feature_ex" targetName="sensor_msgs_generate_messages_nodejs" />
-      <config projectName="feature_ex" targetName="pcl_ros_gencfg" />
-      <config projectName="feature_ex" targetName="std_srvs_generate_messages_cpp" />
-      <config projectName="feature_ex" targetName="rosgraph_msgs_generate_messages_py" />
-      <config projectName="feature_ex" targetName="nodelet_topic_tools_gencfg" />
-      <config projectName="feature_ex" targetName="dynamic_reconfigure_generate_messages_cpp" />
-      <config projectName="feature_ex" targetName="bond_generate_messages_nodejs" />
-      <config projectName="feature_ex" targetName="tf2_msgs_generate_messages_py" />
-      <config projectName="feature_ex" targetName="actionlib_generate_messages_nodejs" />
-      <config projectName="feature_ex" targetName="pcl_msgs_generate_messages_lisp" />
-      <config projectName="feature_ex" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="feature_ex" targetName="geometry_msgs_generate_messages_eus" />
+      <config projectName="feature_ex" targetName="rosgraph_msgs_generate_messages_lisp" />
+      <config projectName="feature_ex" targetName="std_srvs_generate_messages_py" />
+      <config projectName="feature_ex" targetName="topic_tools_generate_messages_nodejs" />
+      <config projectName="feature_ex" targetName="feature_ex" />
+      <config projectName="feature_ex" targetName="clean_test_results" />
+      <config projectName="feature_ex" targetName="roscpp_generate_messages_eus" />
       <config projectName="feature_ex" targetName="topic_tools_generate_messages_eus" />
       <config projectName="feature_ex" targetName="rosgraph_msgs_generate_messages_cpp" />
-      <config projectName="feature_ex" targetName="roscpp_generate_messages_eus" />
-      <config projectName="feature_ex" targetName="nodelet_generate_messages_py" />
-      <config projectName="feature_ex" targetName="dynamic_reconfigure_generate_messages_lisp" />
-      <config projectName="feature_ex" targetName="std_srvs_generate_messages_eus" />
-      <config projectName="feature_ex" targetName="nodelet_generate_messages_nodejs" />
-      <config projectName="feature_ex" targetName="roscpp_generate_messages_lisp" />
-      <config projectName="feature_ex" targetName="geometry_msgs_generate_messages_cpp" />
-      <config projectName="feature_ex" targetName="std_srvs_generate_messages_py" />
-      <config projectName="feature_ex" targetName="tf_generate_messages_lisp" />
-      <config projectName="feature_ex" targetName="tf2_msgs_generate_messages_cpp" />
-      <config projectName="feature_ex" targetName="gmock_main" />
-      <config projectName="feature_ex" targetName="doxygen" />
-      <config projectName="feature_ex" targetName="dynamic_reconfigure_generate_messages_eus" />
-      <config projectName="feature_ex" targetName="geometry_msgs_generate_messages_nodejs" />
-      <config projectName="feature_ex" targetName="actionlib_generate_messages_py" />
-      <config projectName="feature_ex" targetName="topic_tools_generate_messages_lisp" />
-      <config projectName="feature_ex" targetName="std_msgs_generate_messages_eus" />
-      <config projectName="feature_ex" targetName="nodelet_generate_messages_lisp" />
-      <config projectName="feature_ex" targetName="topic_tools_generate_messages_nodejs" />
-      <config projectName="feature_ex" targetName="dynamic_reconfigure_gencfg" />
-      <config projectName="feature_ex" targetName="nodelet_generate_messages_cpp" />
-      <config projectName="feature_ex" targetName="dynamic_reconfigure_generate_messages_nodejs" />
-      <config projectName="feature_ex" targetName="bond_generate_messages_py" />
-      <config projectName="feature_ex" targetName="actionlib_msgs_generate_messages_cpp" />
+      <config projectName="feature_ex" targetName="bond_generate_messages_nodejs" />
+      <config projectName="feature_ex" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="feature_ex" targetName="tests" />
+      <config projectName="feature_ex" targetName="tf_generate_messages_eus" />
+      <config projectName="feature_ex" targetName="pcl_msgs_generate_messages_py" />
+      <config projectName="feature_ex" targetName="gtest_main" />
+      <config projectName="feature_ex" targetName="bond_generate_messages_eus" />
+      <config projectName="feature_ex" targetName="tf2_msgs_generate_messages_eus" />
       <config projectName="feature_ex" targetName="roscpp_generate_messages_nodejs" />
-      <config projectName="feature_ex" targetName="topic_tools_generate_messages_py" />
-      <config projectName="feature_ex" targetName="geometry_msgs_generate_messages_py" />
-      <config projectName="feature_ex" targetName="sensor_msgs_generate_messages_cpp" />
-      <config projectName="feature_ex" targetName="gmock" />
-      <config projectName="feature_ex" targetName="geometry_msgs_generate_messages_eus" />
-      <config projectName="feature_ex" targetName="roscpp_generate_messages_cpp" />
-      <config projectName="feature_ex" targetName="actionlib_generate_messages_cpp" />
-      <config projectName="feature_ex" targetName="bond_generate_messages_lisp" />
-      <config projectName="feature_ex" targetName="sensor_msgs_generate_messages_py" />
-      <config projectName="feature_ex" targetName="actionlib_msgs_generate_messages_nodejs" />
-      <config projectName="feature_ex" targetName="tf_generate_messages_cpp" />
-      <config projectName="feature_ex" targetName="std_msgs_generate_messages_lisp" />
-      <config projectName="feature_ex" targetName="tf2_msgs_generate_messages_nodejs" />
-      <config projectName="feature_ex" targetName="rosgraph_msgs_generate_messages_eus" />
-      <config projectName="feature_ex" targetName="std_msgs_generate_messages_py" />
-      <config projectName="feature_ex" targetName="tf2_msgs_generate_messages_lisp" />
-      <config projectName="feature_ex" targetName="std_srvs_generate_messages_nodejs" />
-      <config projectName="feature_ex" targetName="run_tests" />
-      <config projectName="feature_ex" targetName="nodelet_generate_messages_eus" />
-      <config projectName="feature_ex" targetName="sensor_msgs_generate_messages_eus" />
       <config projectName="feature_ex" targetName="geometry_msgs_generate_messages_lisp" />
       <config projectName="feature_ex" targetName="actionlib_msgs_generate_messages_eus" />
-      <config projectName="feature_ex" targetName="gtest_main" />
-      <config projectName="feature_ex" targetName="tests" />
-      <config projectName="feature_ex" targetName="std_msgs_generate_messages_nodejs" />
-      <config projectName="feature_ex" targetName="pcl_msgs_generate_messages_cpp" />
+      <config projectName="feature_ex" targetName="dynamic_reconfigure_generate_messages_lisp" />
+      <config projectName="feature_ex" targetName="actionlib_generate_messages_eus" />
+      <config projectName="feature_ex" targetName="bond_generate_messages_lisp" />
+      <config projectName="feature_ex" targetName="rosgraph_msgs_generate_messages_py" />
+      <config projectName="feature_ex" targetName="actionlib_msgs_generate_messages_lisp" />
+      <config projectName="feature_ex" targetName="pcl_ros_gencfg" />
+      <config projectName="feature_ex" targetName="geometry_msgs_generate_messages_cpp" />
+      <config projectName="feature_ex" targetName="tf2_msgs_generate_messages_nodejs" />
+      <config projectName="feature_ex" targetName="std_msgs_generate_messages_py" />
+      <config projectName="feature_ex" targetName="actionlib_generate_messages_py" />
+      <config projectName="feature_ex" targetName="nodelet_generate_messages_cpp" />
+      <config projectName="feature_ex" targetName="gtest" />
+      <config projectName="feature_ex" targetName="actionlib_generate_messages_nodejs" />
+      <config projectName="feature_ex" targetName="dynamic_reconfigure_generate_messages_cpp" />
+      <config projectName="feature_ex" targetName="rosgraph_msgs_generate_messages_eus" />
+      <config projectName="feature_ex" targetName="std_msgs_generate_messages_eus" />
+      <config projectName="feature_ex" targetName="tf_generate_messages_cpp" />
+      <config projectName="feature_ex" targetName="bond_generate_messages_py" />
+      <config projectName="feature_ex" targetName="dynamic_reconfigure_generate_messages_nodejs" />
+      <config projectName="feature_ex" targetName="gmock" />
       <config projectName="feature_ex" targetName="bond_generate_messages_cpp" />
+      <config projectName="feature_ex" targetName="nodelet_topic_tools_gencfg" />
+      <config projectName="feature_ex" targetName="std_srvs_generate_messages_cpp" />
+      <config projectName="feature_ex" targetName="actionlib_msgs_generate_messages_py" />
+      <config projectName="feature_ex" targetName="actionlib_msgs_generate_messages_cpp" />
+      <config projectName="feature_ex" targetName="gmock_main" />
+      <config projectName="feature_ex" targetName="actionlib_generate_messages_cpp" />
+      <config projectName="feature_ex" targetName="sensor_msgs_generate_messages_lisp" />
       <config projectName="feature_ex" targetName="rosgraph_msgs_generate_messages_nodejs" />
+      <config projectName="feature_ex" targetName="std_msgs_generate_messages_lisp" />
+      <config projectName="feature_ex" targetName="doxygen" />
+      <config projectName="feature_ex" targetName="nodelet_generate_messages_eus" />
+      <config projectName="feature_ex" targetName="tf2_msgs_generate_messages_lisp" />
+      <config projectName="feature_ex" targetName="tf2_msgs_generate_messages_py" />
+      <config projectName="feature_ex" targetName="nodelet_generate_messages_py" />
+      <config projectName="feature_ex" targetName="topic_tools_generate_messages_lisp" />
+      <config projectName="feature_ex" targetName="geometry_msgs_generate_messages_nodejs" />
+      <config projectName="feature_ex" targetName="dynamic_reconfigure_generate_messages_eus" />
+      <config projectName="feature_ex" targetName="dynamic_reconfigure_generate_messages_py" />
+      <config projectName="feature_ex" targetName="nodelet_generate_messages_lisp" />
+      <config projectName="feature_ex" targetName="sensor_msgs_generate_messages_eus" />
+      <config projectName="feature_ex" targetName="run_tests" />
+      <config projectName="feature_ex" targetName="topic_tools_generate_messages_py" />
+      <config projectName="feature_ex" targetName="actionlib_msgs_generate_messages_nodejs" />
+      <config projectName="feature_ex" targetName="download_extra_data" />
+      <config projectName="feature_ex" targetName="pcl_msgs_generate_messages_lisp" />
+      <config projectName="feature_ex" targetName="geometry_msgs_generate_messages_py" />
+      <config projectName="feature_ex" targetName="pcl_msgs_generate_messages_cpp" />
+      <config projectName="feature_ex" targetName="dynamic_reconfigure_gencfg" />
+      <config projectName="feature_ex" targetName="nodelet_generate_messages_nodejs" />
+      <config projectName="feature_ex" targetName="actionlib_generate_messages_lisp" />
+      <config projectName="feature_ex" targetName="std_srvs_generate_messages_eus" />
+      <config projectName="feature_ex" targetName="std_srvs_generate_messages_nodejs" />
+      <config projectName="feature_ex" targetName="sensor_msgs_generate_messages_py" />
+      <config projectName="feature_ex" targetName="pcl_msgs_generate_messages_nodejs" />
+      <config projectName="feature_ex" targetName="std_srvs_generate_messages_lisp" />
+      <config projectName="feature_ex" targetName="tf_generate_messages_nodejs" />
+      <config projectName="feature_ex" targetName="tf_generate_messages_py" />
+      <config projectName="feature_ex" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="feature_ex" targetName="topic_tools_generate_messages_cpp" />
+      <config projectName="feature_ex" targetName="tf_generate_messages_lisp" />
+      <config projectName="feature_ex" targetName="sensor_msgs_generate_messages_cpp" />
+      <config projectName="feature_ex" targetName="pcl_msgs_generate_messages_eus" />
+      <config projectName="feature_ex" targetName="roscpp_generate_messages_lisp" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -99,7 +99,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c830b09-01f0-434d-b202-ab956984b674" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/lib/feature_ex/feature_ex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_ex.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_ex.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_ex.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_ex.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_ex.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_ex.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_ex.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_ex.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/stamps/feature_ex/package.xml.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/stamps/feature_ex/package.xml.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/feature_ex.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/feature_ex.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/googlemock/gmock.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/gtest/googlemock/gmock.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/googlemock/gtest/gtest.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/gtest/googlemock/gtest/gtest.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/googletest-distribution.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/gtest/googletest-distribution.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/feature_ex.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/feature_ex.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -115,32 +136,20 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/feature_ex.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-              <folding>
-                <element signature="e#1#21#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="401">
+              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/include/pcl-1.8/pcl/sample_consensus/model_types.h">
+        <entry file="file://$PROJECT_DIR$/src/feature_ex.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2842">
-              <caret line="98" selection-start-line="98" selection-end-line="98" />
+            <state relative-caret-position="-319">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -173,7 +182,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="134" />
     <option name="y" value="35" />
     <option name="width" value="1213" />
@@ -692,10 +701,6 @@
       <item itemvalue="CMake Application.geometry_msgs_generate_messages_lisp" />
       <item itemvalue="CMake Application.geometry_msgs_generate_messages_nodejs" />
       <item itemvalue="CMake Application.geometry_msgs_generate_messages_py" />
-      <item itemvalue="CMake Application.gmock" />
-      <item itemvalue="CMake Application.gmock_main" />
-      <item itemvalue="CMake Application.gtest" />
-      <item itemvalue="CMake Application.gtest_main" />
       <item itemvalue="CMake Application.nodelet_generate_messages_cpp" />
       <item itemvalue="CMake Application.nodelet_generate_messages_eus" />
       <item itemvalue="CMake Application.nodelet_generate_messages_lisp" />
@@ -750,6 +755,10 @@
       <item itemvalue="CMake Application.topic_tools_generate_messages_lisp" />
       <item itemvalue="CMake Application.topic_tools_generate_messages_nodejs" />
       <item itemvalue="CMake Application.topic_tools_generate_messages_py" />
+      <item itemvalue="CMake Application.gmock" />
+      <item itemvalue="CMake Application.gmock_main" />
+      <item itemvalue="CMake Application.gtest" />
+      <item itemvalue="CMake Application.gtest_main" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -772,15 +781,16 @@
       <workItem from="1554234073734" duration="1399000" />
       <workItem from="1554277644094" duration="1562000" />
       <workItem from="1554280738666" duration="1172000" />
+      <workItem from="1554372862418" duration="1592000" />
+      <workItem from="1554391822912" duration="806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20238000" />
+    <option name="totallyTimeSpent" value="22636000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="134" y="35" width="1213" height="1405" extended-state="4" />
-    <editor active="true" />
+    <frame x="134" y="35" width="2426" height="1405" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.23377778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -796,7 +806,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="CMake" order="11" weight="0.5298429" />
+      <window_info anchor="bottom" id="CMake" order="11" weight="0.5294118" />
       <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.39859527" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -823,13 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/pcl-1.8/pcl/sample_consensus/model_types.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2842">
@@ -842,11 +845,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/feature_ex.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-          <folding>
-            <element signature="e#1#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-319">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
         </state>
       </provider>
     </entry>

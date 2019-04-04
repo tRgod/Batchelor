@@ -128,21 +128,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/catkin_generated/installspace/.rosinstall")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/catkin_generated/installspace/feature_ex.pc")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/feature_ex/cmake" TYPE FILE FILES
-    "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/catkin_generated/installspace/feature_exConfig.cmake"
-    "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/catkin_generated/installspace/feature_exConfig-version.cmake"
-    )
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/feature_ex" TYPE FILE FILES "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/package.xml")
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/gtest/cmake_install.cmake")

@@ -6,7 +6,6 @@
 #include <pcl/point_types.h>
 #include <pcl/filters/extract_indices.h>
 #include <boost/foreach.hpp>
-
 #include <pcl/sample_consensus/ransac.h>
 #include <pcl/features/normal_3d.h>
 #include <pcl/kdtree/kdtree_flann.h>
@@ -18,7 +17,7 @@
 #include <pcl/segmentation/sac_segmentation.h>
 #include <pcl/visualization/pcl_visualizer.h>
 
-using namespace std::chrono_literals;   
+
 pcl::visualization::PCLVisualizer::Ptr
 simpleVis (pcl::PointCloud<pcl::PointXYZ>::ConstPtr cloud)
 {
