@@ -336,6 +336,7 @@ CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o: /usr/include/pcl-1.8/pcl/feature
 CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o: /usr/include/pcl-1.8/pcl/features/impl/normal_3d.hpp
 CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o: /usr/include/pcl-1.8/pcl/features/normal_3d.h
 CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o: /usr/include/pcl-1.8/pcl/filters/boost.h
+CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o: /usr/include/pcl-1.8/pcl/filters/clipper3D.h
 CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o: /usr/include/pcl-1.8/pcl/filters/extract_indices.h
 CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o: /usr/include/pcl-1.8/pcl/filters/filter.h
 CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o: /usr/include/pcl-1.8/pcl/filters/filter_indices.h
@@ -343,7 +344,9 @@ CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o: /usr/include/pcl-1.8/pcl/filters
 CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o: /usr/include/pcl-1.8/pcl/filters/impl/filter.hpp
 CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o: /usr/include/pcl-1.8/pcl/filters/impl/filter_indices.hpp
 CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o: /usr/include/pcl-1.8/pcl/filters/impl/passthrough.hpp
+CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o: /usr/include/pcl-1.8/pcl/filters/impl/plane_clipper3D.hpp
 CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o: /usr/include/pcl-1.8/pcl/filters/passthrough.h
+CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o: /usr/include/pcl-1.8/pcl/filters/plane_clipper3D.h
 CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o: /usr/include/pcl-1.8/pcl/for_each_type.h
 CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o: /usr/include/pcl-1.8/pcl/geometry/planar_polygon.h
 CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o: /usr/include/pcl-1.8/pcl/impl/cloud_iterator.hpp
