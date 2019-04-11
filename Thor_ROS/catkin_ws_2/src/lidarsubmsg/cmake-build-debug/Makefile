@@ -48,10 +48,10 @@ RM = /home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg
+CMAKE_SOURCE_DIR = /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug
+CMAKE_BINARY_DIR = /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -116,7 +116,7 @@ test/fast: test
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/home/thor/clion-2019.1/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CPackSourceConfig.cmake
+	/home/thor/clion-2019.1/bin/cmake/linux/bin/cpack --config ./CPackSourceConfig.cmake /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -159,9 +159,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

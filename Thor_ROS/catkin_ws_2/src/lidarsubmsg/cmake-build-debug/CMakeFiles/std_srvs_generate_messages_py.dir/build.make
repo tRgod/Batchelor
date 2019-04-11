@@ -43,10 +43,10 @@ RM = /home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg
+CMAKE_SOURCE_DIR = /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug
+CMAKE_BINARY_DIR = /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug
 
 # Utility rule file for std_srvs_generate_messages_py.
 
@@ -67,6 +67,6 @@ CMakeFiles/std_srvs_generate_messages_py.dir/clean:
 .PHONY : CMakeFiles/std_srvs_generate_messages_py.dir/clean
 
 CMakeFiles/std_srvs_generate_messages_py.dir/depend:
-	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/std_srvs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/CMakeFiles/std_srvs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/std_srvs_generate_messages_py.dir/depend
 

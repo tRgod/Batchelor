@@ -1,7 +1,6 @@
 
 #include <ros/ros.h>
 #include <iostream>
-
 #include <pcl_ros/point_cloud.h>
 #include <pcl/point_types.h>
 #include <pcl/point_types.h>
@@ -32,7 +31,8 @@ void cloud_cb(const PointCloud::ConstPtr& input )
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
     pcl::NormalEstimation<pcl::PointXYZ,pcl::Normal> ne;
     cloud->points=input->points;
-
+    cloud->header=input->header;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr final_cloud (new pcl::PointCloud<pcl::PointXYZ>);
     ne.setInputCloud(cloud);
     pcl::search::KdTree<pcl::PointXYZ>::Ptr tree (new pcl::search::KdTree<pcl::PointXYZ>);
     ne.setSearchMethod(tree);
@@ -44,20 +44,21 @@ void cloud_cb(const PointCloud::ConstPtr& input )
 
     pcl::SampleConsensusModelCone<pcl::PointXYZ,pcl::Normal>::Ptr model_c(new pcl::SampleConsensusModelCone<pcl::PointXYZ,pcl::Normal>(cloud));
     model_c->setInputNormals(cloud_normals);
-    model_c->setMinMaxOpeningAngle(0.7,0.9);
+    model_c->setMinMaxOpeningAngle(0.74,0.81);
+    model_c->setRadiusLimits(0.01,0.4);
+    model_c->setAxis({0,1,1});
 
     pcl::RandomSampleConsensus<pcl::PointXYZ> ransac (model_c);
-    ransac.setSampleConsensusModel(model_c);
-    ransac.setDistanceThreshold(10);
-    ransac.computeModel();
-    ransac.refineModel();
-    if(inliers.empty()== true){
 
-    }
-    else{
-        std::cout<<"no inliners found plz fiz THOR"<<std::endl;
-    }
+    ransac.setSampleConsensusModel(model_c);
+    ransac.setMaxIterations(50);
+    ransac.setDistanceThreshold(0.01);
+    ransac.computeModel();
     ransac.getInliers(inliers);
+    std::cout<<ransac.getSampleConsensusModel()<<std::endl;
+    //ransac.getInliers(inliers);
+    //ransac.inliers_=inliers;
+    //ransac.refineModel();
 
     std::cout<<ransac.getProbability()<<std::endl;
 
@@ -65,9 +66,9 @@ void cloud_cb(const PointCloud::ConstPtr& input )
     BOOST_FOREACH (const pcl::Normal& pt, input_normals->points)
     printf ("\t(%f, %f, %f)\n", pt.normal_x, pt.normal_y, pt.normal_z);
     */
-    pcl::copyPointCloud(*input,inliers ,*cloud);
-    pub.publish(cloud);
-    inliers.clear();
+    pcl::copyPointCloud(*cloud,inliers ,*final_cloud);
+    pub.publish(final_cloud);
+
 }
 int main (int argc, char** argv)
 {

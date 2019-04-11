@@ -48,10 +48,10 @@ RM = /home/thor/clion-2019.1/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex
+CMAKE_SOURCE_DIR = /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug
+CMAKE_BINARY_DIR = /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1311,32 +1311,32 @@ gtest/fast:
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
-src/feature_ex.o: src/feature_ex.cpp.o
+src/feature_ex_segmentation.o: src/feature_ex_segmentation.cpp.o
 
-.PHONY : src/feature_ex.o
+.PHONY : src/feature_ex_segmentation.o
 
 # target to build an object file
-src/feature_ex.cpp.o:
-	$(MAKE) -f CMakeFiles/feature_ex.dir/build.make CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o
-.PHONY : src/feature_ex.cpp.o
+src/feature_ex_segmentation.cpp.o:
+	$(MAKE) -f CMakeFiles/feature_ex.dir/build.make CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.o
+.PHONY : src/feature_ex_segmentation.cpp.o
 
-src/feature_ex.i: src/feature_ex.cpp.i
+src/feature_ex_segmentation.i: src/feature_ex_segmentation.cpp.i
 
-.PHONY : src/feature_ex.i
+.PHONY : src/feature_ex_segmentation.i
 
 # target to preprocess a source file
-src/feature_ex.cpp.i:
-	$(MAKE) -f CMakeFiles/feature_ex.dir/build.make CMakeFiles/feature_ex.dir/src/feature_ex.cpp.i
-.PHONY : src/feature_ex.cpp.i
+src/feature_ex_segmentation.cpp.i:
+	$(MAKE) -f CMakeFiles/feature_ex.dir/build.make CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.i
+.PHONY : src/feature_ex_segmentation.cpp.i
 
-src/feature_ex.s: src/feature_ex.cpp.s
+src/feature_ex_segmentation.s: src/feature_ex_segmentation.cpp.s
 
-.PHONY : src/feature_ex.s
+.PHONY : src/feature_ex_segmentation.s
 
 # target to generate assembly for a file
-src/feature_ex.cpp.s:
-	$(MAKE) -f CMakeFiles/feature_ex.dir/build.make CMakeFiles/feature_ex.dir/src/feature_ex.cpp.s
-.PHONY : src/feature_ex.cpp.s
+src/feature_ex_segmentation.cpp.s:
+	$(MAKE) -f CMakeFiles/feature_ex.dir/build.make CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.s
+.PHONY : src/feature_ex_segmentation.cpp.s
 
 # Help Target
 help:
@@ -1439,9 +1439,9 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
-	@echo "... src/feature_ex.o"
-	@echo "... src/feature_ex.i"
-	@echo "... src/feature_ex.s"
+	@echo "... src/feature_ex_segmentation.o"
+	@echo "... src/feature_ex_segmentation.i"
+	@echo "... src/feature_ex_segmentation.s"
 .PHONY : help
 
 
