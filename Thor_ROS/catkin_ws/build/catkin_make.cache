@@ -1,2 +1,0 @@
-lidarsub
--DCATKIN_DEVEL_PREFIX=/home/thor/Batchelor/Thor_ROS/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/thor/Batchelor/Thor_ROS/catkin_ws/install -G Unix Makefiles

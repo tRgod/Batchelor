@@ -15,7 +15,7 @@ find_package( catkin REQUIRED COMPONENTS
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
-  ${PCL_INCLUDE_DIRS}
+ # ${PCL_INCLUDE_DIRS}
 )
 #LINK_DIRECTORIES(${PCL_LIBRARY_DIRS})
 #src/feature_ex.cpp

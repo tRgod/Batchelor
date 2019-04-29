@@ -30,20 +30,28 @@ void cloud_cb(const PointCloud::ConstPtr& input )
     pcl::PointCloud<pcl::Normal>::Ptr cloud_normals (new pcl::PointCloud<pcl::Normal>);
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
     pcl::NormalEstimation<pcl::PointXYZ,pcl::Normal> ne;
+    //Creating a cloud object to hold the input cloud
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_final (new pcl::PointCloud<pcl::PointXYZ>);
+    //filling the cloud with data
+    cloud->width=input->width;
+    cloud->height=input->height;
     cloud->points=input->points;
     cloud->header=input->header;
-    pcl::PointCloud<pcl::PointXYZ>::Ptr final_cloud (new pcl::PointCloud<pcl::PointXYZ>);
-    ne.setInputCloud(cloud);
-    pcl::search::KdTree<pcl::PointXYZ>::Ptr tree (new pcl::search::KdTree<pcl::PointXYZ>);
-    ne.setSearchMethod(tree);
-    ne.setRadiusSearch(0.03);
-    ne.compute(*cloud_normals);
+    // defina a serch tree to find normals
+    pcl::search::Search<pcl::PointXYZ>::Ptr tree (new pcl::search::KdTree<pcl::PointXYZ>);
+    pcl::PointCloud<pcl::Normal>::Ptr Normals (new pcl::PointCloud<pcl::Normal>);
+    pcl::NormalEstimation<pcl::PointXYZ,pcl::Normal> normal_estimator;
+    normal_estimator.setSearchMethod(tree);
+    normal_estimator.setInputCloud(cloud);
+    normal_estimator.setKSearch(50);
+    normal_estimator.compute(*Normals);
+    cloud_normals=Normals;
 
     pcl::SampleConsensusModelPlane<pcl::PointXYZ>::Ptr model_p(new pcl::SampleConsensusModelPlane<pcl::PointXYZ>(cloud));
 
 
     pcl::SampleConsensusModelCone<pcl::PointXYZ,pcl::Normal>::Ptr model_c(new pcl::SampleConsensusModelCone<pcl::PointXYZ,pcl::Normal>(cloud));
-    model_c->setInputNormals(cloud_normals);
+    model_c->setInputNormals(Normals);
     model_c->setMinMaxOpeningAngle(0.74,0.81);
     model_c->setRadiusLimits(0.01,0.4);
     model_c->setAxis({0,1,1});
@@ -66,8 +74,8 @@ void cloud_cb(const PointCloud::ConstPtr& input )
     BOOST_FOREACH (const pcl::Normal& pt, input_normals->points)
     printf ("\t(%f, %f, %f)\n", pt.normal_x, pt.normal_y, pt.normal_z);
     */
-    pcl::copyPointCloud(*cloud,inliers ,*final_cloud);
-    pub.publish(final_cloud);
+    pcl::copyPointCloud(*cloud,inliers ,*cloud_final);
+    pub.publish(cloud_final);
 
 }
 int main (int argc, char** argv)

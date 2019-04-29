@@ -1,8 +1,8 @@
-# Install script for directory: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg
+# Install script for directory: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/install")
+  set(CMAKE_INSTALL_PREFIX "/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -35,20 +35,5 @@ endif()
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/lidarsubmsg/catkin_generated/installspace/lidarsubmsg.pc")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lidarsubmsg/cmake" TYPE FILE FILES
-    "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/lidarsubmsg/catkin_generated/installspace/lidarsubmsgConfig.cmake"
-    "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/lidarsubmsg/catkin_generated/installspace/lidarsubmsgConfig-version.cmake"
-    )
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lidarsubmsg" TYPE FILE FILES "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/package.xml")
 endif()
 

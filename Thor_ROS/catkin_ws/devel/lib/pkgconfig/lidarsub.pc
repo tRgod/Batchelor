@@ -1,8 +1,1 @@
-prefix=/home/thor/Batchelor/Thor_ROS/catkin_ws/devel
-
-Name: lidarsub
-Description: Description of lidarsub
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/thor/Batchelor/Thor_ROS/catkin_ws/devel/lib 
-Requires: 
+/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws/devel/.private/lidarsub/lib/pkgconfig/lidarsub.pc

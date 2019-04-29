@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target listner[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/listner.dir/src/listner.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws/devel/.private/lidarsub/lib/lidarsub/listner[0m
+[100%] Built target listner

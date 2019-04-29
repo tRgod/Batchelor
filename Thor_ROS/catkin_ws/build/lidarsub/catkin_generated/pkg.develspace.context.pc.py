@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "lidarsub"
-PROJECT_SPACE_DIR = "/home/thor/Batchelor/Thor_ROS/catkin_ws/devel"
+PROJECT_SPACE_DIR = "/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws/devel/.private/lidarsub"
 PROJECT_VERSION = "0.0.0"

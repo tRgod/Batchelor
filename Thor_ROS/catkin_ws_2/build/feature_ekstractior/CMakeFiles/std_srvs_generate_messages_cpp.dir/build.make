@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src
+CMAKE_SOURCE_DIR = /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build
+CMAKE_BINARY_DIR = /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build
 
 # Utility rule file for std_srvs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ feature_ekstractior/CMakeFiles/std_srvs_generate_messages_cpp.dir/build: std_srv
 .PHONY : feature_ekstractior/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
 
 feature_ekstractior/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean:
-	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior && $(CMAKE_COMMAND) -P CMakeFiles/std_srvs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior && $(CMAKE_COMMAND) -P CMakeFiles/std_srvs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : feature_ekstractior/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
 
 feature_ekstractior/CMakeFiles/std_srvs_generate_messages_cpp.dir/depend:
-	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ekstractior /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior/CMakeFiles/std_srvs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ekstractior /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior/CMakeFiles/std_srvs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : feature_ekstractior/CMakeFiles/std_srvs_generate_messages_cpp.dir/depend
 
