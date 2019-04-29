@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src
+CMAKE_SOURCE_DIR = /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build
+CMAKE_BINARY_DIR = /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build
 
 # Utility rule file for bond_generate_messages_py.
 
@@ -63,10 +63,10 @@ feature_ekstractior/CMakeFiles/bond_generate_messages_py.dir/build: bond_generat
 .PHONY : feature_ekstractior/CMakeFiles/bond_generate_messages_py.dir/build
 
 feature_ekstractior/CMakeFiles/bond_generate_messages_py.dir/clean:
-	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior && $(CMAKE_COMMAND) -P CMakeFiles/bond_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior && $(CMAKE_COMMAND) -P CMakeFiles/bond_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : feature_ekstractior/CMakeFiles/bond_generate_messages_py.dir/clean
 
 feature_ekstractior/CMakeFiles/bond_generate_messages_py.dir/depend:
-	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ekstractior /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior/CMakeFiles/bond_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ekstractior /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior/CMakeFiles/bond_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : feature_ekstractior/CMakeFiles/bond_generate_messages_py.dir/depend
 

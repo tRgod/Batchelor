@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/feature_ekstractior.dir/src/feature_ex.cpp.o"
-  "/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/devel/lib/feature_ekstractior/feature_ekstractior.pdb"
-  "/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/devel/lib/feature_ekstractior/feature_ekstractior"
+  "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/devel/lib/feature_ekstractior/feature_ekstractior.pdb"
+  "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/devel/lib/feature_ekstractior/feature_ekstractior"
 )
 
 # Per-language clean rules from dependency scanning.

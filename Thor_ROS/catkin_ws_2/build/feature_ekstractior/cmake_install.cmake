@@ -1,8 +1,8 @@
-# Install script for directory: /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ekstractior
+# Install script for directory: /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ekstractior
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/install")
+  set(CMAKE_INSTALL_PREFIX "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior/catkin_generated/installspace/feature_ekstractior.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior/catkin_generated/installspace/feature_ekstractior.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/feature_ekstractior/cmake" TYPE FILE FILES
-    "/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior/catkin_generated/installspace/feature_ekstractiorConfig.cmake"
-    "/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior/catkin_generated/installspace/feature_ekstractiorConfig-version.cmake"
+    "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior/catkin_generated/installspace/feature_ekstractiorConfig.cmake"
+    "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ekstractior/catkin_generated/installspace/feature_ekstractiorConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/feature_ekstractior" TYPE FILE FILES "/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ekstractior/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/feature_ekstractior" TYPE FILE FILES "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ekstractior/package.xml")
 endif()
 
