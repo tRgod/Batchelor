@@ -20,32 +20,38 @@ tf::TransformListener *tf_listner;
 void cloud_cb (const sensor_msgs::PointCloudConstPtr& input)
 {
     //convert pointcloud to a pointcloud 2
-
+    pcl::PassThrough<pcl::PointXYZ> pass;
 	sensor_msgs::PointCloud inputcloud;
 	sensor_msgs::PointCloud2 outputCloud;
 	sensor_msgs::PointCloud2 msg_cloud;
 	pcl::PCLPointCloud2 pcl2 ;
-	//inputcloud=*input
+	inputcloud=*input;
 
-	tf_listner->waitForTransform("world",input->header.frame_id,input->header.stamp,ros::Duration(0.5));
+	tf_listner->waitForTransform("world","velodyneVPL",input->header.stamp,ros::Duration(0.1));
 	sensor_msgs::convertPointCloudToPointCloud2(inputcloud, outputCloud);
     std::cout<< inputcloud.header<<std::endl;
 
     //converting to at pcl::Pointcloud
 	pcl::PCLPointCloud2 pcl_pc2;
     pcl::PointCloud<pcl::PointXYZ>::Ptr temp_cloud1(new pcl::PointCloud<pcl::PointXYZ>);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr temp_cloud2(new pcl::PointCloud<pcl::PointXYZ>);
 	pcl_conversions::toPCL(outputCloud,pcl_pc2);
-	pcl_ros::transformPointCloud("/world",*input,translatedcloud,*tf_listner);
+
 
 	pcl::PointCloud<pcl::PointXYZ>::Ptr temp_cloud(new pcl::PointCloud<pcl::PointXYZ>);
 	pcl::fromPCLPointCloud2(pcl_pc2,*temp_cloud);
+   pcl_ros::transformPointCloud("/world",*temp_cloud,*temp_cloud1,*tf_listner);
     	// creating the pass throug filter
-
-	pcl::toROSMsg(*filterd_cloud,msg_cloud);
+    pass.setInputCloud(temp_cloud1);
+    pass.setFilterFieldName("y");
+    pass.setFilterLimits(-1,0.1);
+    pass.setFilterLimitsNegative(true);
+    pass.filter(*temp_cloud2);
+	pcl::toROSMsg(*temp_cloud1,msg_cloud);
 
 
 	//std::cout<<outputCloud.header<< "Heigt: "<<outputCloud.height<< "Width : "<<outputCloud.width<<std::endl; // debug information
-	pub.publish(outputCloud);
+	pub.publish(msg_cloud);
 }
 
 int main (int argc, char** argv)
@@ -58,7 +64,7 @@ int main (int argc, char** argv)
   //  sync.registerCallback(boost::bind(&callback, _1,_2));
 	ros::Subscriber sub = nh.subscribe("/velodyne",1,cloud_cb);
     tf_listner = new tf::TransformListener();
-	pub=nh.advertise<sensor_msgs::PointCloud2>("/output",1);
+	pub=nh.advertise<pcl::PCLPointCloud2>("/output",1);
 
 ros::spin();
 return 0;

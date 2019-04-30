@@ -48,12 +48,14 @@ void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
     //building a passthrough filter to remove NaNs
     pass.setInputCloud(cloud);
     pass.setFilterFieldName("z");
-    pass.setFilterLimits(0,2);
+    pass.setFilterLimits(0.01,0.2);
+    pass.setNegative(true);
     pass.filter(*cloud_filtered3);
 
     pass.setInputCloud(cloud_filtered3);
     pass.setFilterFieldName("x");
-    pass.setFilterLimits(-10,0);
+    pass.setFilterLimits(0,1.5);
+    pass.setNegative(false);
     pass.filter(*cloud_filtered);
 
 
@@ -115,7 +117,7 @@ void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
     extract.filter(*cloud_cone);
     cloud_cone->header=input->header;
 
-    pub.publish(cloud_plane);
+    pub.publish(cloud_filtered);
 
 
 }
