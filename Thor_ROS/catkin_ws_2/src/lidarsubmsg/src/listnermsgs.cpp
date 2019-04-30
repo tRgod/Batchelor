@@ -10,6 +10,7 @@
 #include <pcl/filters/passthrough.h>
 #include <pcl/conversions.h>
 #include <pcl_ros/transforms.h>
+#include <pcl_ros/filters/passthrough.h>
 #include <tf/transform_listener.h>
 #include <message_filters/subscriber.h>
 #include <message_filters/time_synchronizer.h>
@@ -20,38 +21,36 @@ tf::TransformListener *tf_listner;
 void cloud_cb (const sensor_msgs::PointCloudConstPtr& input)
 {
     //convert pointcloud to a pointcloud 2
-    pcl::PassThrough<pcl::PointXYZ> pass;
-	sensor_msgs::PointCloud inputcloud;
-	sensor_msgs::PointCloud2 outputCloud;
-	sensor_msgs::PointCloud2 msg_cloud;
-	pcl::PCLPointCloud2 pcl2 ;
-	inputcloud=*input;
+ //   pcl::PassThrough<pcl::PointXYZ> pass;
+    pcl::PassThrough<sensor_msgs::PointCloud2> pass;
+    sensor_msgs::PointCloud inputcloud;
+    sensor_msgs::PointCloud2 outputCloud;
+    sensor_msgs::PointCloud2 trans_cloud;
+    sensor_msgs::PointCloud2 msg_cloud;
+    pcl::PCLPointCloud2 pcl2 ;
+    inputcloud=*input;
 
-	tf_listner->waitForTransform("world","velodyneVPL",input->header.stamp,ros::Duration(0.1));
-	sensor_msgs::convertPointCloudToPointCloud2(inputcloud, outputCloud);
+    tf_listner->waitForTransform("world","velodyneVPL",input->header.stamp,ros::Duration(0.1));
+    sensor_msgs::convertPointCloudToPointCloud2(inputcloud, outputCloud);
     std::cout<< inputcloud.header<<std::endl;
 
-    //converting to at pcl::Pointcloud
-	pcl::PCLPointCloud2 pcl_pc2;
-    pcl::PointCloud<pcl::PointXYZ>::Ptr temp_cloud1(new pcl::PointCloud<pcl::PointXYZ>);
-    pcl::PointCloud<pcl::PointXYZ>::Ptr temp_cloud2(new pcl::PointCloud<pcl::PointXYZ>);
-	pcl_conversions::toPCL(outputCloud,pcl_pc2);
+    pcl_ros::transformPointCloud("/world",outputCloud,trans_cloud,*tf_listner);
 
+    pcl::PCLPointCloud2  temp_cloud1;
+    sensor_msgs::PointCloud2 temp_cloud2;
+    pcl_conversions::toPCL(trans_cloud,temp_cloud1);
 
-	pcl::PointCloud<pcl::PointXYZ>::Ptr temp_cloud(new pcl::PointCloud<pcl::PointXYZ>);
-	pcl::fromPCLPointCloud2(pcl_pc2,*temp_cloud);
-   pcl_ros::transformPointCloud("/world",*temp_cloud,*temp_cloud1,*tf_listner);
-    	// creating the pass throug filter
-    pass.setInputCloud(temp_cloud1);
+    // creating the pass throug filter
+    pass.setInputCloud(trans_cloud);
     pass.setFilterFieldName("y");
     pass.setFilterLimits(-1,0.1);
     pass.setFilterLimitsNegative(true);
-    pass.filter(*temp_cloud2);
-	pcl::toROSMsg(*temp_cloud1,msg_cloud);
+    pass.filter(temp_cloud2);
+    //pcl::toROSMsg(temp_cloud2,msg_cloud)
 
 
 	//std::cout<<outputCloud.header<< "Heigt: "<<outputCloud.height<< "Width : "<<outputCloud.width<<std::endl; // debug information
-	pub.publish(msg_cloud);
+	pub.publish(temp_cloud2);
 }
 
 int main (int argc, char** argv)
