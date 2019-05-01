@@ -12,7 +12,6 @@
 #include <pcl/sample_consensus/model_types.h>
 #include <pcl/sample_consensus/sac_model_cone.h>
 #include <pcl/segmentation/sac_segmentation.h>
-#include <pcl/visualization/pcl_visualizer.h>
 #include <pcl/sample_consensus/sac_model.h>
 #include <pcl/sample_consensus/sac_model_plane.h>
 #include <pcl/filters/plane_clipper3D.h>
@@ -21,7 +20,7 @@ ros::Publisher pub;
 
 void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
 {
-        pcl::PassThrough<pcl::PointXYZ> pass;
+    pcl::PassThrough<pcl::PointXYZ> pass;
     pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> ne;
     pcl::SACSegmentationFromNormals<pcl::PointXYZ,pcl::Normal> seg;
     pcl::ExtractIndices<pcl::PointXYZ> extract;
@@ -29,16 +28,18 @@ void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
     pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(new pcl::search::KdTree<pcl::PointXYZ>());
 
     //data
+
     //Creating a cloud object to hold the input cloud
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
     //filling the cloud with data
     cloud->width=input->width;
     cloud->height=input->height;
-    cloud->points=input->points;
+    cloud->points=input->points;;
     cloud->header=input->header;
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered1(new pcl::PointCloud<pcl::PointXYZ>);
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered(new pcl::PointCloud<pcl::PointXYZ>);
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered3(new pcl::PointCloud<pcl::PointXYZ>);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered4(new pcl::PointCloud<pcl::PointXYZ>);
     pcl::PointCloud<pcl::Normal>::Ptr cloud_normals (new pcl::PointCloud<pcl::Normal>);
     pcl::PointCloud<pcl::Normal>::Ptr cloud_normals2 (new pcl::PointCloud<pcl::Normal>);
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered2 (new pcl::PointCloud<pcl::PointXYZ>);
@@ -48,20 +49,26 @@ void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
     //building a passthrough filter to remove NaNs
     pass.setInputCloud(cloud);
     pass.setFilterFieldName("z");
-    pass.setFilterLimits(0.01,0.2);
-    pass.setNegative(true);
+    pass.setFilterLimits(-0.25,0.1);
+    pass.setNegative(false);
     pass.filter(*cloud_filtered3);
-
+//cloud_filtered3->header=cloud->header;
     pass.setInputCloud(cloud_filtered3);
     pass.setFilterFieldName("x");
-    pass.setFilterLimits(0,1.5);
-    pass.setNegative(false);
+    pass.setFilterLimits(-100,0.03);
+    pass.setNegative(true);
     pass.filter(*cloud_filtered);
+
+    pass.setInputCloud(cloud_filtered);
+    pass.setFilterFieldName("y");
+    pass.setFilterLimits(-3,3);
+    pass.setNegative(false);
+    pass.filter(*cloud_filtered4);
 
 
     //Estimate point normals
     ne.setSearchMethod(tree);
-    ne.setInputCloud(cloud_filtered);
+    ne.setInputCloud(cloud_filtered4);
     ne.setKSearch(50);
     ne.compute(*cloud_normals);
 
@@ -77,7 +84,7 @@ void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
     seg.segment(*inliers_plane,*coefficients_plane);
 
     //Extract the planar inliners
-    extract.setInputCloud(cloud_filtered);
+    extract.setInputCloud(cloud_filtered4);
     extract.setIndices(inliers_plane);
     extract.setNegative(false);
     //create cloud for planmodel
@@ -99,13 +106,14 @@ void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
     seg.setModelType(pcl::SACMODEL_CONE);
     seg.setMethodType(pcl::SAC_RANSAC);
     seg.setNormalDistanceWeight(0.1);
-    seg.setMaxIterations(1000);
-    seg.setDistanceThreshold(0.05);
-    seg.setRadiusLimits(0,0.5);
-    seg.setMinMaxOpeningAngle(0.4,0.75);
+    seg.setMaxIterations(150);
+    seg.setDistanceThreshold(0.009);
+    seg.setRadiusLimits(0,0.4);
+    seg.setMinMaxOpeningAngle(0.4,0.8);
     seg.setInputCloud(cloud_filtered2);
     seg.setInputNormals(cloud_normals2);
     seg.segment(*inliners_cone,*coefficients_cone);
+    std::cout<<*coefficients_cone<<std::endl;
 
 
     //ekstract the cone objects.
@@ -117,7 +125,7 @@ void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
     extract.filter(*cloud_cone);
     cloud_cone->header=input->header;
 
-    pub.publish(cloud_filtered);
+    pub.publish(cloud_cone);
 
 
 }

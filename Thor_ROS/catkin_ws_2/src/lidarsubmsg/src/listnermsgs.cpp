@@ -22,35 +22,37 @@ void cloud_cb (const sensor_msgs::PointCloudConstPtr& input)
 {
     //convert pointcloud to a pointcloud 2
  //   pcl::PassThrough<pcl::PointXYZ> pass;
-    pcl::PassThrough<sensor_msgs::PointCloud2> pass;
+  //  pcl::PassThrough<sensor_msgs::PointCloud2> pass;
     sensor_msgs::PointCloud inputcloud;
     sensor_msgs::PointCloud2 outputCloud;
     sensor_msgs::PointCloud2 trans_cloud;
     sensor_msgs::PointCloud2 msg_cloud;
     pcl::PCLPointCloud2 pcl2 ;
     inputcloud=*input;
+   // inputcloud.header.frame_id="/velodyneVPL";
 
     tf_listner->waitForTransform("world","velodyneVPL",input->header.stamp,ros::Duration(0.1));
     sensor_msgs::convertPointCloudToPointCloud2(inputcloud, outputCloud);
     std::cout<< inputcloud.header<<std::endl;
 
-    pcl_ros::transformPointCloud("/world",outputCloud,trans_cloud,*tf_listner);
+   pcl_ros::transformPointCloud("/velodyneVPL",outputCloud,trans_cloud,*tf_listner);
 
-    pcl::PCLPointCloud2  temp_cloud1;
-    sensor_msgs::PointCloud2 temp_cloud2;
-    pcl_conversions::toPCL(trans_cloud,temp_cloud1);
+  //  pcl::PCLPointCloud2  temp_cloud1;
+ //   sensor_msgs::PointCloud2 temp_cloud2;
+ //   pcl_conversions::toPCL(trans_cloud,temp_cloud1);
 
     // creating the pass throug filter
-    pass.setInputCloud(trans_cloud);
-    pass.setFilterFieldName("y");
-    pass.setFilterLimits(-1,0.1);
-    pass.setFilterLimitsNegative(true);
-    pass.filter(temp_cloud2);
-    //pcl::toROSMsg(temp_cloud2,msg_cloud)
+    //pass.setInputCloud(trans_cloud);
+    //pass.setFilterFieldName("y");
+   // pass.setFilterLimits(-1,0.1);
+    //pass.setFilterLimitsNegative(true);
+  //  pass.filter(temp_cloud2);
+//    pcl::toROSMsg(temp_cloud2,msg_cloud)
+outputCloud.header=inputcloud.header;
 
 
 	//std::cout<<outputCloud.header<< "Heigt: "<<outputCloud.height<< "Width : "<<outputCloud.width<<std::endl; // debug information
-	pub.publish(temp_cloud2);
+	pub.publish(trans_cloud);
 }
 
 int main (int argc, char** argv)
