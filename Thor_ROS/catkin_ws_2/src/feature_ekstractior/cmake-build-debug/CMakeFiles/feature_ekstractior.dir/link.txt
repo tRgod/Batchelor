@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/feature_ekstractior.dir/src/feature_ex.cpp.o  -o feature_ekstractior 

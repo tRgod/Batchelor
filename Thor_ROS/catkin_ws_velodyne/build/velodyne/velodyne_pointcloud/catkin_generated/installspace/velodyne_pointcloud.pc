@@ -1,0 +1,8 @@
+prefix=/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_velodyne/install
+
+Name: velodyne_pointcloud
+Description: Description of velodyne_pointcloud
+Version: 1.5.2
+Cflags: -I/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_velodyne/install/include
+Libs: -L/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_velodyne/install/lib -lvelodyne_rawdata
+Requires: angles nodelet pcl_ros roscpp roslib sensor_msgs tf velodyne_driver velodyne_msgs dynamic_reconfigure diagnostic_updater

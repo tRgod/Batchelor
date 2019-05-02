@@ -338,6 +338,9 @@ feature_ex_BINARY_DIR:STATIC=/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/s
 //Value Computed by CMake
 feature_ex_SOURCE_DIR:STATIC=/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex
 
+//The directory containing a CMake configuration file for ge.
+ge_DIR:PATH=ge_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/melodic/share/gencpp/cmake
 
@@ -355,6 +358,9 @@ gennodejs_DIR:PATH=/opt/ros/melodic/share/gennodejs/cmake
 
 //The directory containing a CMake configuration file for genpy.
 genpy_DIR:PATH=/opt/ros/melodic/share/genpy/cmake
+
+//The directory containing a CMake configuration file for geome.
+geome_DIR:PATH=geome_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for geometry_msgs.
 geometry_msgs_DIR:PATH=/opt/ros/melodic/share/geometry_msgs/cmake
@@ -482,6 +488,9 @@ sensor_msgs_DIR:PATH=/opt/ros/melodic/share/sensor_msgs/cmake
 
 //The directory containing a CMake configuration file for smclib.
 smclib_DIR:PATH=/opt/ros/melodic/share/smclib/cmake
+
+//The directory containing a CMake configuration file for std_msg.
+std_msg_DIR:PATH=std_msg_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/melodic/share/std_msgs/cmake

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src
+CMAKE_SOURCE_DIR = /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build
+CMAKE_BINARY_DIR = /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -93,7 +93,7 @@ test/fast: test
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"main\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -137,14 +137,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/CMakeFiles /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ex/CMakeFiles/progress.marks
-	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/CMakeFiles 0
+	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build/CMakeFiles /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ex/CMakeFiles/progress.marks
+	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/clean
+	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/preinstall
+	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/preinstall
+	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 feature_ex/CMakeFiles/feature_ex.dir/rule:
-	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/feature_ex.dir/rule
+	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/feature_ex.dir/rule
 .PHONY : feature_ex/CMakeFiles/feature_ex.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ feature_ex: feature_ex/CMakeFiles/feature_ex.dir/rule
 
 # fast build rule for target.
 feature_ex/fast:
-	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build && $(MAKE) -f feature_ex/CMakeFiles/feature_ex.dir/build.make feature_ex/CMakeFiles/feature_ex.dir/build
+	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build && $(MAKE) -f feature_ex/CMakeFiles/feature_ex.dir/build.make feature_ex/CMakeFiles/feature_ex.dir/build
 .PHONY : feature_ex/fast
 
 src/feature_ex_segmentation.o: src/feature_ex_segmentation.cpp.o
@@ -188,7 +188,7 @@ src/feature_ex_segmentation.o: src/feature_ex_segmentation.cpp.o
 
 # target to build an object file
 src/feature_ex_segmentation.cpp.o:
-	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build && $(MAKE) -f feature_ex/CMakeFiles/feature_ex.dir/build.make feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.o
+	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build && $(MAKE) -f feature_ex/CMakeFiles/feature_ex.dir/build.make feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.o
 .PHONY : src/feature_ex_segmentation.cpp.o
 
 src/feature_ex_segmentation.i: src/feature_ex_segmentation.cpp.i
@@ -197,7 +197,7 @@ src/feature_ex_segmentation.i: src/feature_ex_segmentation.cpp.i
 
 # target to preprocess a source file
 src/feature_ex_segmentation.cpp.i:
-	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build && $(MAKE) -f feature_ex/CMakeFiles/feature_ex.dir/build.make feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.i
+	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build && $(MAKE) -f feature_ex/CMakeFiles/feature_ex.dir/build.make feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.i
 .PHONY : src/feature_ex_segmentation.cpp.i
 
 src/feature_ex_segmentation.s: src/feature_ex_segmentation.cpp.s
@@ -206,7 +206,7 @@ src/feature_ex_segmentation.s: src/feature_ex_segmentation.cpp.s
 
 # target to generate assembly for a file
 src/feature_ex_segmentation.cpp.s:
-	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build && $(MAKE) -f feature_ex/CMakeFiles/feature_ex.dir/build.make feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.s
+	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build && $(MAKE) -f feature_ex/CMakeFiles/feature_ex.dir/build.make feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.s
 .PHONY : src/feature_ex_segmentation.cpp.s
 
 # Help Target
@@ -237,6 +237,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/src/feature_ex_segmentation.cpp" "/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.o"
+  "/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/src/feature_ex_segmentation.cpp" "/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build/feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -21,8 +21,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"
   "/usr/include/pcl-1.8"
-  "/usr/include/ni"
-  "/usr/include/openni2"
   "/usr/include/vtk-6.3"
   "/usr/include/freetype2"
   "/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi"
@@ -35,6 +33,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/libxml2"
   "/usr/include/jsoncpp"
   "/usr/include/tcl"
+  "/usr/include/ni"
+  "/usr/include/openni2"
   )
 
 # Targets to which this target links.

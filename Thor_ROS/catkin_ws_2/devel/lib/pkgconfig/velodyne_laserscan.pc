@@ -1,0 +1,8 @@
+prefix=/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/devel
+
+Name: velodyne_laserscan
+Description: Description of velodyne_laserscan
+Version: 1.5.2
+Cflags: -I/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/devel/include
+Libs: -L/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/devel/lib 
+Requires: sensor_msgs

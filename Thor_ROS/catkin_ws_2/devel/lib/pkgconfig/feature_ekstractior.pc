@@ -1,8 +1,8 @@
-prefix=/home/thor/Batchelor/Thor_ROS/catkin_ws_2/devel
+prefix=/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/devel
 
 Name: feature_ekstractior
 Description: Description of feature_ekstractior
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/thor/Batchelor/Thor_ROS/catkin_ws_2/devel/lib 
+Libs: -L/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/devel/lib 
 Requires: 

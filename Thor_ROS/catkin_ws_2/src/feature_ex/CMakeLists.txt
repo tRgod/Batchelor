@@ -4,11 +4,11 @@ project(feature_ex)
 
 #find_package( PCL 1.9.1 REQUIRED )
 find_package( catkin REQUIRED COMPONENTS
-  pcl_conversions
   pcl_msgs
   pcl_ros
   roscpp
   std_msgs
+  geometry_msgs
 )
 
 #add_definitions(${PCL_DEFINITIONS})

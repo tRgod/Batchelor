@@ -16,10 +16,13 @@
 #include <pcl/sample_consensus/sac_model_plane.h>
 #include <pcl/filters/plane_clipper3D.h>
 #include <tf/transform_listener.h>
-ros::Publisher pub;
+#include <geometry_msgs/Pose2D.h>
+ros::Publisher pub_pointcloud;
+ros::Publisher pub_posemsgs;
 
 void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
 {
+    geometry_msgs::Pose2D madausneedthis;
     pcl::PassThrough<pcl::PointXYZ> pass;
     pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> ne;
     pcl::SACSegmentationFromNormals<pcl::PointXYZ,pcl::Normal> seg;
@@ -114,8 +117,9 @@ void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
     seg.setInputNormals(cloud_normals2);
     seg.segment(*inliners_cone,*coefficients_cone);
     std::cout<<*coefficients_cone<<std::endl;
-
-
+    madausneedthis.x=coefficients_cone->values[0];
+    madausneedthis.y=coefficients_cone->values[1];
+    madausneedthis.theta=atan2(coefficients_cone->values[0],coefficients_cone->values[1]);
     //ekstract the cone objects.
     extract.setInputCloud(cloud_filtered2);
     extract.setIndices(inliners_cone);
@@ -125,7 +129,8 @@ void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
     extract.filter(*cloud_cone);
     cloud_cone->header=input->header;
 
-    pub.publish(cloud_cone);
+    pub_pointcloud.publish(cloud_cone);
+    pub_posemsgs.publish(madausneedthis);
 
 
 }
@@ -137,7 +142,8 @@ int main (int argc, char** argv)
     tf::TransformListener listener;
     ros::Subscriber sub1 =nh1.subscribe("/output",1, cloud_cb);
 
-    pub=nh1.advertise<sensor_msgs::PointCloud2>("/features",1);
+    pub_pointcloud=nh1.advertise<sensor_msgs::PointCloud2>("/features",1);
+    pub_posemsgs=nh1.advertise<geometry_msgs::Pose2D>("/pose",1);
     ros::spin();
 
 }

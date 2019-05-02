@@ -1,0 +1,8 @@
+prefix=/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/install
+
+Name: velodyne_driver
+Description: Description of velodyne_driver
+Version: 1.5.2
+Cflags: -I/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/install/include
+Libs: -L/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/install/lib -lvelodyne_input
+Requires: diagnostic_updater dynamic_reconfigure nodelet roscpp tf velodyne_msgs

@@ -1,3 +1,0 @@
-/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ekstractior/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ekstractior/cmake-build-debug/CMakeFiles/feature_ekstractior.dir
-/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ekstractior/cmake-build-debug/CMakeFiles/edit_cache.dir

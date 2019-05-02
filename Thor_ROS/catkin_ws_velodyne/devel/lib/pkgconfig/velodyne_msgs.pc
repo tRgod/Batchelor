@@ -1,0 +1,8 @@
+prefix=/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_velodyne/devel
+
+Name: velodyne_msgs
+Description: Description of velodyne_msgs
+Version: 1.5.2
+Cflags: -I/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_velodyne/devel/include
+Libs: -L/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_velodyne/devel/lib 
+Requires: message_runtime std_msgs

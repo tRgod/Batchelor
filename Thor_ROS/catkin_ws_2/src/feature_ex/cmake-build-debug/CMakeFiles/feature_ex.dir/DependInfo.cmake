@@ -21,8 +21,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"
   "/usr/include/pcl-1.8"
-  "/usr/include/ni"
-  "/usr/include/openni2"
   "/usr/include/vtk-6.3"
   "/usr/include/freetype2"
   "/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi"
@@ -35,6 +33,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/libxml2"
   "/usr/include/jsoncpp"
   "/usr/include/tcl"
+  "/usr/include/ni"
+  "/usr/include/openni2"
   )
 
 # Targets to which this target links.
