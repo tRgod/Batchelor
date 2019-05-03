@@ -1,0 +1,2 @@
+slam_backend
+-DCATKIN_DEVEL_PREFIX=/home/gilberg96/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/gilberg96/catkin_ws/install -G Unix Makefiles
