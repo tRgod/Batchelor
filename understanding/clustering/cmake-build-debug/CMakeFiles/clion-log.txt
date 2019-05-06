@@ -1,0 +1,13 @@
+/home/thor/CLion-2019.1/clion-2019.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/thor/Desktop/Batchelor/understanding/clustering
+CMake Error at CMakeLists.txt:3 (find_package):
+  Could not find a configuration file for package "PCL" that is compatible
+  with requested version "1.9".
+
+  The following configuration files were considered but not accepted:
+
+    /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake, version: 1.8.1
+
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/thor/Desktop/Batchelor/understanding/clustering/cmake-build-debug/CMakeFiles/CMakeOutput.log".
