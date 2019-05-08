@@ -6,13 +6,13 @@
 
 #include <ros/ros.h>
 #include <tf/transform_listener.h>
-#include <geometry_msgs/Pose.h>
+#include <geometry_msgs/PoseStamped.h>
 
 int main(int argc,char** argv)
 {
     ros::init(argc,argv,"Transform_listner");
     ros::NodeHandle node;
-    ros::Publisher transform_pub=node.advertise<geometry_msgs::Pose>("transform_pose",10);
+    ros::Publisher transform_pub=node.advertise<geometry_msgs::PoseStamped>("transform_pose",10);
     tf::TransformListener listner;
     ros:: Rate rate(5.0);
     while(node.ok())
@@ -27,7 +27,9 @@ int main(int argc,char** argv)
             ROS_ERROR("%s",ex.what());
 
         }
-        geometry_msgs::Pose trans_pose;
+        geometry_msgs::PoseStamped trans_pose;
+        trans_pose.header.frame_id = "/Velodyne";
+        trans_pose.header.stamp = ros::Time::now();
         trans_pose.position.x=transform.getOrigin().x();
         trans_pose.position.y=transform.getOrigin().y();
         trans_pose.position.z=transform.getOrigin().z();

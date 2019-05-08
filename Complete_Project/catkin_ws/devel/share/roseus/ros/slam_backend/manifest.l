@@ -1,0 +1,1 @@
+/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/share/roseus/ros/slam_backend/manifest.l

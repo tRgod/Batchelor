@@ -1,0 +1,8 @@
+prefix=/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/devel
+
+Name: lidarsubmsg
+Description: Description of lidarsubmsg
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/lidarsubmsg/cmake-build-debug/devel/lib 
+Requires: 
