@@ -1,0 +1,13 @@
+[35m[1mScanning dependencies of target feature_ex[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.o[0m
+In file included from [01m[K/usr/include/pcl-1.8/pcl/sample_consensus/sac_model.h:52:0[m[K,
+                 from [01m[K/usr/include/pcl-1.8/pcl/sample_consensus/sac.h:45[m[K,
+                 from [01m[K/usr/include/pcl-1.8/pcl/sample_consensus/ransac.h:44[m[K,
+                 from [01m[K/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/feature_ex/src/feature_ex_segmentation.cpp:6[m[K:
+[01m[K/usr/include/pcl-1.8/pcl/sample_consensus/model_types.h:[m[K In function ‘[01m[Kvoid __static_initialization_and_destruction_0(int, int)[m[K’:
+[01m[K/usr/include/pcl-1.8/pcl/sample_consensus/model_types.h:99:3:[m[K [01;35m[Kwarning: [m[K‘[01m[Kpcl::SAC_SAMPLE_SIZE[m[K’ is deprecated: This map is deprecated and is kept only to prevent breaking existing user code. Starting from PCL 1.8.0 model sample size is a protected member of the SampleConsensusModel class [[01;35m[K-Wdeprecated-declarations[m[K]
+   [01;35m[KSAC_SAMPLE_SIZE[m[K (sample_size_pairs, sample_size_pairs + sizeof (sample_size_pairs) / sizeof (SampleSizeModel));
+   [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.8/pcl/sample_consensus/model_types.h:99:3:[m[K [01;36m[Knote: [m[Kdeclared here
+[100%] [32m[1mLinking CXX executable feature_ex[0m
+[100%] Built target feature_ex
