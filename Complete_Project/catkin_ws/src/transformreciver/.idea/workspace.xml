@@ -67,6 +67,45 @@
   <component name="ChangeListManager">
     <list default="true" id="132d0da3-cf65-4f2f-b5a9-971a8e701361" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../../../../Mathias_ROS/catkin_ws/src/slam_backend/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/.idea/clustering.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/3.13.4/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/3.13.4/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/3.13.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/3.13.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/3.13.4/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdC/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdCXX/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/clustering.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/clustering.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/clustering.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/clustering.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/clustering.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/clustering.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/clustering.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/feature_tests.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/clustering.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../understanding/clustering/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../Mathias_ROS/catkin_ws/src/slam_backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Mathias_ROS/catkin_ws/src/slam_backend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../Mathias_ROS/catkin_ws/src/slam_backend/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Mathias_ROS/catkin_ws/src/slam_backend/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt" afterDir="false" />
@@ -216,17 +255,10 @@
       <change beforePath="$PROJECT_DIR$/../../../../Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googletest-distribution.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googletest-distribution.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/slam_backend.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/slam_backend.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../Mathias_ROS/catkin_ws/src/slam_backend/src/slam_backend_node.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Mathias_ROS/catkin_ws/src/slam_backend/src/slam_backend_node.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../ROS/catkin_ws/.catkin_tools/CATKIN_IGNORE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../ROS/catkin_ws/.catkin_tools/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../ROS/catkin_ws/.catkin_tools/VERSION" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../ROS/catkin_ws/.catkin_tools/profiles/default/devel_collisions.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../ROS/catkin_ws/.catkin_workspace" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../ROS/catkin_ws/src/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../ROS/catkin_ws/src/ros_bubble_rob2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../ROS/catkin_ws/src/vrep_plugin_skeleton" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../ROS/catkin_ws/src/vrep_ros_interface" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../ROS/catkin_ws/src/vrep_skeleton_msg_and_srv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../ROS/ros.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../ROS/catkin_ws/.catkin_tools/CATKIN_IGNORE" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../ROS/catkin_ws/.catkin_tools/CATKIN_IGNORE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../ROS/catkin_ws/.catkin_tools/VERSION" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../ROS/catkin_ws/.catkin_tools/VERSION" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../ROS/catkin_ws/.catkin_tools/profiles/default/devel_collisions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../ROS/catkin_ws/.catkin_tools/profiles/default/devel_collisions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../ROS/ros.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../ROS/ros.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../Thor_ROS/catkin_ws_2/src/transformreciver/src/transformreciver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Thor_ROS/catkin_ws_2/src/transformreciver/src/transformreciver.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -672,12 +704,12 @@
       <workItem from="1556619224389" duration="17000" />
       <workItem from="1557142178459" duration="2233000" />
       <workItem from="1557220536819" duration="10509000" />
-      <workItem from="1557298757594" duration="2767000" />
+      <workItem from="1557298757594" duration="3053000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22130000" />
+    <option name="totallyTimeSpent" value="22416000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="25" width="1865" height="1055" extended-state="6" />

@@ -7,8 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/devel:$CMAKE_PREFIX_PATH"
-export PWD="/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build"
-export PYTHONPATH="/opt/ros/melodic/lib/python2.7/dist-packages"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/thor/Batchelor/Thor_ROS/catkin_ws_2/devel:$CMAKE_PREFIX_PATH"
+export PWD="/home/thor/Batchelor/Thor_ROS/catkin_ws_2/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/thor/Batchelor/Thor_ROS/catkin_ws_2/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src:$ROS_PACKAGE_PATH"

@@ -17,6 +17,8 @@
 #include <pcl/filters/plane_clipper3D.h>
 #include <tf/transform_listener.h>
 #include <geometry_msgs/Pose2D.h>
+#include <pcl/segmentation/extract_clusters.h>
+
 ros::Publisher pub_pointcloud;
 ros::Publisher pub_posemsgs;
 
@@ -25,6 +27,7 @@ void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
     geometry_msgs::Pose2D madausneedthis;
     pcl::PassThrough<pcl::PointXYZ> pass;
     pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> ne;
+
     pcl::SACSegmentationFromNormals<pcl::PointXYZ,pcl::Normal> seg;
     pcl::ExtractIndices<pcl::PointXYZ> extract;
     pcl::ExtractIndices<pcl::Normal> extract_normals;
@@ -55,13 +58,13 @@ void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
     pass.setFilterLimits(-0.25,0.1);
     pass.setNegative(false);
     pass.filter(*cloud_filtered3);
-//cloud_filtered3->header=cloud->header;
+    //build a pass through filter to remove points behind the velodyne sensor
     pass.setInputCloud(cloud_filtered3);
     pass.setFilterFieldName("x");
     pass.setFilterLimits(-100,0.03);
     pass.setNegative(true);
     pass.filter(*cloud_filtered);
-
+    //build a pass throu filter til limit the points fromt he side.
     pass.setInputCloud(cloud_filtered);
     pass.setFilterFieldName("y");
     pass.setFilterLimits(-3,3);
@@ -82,7 +85,7 @@ void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
     seg.setMethodType(pcl::SAC_RANSAC);
     seg.setMaxIterations(100);
     seg.setDistanceThreshold(0.15 );
-    seg.setInputCloud(cloud_filtered);
+    seg.setInputCloud(cloud_filtered4);
     seg.setInputNormals(cloud_normals);
     seg.segment(*inliers_plane,*coefficients_plane);
 
@@ -97,43 +100,70 @@ void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
 
     //Removing plannar inliers from the cloud
     extract.setNegative(true);
-    extract.filter(*cloud_filtered2);
+    extract.filter(*cloud_filtered4);
     extract_normals.setNegative(true);
     extract_normals.setInputCloud(cloud_normals);
     extract_normals.setIndices(inliers_plane);
     extract_normals.filter(*cloud_normals2);
 
-    //create segmentation object for cone segmentation and etting parameters.
+    //create kdtree object for the search method of extraction
 
-    seg.setOptimizeCoefficients(true);
-    seg.setModelType(pcl::SACMODEL_CONE);
-    seg.setMethodType(pcl::SAC_RANSAC);
-    seg.setNormalDistanceWeight(0.1);
-    seg.setMaxIterations(150);
-    seg.setDistanceThreshold(0.009);
-    seg.setRadiusLimits(0,0.4);
-    seg.setMinMaxOpeningAngle(0.4,0.8);
-    seg.setInputCloud(cloud_filtered2);
-    seg.setInputNormals(cloud_normals2);
-    seg.segment(*inliners_cone,*coefficients_cone);
-    std::cout<<*coefficients_cone<<std::endl;
-    madausneedthis.x=coefficients_cone->values[0];
-    madausneedthis.y=coefficients_cone->values[1];
-    madausneedthis.theta=atan2(coefficients_cone->values[0],coefficients_cone->values[1]);
-    //ekstract the cone objects.
-    extract.setInputCloud(cloud_filtered2);
-    extract.setIndices(inliners_cone);
-    extract.setNegative(false);
-    //create cone cloud
-    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_cone (new pcl::PointCloud<pcl::PointXYZ>());
-    extract.filter(*cloud_cone);
-    cloud_cone->header=input->header;
+    //create segmentation object for cone segmentation and setting parameters.
+    int nr_points = (int) cloud_filtered4->points.size();
+    pcl::PointCloud<pcl::PointXYZ>::Ptr  cloud_f (new pcl::PointCloud<pcl::PointXYZ>);
 
-    pub_pointcloud.publish(cloud_cone);
-    pub_posemsgs.publish(madausneedthis);
+        if (cloud_filtered4->points.size() != 0) {
+            seg.setOptimizeCoefficients(true);
+            seg.setModelType(pcl::SACMODEL_CONE);
+            seg.setMethodType(pcl::SAC_RANSAC);
+            seg.setNormalDistanceWeight(0.1);
+            seg.setMaxIterations(150);
+            seg.setDistanceThreshold(0.005);
+            seg.setRadiusLimits(0, 0.4);
+            seg.setMinMaxOpeningAngle(0.4, 0.8);
+
+            while (cloud_filtered4->points.size() >0.6*nr_points) {
+                seg.setInputCloud(cloud_filtered4);
+                seg.setInputNormals(cloud_normals2);
+                seg.segment(*inliners_cone, *coefficients_cone);
+                if(inliners_cone->indices.size() ==0)
+                {
+                    break;
+                }
+                std::cout << *coefficients_cone << std::endl;
+                if (coefficients_cone->values[0] < 100 && coefficients_cone->values[0] > 0) {
+                    madausneedthis.x = coefficients_cone->values[0];
+                    madausneedthis.y = coefficients_cone->values[1];
+                    madausneedthis.theta = atan2(coefficients_cone->values[0], coefficients_cone->values[1]);
+                }
+                //ekstract the cone objects.
+                extract.setInputCloud(cloud_filtered4);
+                extract.setIndices(inliners_cone);
+                extract.setNegative(false);
+                //create cone cloud
+                pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_cone(new pcl::PointCloud<pcl::PointXYZ>());
+                extract.filter(*cloud_cone);
+                extract.setNegative(true);
+                extract.filter(*cloud_f);
+                *cloud_filtered4=*cloud_f;
+                ne.setSearchMethod(tree);
+                ne.setInputCloud(cloud_filtered4);
+                ne.setKSearch(50);
+                ne.compute(*cloud_normals);
+                cloud_normals2=cloud_normals;
 
 
-}
+                cloud_cone->header = input->header;
+
+                pub_pointcloud.publish(cloud_cone);
+                pub_posemsgs.publish(madausneedthis);
+            }
+        }
+
+    }
+
+
+
 int main (int argc, char** argv)
 {
 
