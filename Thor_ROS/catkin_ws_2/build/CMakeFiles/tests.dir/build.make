@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src
+CMAKE_SOURCE_DIR = /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build
+CMAKE_BINARY_DIR = /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build
 
 # Utility rule file for tests.
 
@@ -67,6 +67,6 @@ CMakeFiles/tests.dir/clean:
 .PHONY : CMakeFiles/tests.dir/clean
 
 CMakeFiles/tests.dir/depend:
-	cd /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build /home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src /home/thor/Batchelor/Thor_ROS/catkin_ws_2/src /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build /home/thor/Batchelor/Thor_ROS/catkin_ws_2/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tests.dir/depend
 
