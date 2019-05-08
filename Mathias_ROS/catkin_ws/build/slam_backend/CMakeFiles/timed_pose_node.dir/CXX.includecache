@@ -6,29 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/gilberg96/catkin_ws/devel/include/slam_backend/TimedPose.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-
-/home/gilberg96/catkin_ws/src/slam_backend/src/timed_pose_node.cpp
+/home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/src/timed_pose_node.cpp
 ros/ros.h
-/home/gilberg96/catkin_ws/src/slam_backend/src/ros/ros.h
+/home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/src/ros/ros.h
 std_msgs/Float32.h
-/home/gilberg96/catkin_ws/src/slam_backend/src/std_msgs/Float32.h
+/home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/src/std_msgs/Float32.h
 std_msgs/UInt16.h
-/home/gilberg96/catkin_ws/src/slam_backend/src/std_msgs/UInt16.h
+/home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/src/std_msgs/UInt16.h
 slam_backend/TimedPose.h
 -
 
