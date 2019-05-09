@@ -1,2 +1,0 @@
-feature_ex
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/feature_ex/cmake.lock /home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/./cmake.lock

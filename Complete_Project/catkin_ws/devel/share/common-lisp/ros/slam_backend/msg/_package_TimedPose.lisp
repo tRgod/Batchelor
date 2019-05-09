@@ -1,1 +1,8 @@
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/share/common-lisp/ros/slam_backend/msg/_package_TimedPose.lisp
+(cl:in-package slam_backend-msg)
+(cl:export '(TIME-VAL
+          TIME
+          DIST-VAL
+          DIST
+          STEER-VAL
+          STEER
+))

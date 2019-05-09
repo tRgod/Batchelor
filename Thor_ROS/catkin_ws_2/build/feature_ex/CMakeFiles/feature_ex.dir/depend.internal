@@ -490,6 +490,8 @@ feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.o
  /usr/include/pcl-1.8/pcl/search/organized.h
  /usr/include/pcl-1.8/pcl/search/pcl_search.h
  /usr/include/pcl-1.8/pcl/search/search.h
+ /usr/include/pcl-1.8/pcl/segmentation/extract_clusters.h
+ /usr/include/pcl-1.8/pcl/segmentation/impl/extract_clusters.hpp
  /usr/include/pcl-1.8/pcl/segmentation/impl/sac_segmentation.hpp
  /usr/include/pcl-1.8/pcl/segmentation/sac_segmentation.h
  /usr/include/x86_64-linux-gnu/bits/mman-linux.h

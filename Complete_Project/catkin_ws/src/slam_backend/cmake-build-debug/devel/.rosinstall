@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/gilberg96/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/devel/setup.sh
+    local-name: /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel/setup.sh

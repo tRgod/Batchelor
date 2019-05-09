@@ -1,1 +1,8 @@
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/share/gennodejs/ros/slam_backend/msg/_index.js
+
+"use strict";
+
+let TimedPose = require('./TimedPose.js');
+
+module.exports = {
+  TimedPose: TimedPose,
+};

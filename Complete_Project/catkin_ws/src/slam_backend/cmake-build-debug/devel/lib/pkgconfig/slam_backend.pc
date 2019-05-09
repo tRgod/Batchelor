@@ -1,8 +1,8 @@
-prefix=/home/gilberg96/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/devel
+prefix=/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel
 
 Name: slam_backend
 Description: Description of slam_backend
 Version: 0.0.0
-Cflags: -I/home/gilberg96/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/devel/include
-Libs: -L/home/gilberg96/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/devel/lib 
+Cflags: -I/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel/include
+Libs: -L/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel/lib 
 Requires: roscpp std_msgs message_runtime

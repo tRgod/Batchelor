@@ -1,0 +1,4 @@
+<launch>
+	<node name="timed_pose_node" pkg="slam_backend" type="timed_pose_node"/>
+	<node name="slam_backend_node" pkg="slam_backend" type="slam_backend_node"/>
+</launch>

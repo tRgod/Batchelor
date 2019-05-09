@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.o"
+  "CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o"
   "feature_ex.pdb"
   "feature_ex"
 )

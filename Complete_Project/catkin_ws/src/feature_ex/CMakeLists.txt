@@ -19,5 +19,5 @@ include_directories(
 )
 #LINK_DIRECTORIES(${PCL_LIBRARY_DIRS})
 #src/feature_ex.cpp
-add_executable(feature_ex  src/feature_ex_segmentation.cpp)
+add_executable(feature_ex  src/feature_ex.cpp)
 target_link_libraries(feature_ex ${catkin_LIBRARIES})

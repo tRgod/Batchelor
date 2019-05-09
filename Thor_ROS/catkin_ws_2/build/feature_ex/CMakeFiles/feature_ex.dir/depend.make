@@ -489,6 +489,8 @@ feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.o: /usr/inc
 feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.o: /usr/include/pcl-1.8/pcl/search/organized.h
 feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.o: /usr/include/pcl-1.8/pcl/search/pcl_search.h
 feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.o: /usr/include/pcl-1.8/pcl/search/search.h
+feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.o: /usr/include/pcl-1.8/pcl/segmentation/extract_clusters.h
+feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.o: /usr/include/pcl-1.8/pcl/segmentation/impl/extract_clusters.hpp
 feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.o: /usr/include/pcl-1.8/pcl/segmentation/impl/sac_segmentation.hpp
 feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.o: /usr/include/pcl-1.8/pcl/segmentation/sac_segmentation.h
 feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex_segmentation.cpp.o: /usr/include/x86_64-linux-gnu/bits/mman-linux.h

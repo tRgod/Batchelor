@@ -1,1 +1,9 @@
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/share/common-lisp/ros/slam_backend/msg/slam_backend-msg.asd
+
+(cl:in-package :asdf)
+
+(defsystem "slam_backend-msg"
+  :depends-on (:roslisp-msg-protocol :roslisp-utils )
+  :components ((:file "_package")
+    (:file "TimedPose" :depends-on ("_package_TimedPose"))
+    (:file "_package_TimedPose" :depends-on ("_package"))
+  ))

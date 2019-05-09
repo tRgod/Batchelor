@@ -1,1 +1,7 @@
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/share/common-lisp/ros/slam_backend/msg/_package.lisp
+(cl:defpackage slam_backend-msg
+  (:use )
+  (:export
+   "<TIMEDPOSE>"
+   "TIMEDPOSE"
+  ))
+
