@@ -19,6 +19,7 @@
 #include <geometry_msgs/Pose2D.h>
 #include <pcl/segmentation/extract_clusters.h>
 
+
 ros::Publisher pub_pointcloud;
 ros::Publisher pub_posemsgs;
 

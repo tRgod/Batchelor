@@ -1,0 +1,8 @@
+prefix=/home/thor/Batchelor/Complete_Project/catkin_ws/devel
+
+Name: odo_sim
+Description: Description of odo_sim
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib 
+Requires: 

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/slam_backend_generate_messages_eus"
-  "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/share/roseus/ros/slam_backend/msg/TimedPose.l"
-  "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/share/roseus/ros/slam_backend/manifest.l"
+  "/home/thor/Batchelor/Complete_Project/catkin_ws/devel/share/roseus/ros/slam_backend/msg/TimedPose.l"
+  "/home/thor/Batchelor/Complete_Project/catkin_ws/devel/share/roseus/ros/slam_backend/manifest.l"
 )
 
 # Per-language clean rules from dependency scanning.

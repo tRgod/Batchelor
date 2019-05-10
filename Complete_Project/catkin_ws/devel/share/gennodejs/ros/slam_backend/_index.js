@@ -1,1 +1,6 @@
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/share/gennodejs/ros/slam_backend/_index.js
+
+"use strict";
+
+module.exports = {
+  msg: require('./msg/_index.js'),
+};

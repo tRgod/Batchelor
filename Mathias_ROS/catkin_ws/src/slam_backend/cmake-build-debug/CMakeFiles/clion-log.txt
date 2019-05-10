@@ -1,25 +1,19 @@
-/home/gilberg96/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/gilberg96/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend
--- Using CATKIN_DEVEL_PREFIX: /home/gilberg96/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/devel
--- Using CMAKE_PREFIX_PATH: /home/gilberg96/Batchelor/Mathias_ROS/catkin_ws/devel;/home/gilberg96/catkin_ws/devel;/opt/ros/melodic
--- This workspace overlays: /home/gilberg96/Batchelor/Mathias_ROS/catkin_ws/devel;/home/gilberg96/catkin_ws/devel;/opt/ros/melodic
--- Found PythonInterp: /usr/bin/python2 (found suitable version "2.7.15", minimum required is "2") 
--- Using PYTHON_EXECUTABLE: /usr/bin/python2
--- Using Debian Python package layout
--- Using empy: /usr/bin/empy
--- Using CATKIN_ENABLE_TESTING: ON
--- Call enable_testing()
--- Using CATKIN_TEST_RESULTS_DIR: /home/gilberg96/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/test_results
--- Found gmock sources under '/usr/src/googletest': gmock will be built
--- Found PythonInterp: /usr/bin/python2 (found version "2.7.15") 
--- Found gtest sources under '/usr/src/googletest': gtests will be built
--- Using Python nosetests: /usr/bin/nosetests-2.7
--- catkin 0.7.17
--- BUILD_SHARED_LIBS is on
--- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- Boost version: 1.67.0
--- Found the following Boost libraries:
---   system
--- slam_backend: 1 messages, 0 services
--- Configuring done
--- Generating done
--- Build files have been written to: /home/gilberg96/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug
+/home/thor/clion-2019.1.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend
+CMake Error: Parse error in cache file /home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 2. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 8. Offending entry: >>>>>>> b9c8e42e217567136df0a526ac4379c43a2e1133
+CMake Error: Parse error in cache file /home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 22. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 64. Offending entry: >>>>>>> b9c8e42e217567136df0a526ac4379c43a2e1133
+CMake Error: Parse error in cache file /home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 263. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 310. Offending entry: >>>>>>> b9c8e42e217567136df0a526ac4379c43a2e1133
+CMake Error: Parse error in cache file /home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 317. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 439. Offending entry: >>>>>>> b9c8e42e217567136df0a526ac4379c43a2e1133
+CMake Error: Parse error in cache file /home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 446. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 471. Offending entry: >>>>>>> b9c8e42e217567136df0a526ac4379c43a2e1133
+CMake Error: Parse error in cache file /home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 552. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 556. Offending entry: >>>>>>> b9c8e42e217567136df0a526ac4379c43a2e1133
+CMake Error: Parse error in cache file /home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 617. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 649. Offending entry: >>>>>>> b9c8e42e217567136df0a526ac4379c43a2e1133
+CMake Error: Parse error in cache file /home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 654. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file /home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 668. Offending entry: >>>>>>> b9c8e42e217567136df0a526ac4379c43a2e1133
+CMake Error: The current CMakeCache.txt directory /home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt is different than the directory /home/gilberg96/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/cmake-build-debug where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+CMake Error: The source "/home/thor/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/CMakeLists.txt" does not match the source "/home/gilberg96/Batchelor/Mathias_ROS/catkin_ws/src/slam_backend/CMakeLists.txt" used to generate cache.  Re-run cmake with a different source directory.

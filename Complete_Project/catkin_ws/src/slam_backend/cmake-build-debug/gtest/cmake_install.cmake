@@ -39,7 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+<<<<<<< HEAD
   include("/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googlemock/cmake_install.cmake")
+=======
+  include("/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googlemock/cmake_install.cmake")
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 
 endif()
 

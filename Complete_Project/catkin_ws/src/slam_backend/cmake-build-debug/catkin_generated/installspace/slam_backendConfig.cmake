@@ -67,8 +67,13 @@ set(slam_backend_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
+<<<<<<< HEAD
   set(slam_backend_SOURCE_PREFIX /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend)
   set(slam_backend_DEVEL_PREFIX /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel)
+=======
+  set(slam_backend_SOURCE_PREFIX /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend)
+  set(slam_backend_DEVEL_PREFIX /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel)
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
   set(slam_backend_INSTALL_PREFIX "")
   set(slam_backend_PREFIX ${slam_backend_DEVEL_PREFIX})
 else()
@@ -131,7 +136,11 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
+<<<<<<< HEAD
     foreach(path /usr/local/lib;/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/lib;/home/gilberg96/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+=======
+    foreach(path /usr/local/lib;/home/thor/Batchelor/Mathias_ROS/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

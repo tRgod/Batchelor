@@ -11,7 +11,7 @@ ros/ros.h
 -
 tf/transform_listener.h
 -
-geometry_msgs/Pose.h
+geometry_msgs/PoseStamped.h
 -
 
 /opt/ros/melodic/include/boost_161_condition_variable.h

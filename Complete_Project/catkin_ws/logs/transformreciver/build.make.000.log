@@ -1,4 +1,0 @@
-[35m[1mScanning dependencies of target transformreciver[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/transformreciver.dir/src/transformreciver.cpp.o[0m
-[100%] [32m[1mLinking CXX executable transformreciver[0m
-[100%] Built target transformreciver

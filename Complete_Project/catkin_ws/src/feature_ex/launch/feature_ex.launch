@@ -1,0 +1,3 @@
+<launch>
+	<node name="feature_ex" pkg="feature_ex" type="feature_ex"/>
+</launch>
