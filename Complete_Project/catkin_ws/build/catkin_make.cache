@@ -1,2 +1,2 @@
 feature_ex:lidarsubmsg:odo_sim:slam_backend:transformreciver
--DCATKIN_DEVEL_PREFIX=/home/thor/Batchelor/Complete_Project/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/thor/Batchelor/Complete_Project/catkin_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/gilberg96/Batchelor/Complete_Project/catkin_ws/install -G Unix Makefiles
