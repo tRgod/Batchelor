@@ -48,10 +48,17 @@ RM = /home/thor/clion-2019.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
+CMAKE_SOURCE_DIR = /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug
+=======
 CMAKE_SOURCE_DIR = /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +144,24 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
+	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/CMakeFiles/progress.marks
+	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 gtest/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles 0
+=======
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/CMakeFiles/progress.marks
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 gtest/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles 0
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 .PHONY : all
 
 # The main clean target
 clean:
+<<<<<<< HEAD
+	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 gtest/clean
+=======
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 gtest/clean
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 .PHONY : clean
 
 # The main clean target
@@ -154,17 +171,29 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
+<<<<<<< HEAD
+	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 gtest/preinstall
+=======
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 gtest/preinstall
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
+<<<<<<< HEAD
+	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 gtest/preinstall
+=======
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 gtest/preinstall
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
+<<<<<<< HEAD
+	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+=======
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 .PHONY : depend
 
 # Help Target
@@ -191,6 +220,10 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+<<<<<<< HEAD
+	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+=======
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 .PHONY : cmake_check_build_system
 

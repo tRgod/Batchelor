@@ -4,7 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+<<<<<<< HEAD
+  "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/src/timed_pose_node.cpp" "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/timed_pose_node.dir/src/timed_pose_node.cpp.o"
+=======
   "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/src/timed_pose_node.cpp" "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/timed_pose_node.dir/src/timed_pose_node.cpp.o"
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

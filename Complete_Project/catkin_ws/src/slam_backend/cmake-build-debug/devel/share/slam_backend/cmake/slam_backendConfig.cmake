@@ -67,8 +67,13 @@ set(slam_backend_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
+<<<<<<< HEAD
+  set(slam_backend_SOURCE_PREFIX /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend)
+  set(slam_backend_DEVEL_PREFIX /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel)
+=======
   set(slam_backend_SOURCE_PREFIX /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend)
   set(slam_backend_DEVEL_PREFIX /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel)
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
   set(slam_backend_INSTALL_PREFIX "")
   set(slam_backend_PREFIX ${slam_backend_DEVEL_PREFIX})
 else()
@@ -91,9 +96,15 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(slam_backend_FOUND_CATKIN_PROJECT TRUE)
 
+<<<<<<< HEAD
+if(NOT "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel/include " STREQUAL " ")
+  set(slam_backend_INCLUDE_DIRS "")
+  set(_include_dirs "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel/include")
+=======
 if(NOT "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel/include " STREQUAL " ")
   set(slam_backend_INCLUDE_DIRS "")
   set(_include_dirs "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel/include")
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +121,11 @@ if(NOT "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-b
         message(FATAL_ERROR "Project 'slam_backend' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
+<<<<<<< HEAD
+      message(FATAL_ERROR "Project 'slam_backend' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/${idir}'.  ${_report}")
+=======
       message(FATAL_ERROR "Project 'slam_backend' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/${idir}'.  ${_report}")
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
     endif()
     _list_append_unique(slam_backend_INCLUDE_DIRS ${include})
   endforeach()
@@ -131,7 +146,11 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
+<<<<<<< HEAD
+    foreach(path /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel/lib;/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/lib;/home/gilberg96/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+=======
     foreach(path /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel/lib;/home/thor/Batchelor/Mathias_ROS/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

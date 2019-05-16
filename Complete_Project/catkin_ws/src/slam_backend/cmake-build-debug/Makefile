@@ -48,10 +48,17 @@ RM = /home/thor/clion-2019.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
+CMAKE_SOURCE_DIR = /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug
+=======
 CMAKE_SOURCE_DIR = /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +144,15 @@ install/local/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles 0
+=======
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles 0
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 .PHONY : all
 
 # The main clean target

@@ -43,10 +43,17 @@ RM = /home/thor/clion-2019.1.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
+CMAKE_SOURCE_DIR = /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug
+=======
 CMAKE_SOURCE_DIR = /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 
 # Include any dependencies generated for this target.
 include gtest/googlemock/CMakeFiles/gmock.dir/depend.make
@@ -59,6 +66,31 @@ include gtest/googlemock/CMakeFiles/gmock.dir/flags.make
 
 gtest/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o: gtest/googlemock/CMakeFiles/gmock.dir/flags.make
 gtest/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o: /usr/src/googletest/googletest/src/gtest-all.cc
+<<<<<<< HEAD
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object gtest/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o"
+	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googlemock && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o -c /usr/src/googletest/googletest/src/gtest-all.cc
+
+gtest/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.i"
+	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googlemock && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/src/googletest/googletest/src/gtest-all.cc > CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.i
+
+gtest/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.s"
+	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googlemock && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/src/googletest/googletest/src/gtest-all.cc -o CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.s
+
+gtest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: gtest/googlemock/CMakeFiles/gmock.dir/flags.make
+gtest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: /usr/src/googletest/googlemock/src/gmock-all.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object gtest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googlemock && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /usr/src/googletest/googlemock/src/gmock-all.cc
+
+gtest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gmock.dir/src/gmock-all.cc.i"
+	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googlemock && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/src/googletest/googlemock/src/gmock-all.cc > CMakeFiles/gmock.dir/src/gmock-all.cc.i
+
+gtest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gmock.dir/src/gmock-all.cc.s"
+	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googlemock && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/src/googletest/googlemock/src/gmock-all.cc -o CMakeFiles/gmock.dir/src/gmock-all.cc.s
+=======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object gtest/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o"
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googlemock && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o -c /usr/src/googletest/googletest/src/gtest-all.cc
 
@@ -82,6 +114,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.i: cmake_force
 gtest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gmock.dir/src/gmock-all.cc.s"
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googlemock && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/src/googletest/googlemock/src/gmock-all.cc -o CMakeFiles/gmock.dir/src/gmock-all.cc.s
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 
 # Object files for target gmock
 gmock_OBJECTS = \
@@ -95,8 +128,13 @@ gtest/googlemock/libgmock.so: gtest/googlemock/CMakeFiles/gmock.dir/__/googletes
 gtest/googlemock/libgmock.so: gtest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
 gtest/googlemock/libgmock.so: gtest/googlemock/CMakeFiles/gmock.dir/build.make
 gtest/googlemock/libgmock.so: gtest/googlemock/CMakeFiles/gmock.dir/link.txt
+<<<<<<< HEAD
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libgmock.so"
+	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googlemock && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gmock.dir/link.txt --verbose=$(VERBOSE)
+=======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libgmock.so"
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googlemock && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gmock.dir/link.txt --verbose=$(VERBOSE)
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 
 # Rule to build all files generated by this target.
 gtest/googlemock/CMakeFiles/gmock.dir/build: gtest/googlemock/libgmock.so
@@ -104,10 +142,18 @@ gtest/googlemock/CMakeFiles/gmock.dir/build: gtest/googlemock/libgmock.so
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/build
 
 gtest/googlemock/CMakeFiles/gmock.dir/clean:
+<<<<<<< HEAD
+	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock.dir/cmake_clean.cmake
+.PHONY : gtest/googlemock/CMakeFiles/gmock.dir/clean
+
+gtest/googlemock/CMakeFiles/gmock.dir/depend:
+	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend /usr/src/googletest/googlemock /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googlemock /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake --color=$(COLOR)
+=======
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock.dir/cmake_clean.cmake
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/clean
 
 gtest/googlemock/CMakeFiles/gmock.dir/depend:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend /usr/src/googletest/googlemock /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googlemock /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/gtest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/depend
 

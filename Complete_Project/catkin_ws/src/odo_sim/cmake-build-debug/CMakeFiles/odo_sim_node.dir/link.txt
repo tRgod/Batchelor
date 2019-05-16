@@ -1,1 +1,0 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/odo_sim_node.dir/src/odosim_node.cpp.o  -o devel/lib/odo_sim/odo_sim_node 

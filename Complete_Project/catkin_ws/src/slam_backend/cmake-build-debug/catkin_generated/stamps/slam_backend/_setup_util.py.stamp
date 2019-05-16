@@ -264,7 +264,11 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
+<<<<<<< HEAD
+            CMAKE_PREFIX_PATH = '/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel;/home/gilberg96/catkin_ws/devel;/opt/ros/melodic'.split(';')
+=======
             CMAKE_PREFIX_PATH = '/home/thor/Batchelor/Mathias_ROS/catkin_ws/devel;/opt/ros/melodic'.split(';')
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []

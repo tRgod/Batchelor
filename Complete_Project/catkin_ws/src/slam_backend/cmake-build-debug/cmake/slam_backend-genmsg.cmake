@@ -2,7 +2,11 @@
 
 message(STATUS "slam_backend: 1 messages, 0 services")
 
+<<<<<<< HEAD
+set(MSG_I_FLAGS "-Islam_backend:/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
+=======
 set(MSG_I_FLAGS "-Islam_backend:/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,9 +21,15 @@ add_custom_target(slam_backend_generate_messages ALL)
 
 
 
+<<<<<<< HEAD
+get_filename_component(_filename "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg" NAME_WE)
+add_custom_target(_slam_backend_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slam_backend" "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg" ""
+=======
 get_filename_component(_filename "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg" NAME_WE)
 add_custom_target(_slam_backend_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "slam_backend" "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg" ""
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 )
 
 #
@@ -29,7 +39,11 @@ add_custom_target(_slam_backend_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(slam_backend
+<<<<<<< HEAD
+  "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg"
+=======
   "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg"
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/slam_backend
@@ -49,7 +63,11 @@ add_custom_target(slam_backend_generate_messages_cpp
 add_dependencies(slam_backend_generate_messages slam_backend_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+<<<<<<< HEAD
+get_filename_component(_filename "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg" NAME_WE)
+=======
 get_filename_component(_filename "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg" NAME_WE)
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 add_dependencies(slam_backend_generate_messages_cpp _slam_backend_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -62,7 +80,11 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS slam_backend_generate_messages_cpp)
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(slam_backend
+<<<<<<< HEAD
+  "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg"
+=======
   "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg"
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/slam_backend
@@ -82,7 +104,11 @@ add_custom_target(slam_backend_generate_messages_eus
 add_dependencies(slam_backend_generate_messages slam_backend_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+<<<<<<< HEAD
+get_filename_component(_filename "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg" NAME_WE)
+=======
 get_filename_component(_filename "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg" NAME_WE)
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 add_dependencies(slam_backend_generate_messages_eus _slam_backend_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -95,7 +121,11 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS slam_backend_generate_messages_eus)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(slam_backend
+<<<<<<< HEAD
+  "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg"
+=======
   "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg"
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/slam_backend
@@ -115,7 +145,11 @@ add_custom_target(slam_backend_generate_messages_lisp
 add_dependencies(slam_backend_generate_messages slam_backend_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+<<<<<<< HEAD
+get_filename_component(_filename "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg" NAME_WE)
+=======
 get_filename_component(_filename "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg" NAME_WE)
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 add_dependencies(slam_backend_generate_messages_lisp _slam_backend_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -128,7 +162,11 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS slam_backend_generate_messages_lisp
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(slam_backend
+<<<<<<< HEAD
+  "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg"
+=======
   "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg"
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/slam_backend
@@ -148,7 +186,11 @@ add_custom_target(slam_backend_generate_messages_nodejs
 add_dependencies(slam_backend_generate_messages slam_backend_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
+<<<<<<< HEAD
+get_filename_component(_filename "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg" NAME_WE)
+=======
 get_filename_component(_filename "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg" NAME_WE)
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 add_dependencies(slam_backend_generate_messages_nodejs _slam_backend_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -161,7 +203,11 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS slam_backend_generate_messages_node
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(slam_backend
+<<<<<<< HEAD
+  "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg"
+=======
   "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg"
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/slam_backend
@@ -181,7 +227,11 @@ add_custom_target(slam_backend_generate_messages_py
 add_dependencies(slam_backend_generate_messages slam_backend_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+<<<<<<< HEAD
+get_filename_component(_filename "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg" NAME_WE)
+=======
 get_filename_component(_filename "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg" NAME_WE)
+>>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 add_dependencies(slam_backend_generate_messages_py _slam_backend_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
