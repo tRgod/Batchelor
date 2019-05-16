@@ -16,6 +16,13 @@ struct Pose{
 
 class TransformReceiver{
 public:
+    double constrainAngle(double x)
+    {
+        x=fmod(x+(180*M_PI)/180,(360*M_PI)/180);
+        if(x<0)
+            x+=(360*M_PI)/180;
+        return x-(180*M_PI)/180;
+    }
     TransformReceiver(){
         try {
             listener.waitForTransform("velodyneVPL", "world", ros::Time(0), ros::Duration(60));
@@ -36,14 +43,8 @@ public:
         double currY = currentTransform.getOrigin().getY();
 
         pose.changeDist = sqrt(pow(currX-prevX,2)+pow(currY-prevY,2));
+        pose.changeOri =constrainAngle(atan2(currY, currX)-atan2(prevY, prevX));
 
-        pose.changeOri = atan2(currY, currX)-atan2(prevY, prevX);
-        if(pose.changeOri > M_PI){
-            pose.changeOri -= 2*M_PI;
-        }
-        if(pose.changeOri < -M_PI){
-            pose.changeOri += 2*M_PI;
-        }
         //pose.changeOri = acos((currX*prevX+currY*prevY)/(sqrt(pow(currX,2)+pow(currY,2))+sqrt(pow(prevY,2)+pow(currY,2))));
         return pose;
     }
