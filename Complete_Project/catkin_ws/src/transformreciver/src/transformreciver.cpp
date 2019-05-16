@@ -36,10 +36,17 @@ public:
         double currY = currentTransform.getOrigin().getY();
 
         pose.changeDist = sqrt(pow(currX-prevX,2)+pow(currY-prevY,2));
-        pose.changeOri = acos((currX*prevX+currY*prevY)/(sqrt(pow(currX,2)+pow(currY,2))+sqrt(pow(prevY,2)+pow(currY,2))));
+
+        pose.changeOri = atan2(currY, currX)-atan2(prevY, prevX);
+        if(pose.changeOri > M_PI){
+            pose.changeOri -= 2*M_PI;
+        }
+        if(pose.changeOri < -M_PI){
+            pose.changeOri += 2*M_PI;
+        }
+        //pose.changeOri = acos((currX*prevX+currY*prevY)/(sqrt(pow(currX,2)+pow(currY,2))+sqrt(pow(prevY,2)+pow(currY,2))));
         return pose;
     }
-    double calculateRotation()
 
     void publishTranslation() {
         geometry_msgs::PoseStamped poseStamped;
@@ -68,7 +75,7 @@ public:
             poseStamped.pose.orientation.w = transform.getRotation().w();*/
             //ROS_INFO("x1[%f] x0[%f] y1[%f] y0[%f] translation [%f] rotation [%f]",transform.getOrigin().getX(),  previousTransform.getOrigin().getX(),transform.getOrigin().getY(),previousTransform.getOrigin().getY(), translation, rotation);
             currentPose = calculatePose(transform);
-            ROS_INFO("translation [%lf] rotation [%lf]", currentPose.changeDist, currentPose.changeOri);
+            ROS_INFO("atan2 [%lf]", atan2(0,-3));
             transform_pub.publish(poseStamped);
             previousTransform = transform;
             previousTime = transform.stamp_;
