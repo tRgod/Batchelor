@@ -7,8 +7,8 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/devel/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex:/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/feature_ex/cmake-build-debug/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/feature_ex/cmake-build-debug/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/feature_ex/cmake-build-debug/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/feature_ex/cmake-build-debug/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex:/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex:/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/feature_ex:/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src:/opt/ros/melodic/share"

@@ -9,6 +9,10 @@
 #include <tf/tf.h>
 #include <geometry_msgs/PoseStamped.h>
 
+struct Pose{
+    double changeDist;
+    double changeOri;
+};
 
 class TransformReceiver{
 public:
@@ -24,26 +28,23 @@ public:
         }
     }
 
-    double calculateRotation(double &currentOrientation){
-        double rotation;
-        if ( currentOrientation > M_PI/2 && previousOrientation < -M_PI/2){
-            rotation =currentOrientation - previousOrientation - 2*M_PI;
-            previousOrientation = currentOrientation;
-            return rotation;
-        }
-        if( currentOrientation < -M_PI/2 && previousOrientation > M_PI/2 ){
-            rotation = currentOrientation - previousOrientation + 2 * M_PI;
-            previousOrientation = currentOrientation;
-            return rotation;
-        }
-        rotation = currentOrientation-previousOrientation;
-        previousOrientation = currentOrientation;
-        return rotation;
+    Pose calculatePose(tf::StampedTransform &currentTransform){
+        Pose pose;
+        double prevX = previousTransform.getOrigin().getX();
+        double prevY = previousTransform.getOrigin().getY();
+        double currX = currentTransform.getOrigin().getX();
+        double currY = currentTransform.getOrigin().getY();
+
+        pose.changeDist = sqrt(pow(currX-prevX,2)+pow(currY-prevY,2));
+        pose.changeOri = acos((currX*prevX+currY*prevY)/(sqrt(pow(currX,2)+pow(currY,2))+sqrt(pow(prevY,2)+pow(currY,2))));
+        return pose;
     }
+    double calculateRotation()
 
     void publishTranslation() {
         geometry_msgs::PoseStamped poseStamped;
         tf::StampedTransform transform;
+        Pose currentPose;
         try {
             ros::Time now = ros::Time::now();
             listener.waitForTransform("velodyneVPL", "world", now, ros::Duration(1));
@@ -65,14 +66,9 @@ public:
             poseStamped.pose.orientation.y = transform.getRotation().y();
             poseStamped.pose.orientation.z = transform.getRotation().z();
             poseStamped.pose.orientation.w = transform.getRotation().w();*/
-
-            double deltaX = transform.getOrigin().getX()-previousTransform.getOrigin().getX();
-            double deltaY = transform.getOrigin().getY()-previousTransform.getOrigin().getY();
-            double translation = sqrt(pow(deltaX,2)+pow(deltaY,2));
-            double orientation = atan2(deltaY, deltaX);
-            double rotation = calculateRotation(orientation);
             //ROS_INFO("x1[%f] x0[%f] y1[%f] y0[%f] translation [%f] rotation [%f]",transform.getOrigin().getX(),  previousTransform.getOrigin().getX(),transform.getOrigin().getY(),previousTransform.getOrigin().getY(), translation, rotation);
-            ROS_INFO("x [%lf", double(transform.getOrigin().getX()));
+            currentPose = calculatePose(transform);
+            ROS_INFO("translation [%lf] rotation [%lf]", currentPose.changeDist, currentPose.changeOri);
             transform_pub.publish(poseStamped);
             previousTransform = transform;
             previousTime = transform.stamp_;
@@ -94,7 +90,7 @@ int main(int argc,char** argv)
 
     TransformReceiver transformReceiver;
 
-    ros:: Rate rate(5);
+    ros:: Rate rate(10);
 
     while(ros::ok())
     {

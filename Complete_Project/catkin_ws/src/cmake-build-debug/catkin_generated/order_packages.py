@@ -2,4 +2,4 @@
 source_root_dir = "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src"
 whitelisted_packages = "".split(';') if "" != "" else []
 blacklisted_packages = "".split(';') if "" != "" else []
-underlay_workspaces = "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel;/home/gilberg96/catkin_ws/devel;/opt/ros/melodic".split(';') if "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel;/home/gilberg96/catkin_ws/devel;/opt/ros/melodic" != "" else []
+underlay_workspaces = "/home/gilberg96/catkin_ws/devel;/opt/ros/melodic".split(';') if "/home/gilberg96/catkin_ws/devel;/opt/ros/melodic" != "" else []
