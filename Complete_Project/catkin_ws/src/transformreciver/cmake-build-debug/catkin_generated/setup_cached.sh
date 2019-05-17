@@ -7,6 +7,6 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver/cmake-build-debug/devel:$CMAKE_PREFIX_PATH"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver/cmake-build-debug/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export CMAKE_PREFIX_PATH="/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/transformreciver/cmake-build-debug/devel:$CMAKE_PREFIX_PATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/transformreciver/cmake-build-debug/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/thor/Desktop/Batchelor/Thor_ROS/catkin_ws_2/src/transformreciver:/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/transformreciver:/home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver:$ROS_PACKAGE_PATH"

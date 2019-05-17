@@ -7,7 +7,7 @@
 #include <ros/ros.h>
 #include <tf/transform_listener.h>
 #include <tf/tf.h>
-#include <geometry_msgs/PoseStamped.h>
+#include <geometry_msgs/TwistStamped.h>
 
 struct Pose{
     double changeDist;
@@ -16,13 +16,6 @@ struct Pose{
 
 class TransformReceiver{
 public:
-    double constrainAngle(double x)
-    {
-        x=fmod(x+(180*M_PI)/180,(360*M_PI)/180);
-        if(x<0)
-            x+=(360*M_PI)/180;
-        return x-(180*M_PI)/180;
-    }
     TransformReceiver(){
         try {
             listener.waitForTransform("velodyneVPL", "world", ros::Time(0), ros::Duration(60));
@@ -34,6 +27,15 @@ public:
             ROS_ERROR("%s", ex.what());
         }
     }
+
+    double constrainAngle(double x)
+    {
+        x=fmod(x+(180*M_PI)/180,(360*M_PI)/180);
+        if(x<0)
+            x+=(360*M_PI)/180;
+        return x-(180*M_PI)/180;
+    }
+
 
     Pose calculatePose(tf::StampedTransform &currentTransform){
         Pose pose;
@@ -50,7 +52,7 @@ public:
     }
 
     void publishTranslation() {
-        geometry_msgs::PoseStamped poseStamped;
+        geometry_msgs::TwistStamped twistStamped;
         tf::StampedTransform transform;
         Pose currentPose;
         try {
@@ -76,8 +78,10 @@ public:
             poseStamped.pose.orientation.w = transform.getRotation().w();*/
             //ROS_INFO("x1[%f] x0[%f] y1[%f] y0[%f] translation [%f] rotation [%f]",transform.getOrigin().getX(),  previousTransform.getOrigin().getX(),transform.getOrigin().getY(),previousTransform.getOrigin().getY(), translation, rotation);
             currentPose = calculatePose(transform);
-            ROS_INFO("atan2 [%lf]", atan2(0,-3));
-            transform_pub.publish(poseStamped);
+            twistStamped.twist.linear.x = currentPose.changeDist;
+            twistStamped.twist.angular.x = currentPose.changeOri;
+            ROS_INFO("atan2 [%lf]", currentPose.changeOri);
+            transform_pub.publish(twistStamped);
             previousTransform = transform;
             previousTime = transform.stamp_;
         }
@@ -85,7 +89,7 @@ public:
 
 private:
     ros::NodeHandle node;
-    ros::Publisher transform_pub = node.advertise<geometry_msgs::PoseStamped>("transform_pose", 10);
+    ros::Publisher transform_pub = node.advertise<geometry_msgs::TwistStamped>("transform_pose", 10);
     ros::Time previousTime = ros::Time::now();
     tf::StampedTransform previousTransform;
     tf::TransformListener listener;
