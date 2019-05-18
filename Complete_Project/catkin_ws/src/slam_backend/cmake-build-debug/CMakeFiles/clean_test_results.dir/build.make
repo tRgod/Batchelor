@@ -34,26 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/thor/clion-2019.1.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/gilberg96/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/thor/clion-2019.1.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/gilberg96/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug
-=======
-CMAKE_SOURCE_DIR = /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug
->>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 
 # Utility rule file for clean_test_results.
 
@@ -61,11 +54,7 @@ CMAKE_BINARY_DIR = /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_back
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-<<<<<<< HEAD
 	/usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/test_results
-=======
-	/usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/test_results
->>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -82,10 +71,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-<<<<<<< HEAD
 	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
-=======
-	cd /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
->>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

@@ -1,47 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-<<<<<<< HEAD
 Change Dir: /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_3b173/fast 
-/usr/bin/make -f CMakeFiles/cmTC_3b173.dir/build.make CMakeFiles/cmTC_3b173.dir/build
+Run Build Command(s):/usr/bin/make cmTC_cb756/fast 
+/usr/bin/make -f CMakeFiles/cmTC_cb756.dir/build.make CMakeFiles/cmTC_cb756.dir/build
 make[1]: Entering directory '/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3b173.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_3b173.dir/CheckSymbolExists.c.o   -c /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_3b173
-/home/gilberg96/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3b173.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_3b173.dir/CheckSymbolExists.c.o  -o cmTC_3b173 
-CMakeFiles/cmTC_3b173.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_cb756.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_cb756.dir/CheckSymbolExists.c.o   -c /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_cb756
+/home/gilberg96/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb756.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_cb756.dir/CheckSymbolExists.c.o  -o cmTC_cb756 
+CMakeFiles/cmTC_cb756.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_3b173.dir/build.make:86: recipe for target 'cmTC_3b173' failed
-make[1]: *** [cmTC_3b173] Error 1
+CMakeFiles/cmTC_cb756.dir/build.make:86: recipe for target 'cmTC_cb756' failed
+make[1]: *** [cmTC_cb756] Error 1
 make[1]: Leaving directory '/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_3b173/fast' failed
-make: *** [cmTC_3b173/fast] Error 2
+Makefile:121: recipe for target 'cmTC_cb756/fast' failed
+make: *** [cmTC_cb756/fast] Error 2
 
 File /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-=======
-Change Dir: /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/usr/bin/make cmTC_8d423/fast 
-/usr/bin/make -f CMakeFiles/cmTC_8d423.dir/build.make CMakeFiles/cmTC_8d423.dir/build
-make[1]: Entering directory '/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8d423.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_8d423.dir/CheckSymbolExists.c.o   -c /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_8d423
-/home/thor/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d423.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_8d423.dir/CheckSymbolExists.c.o  -o cmTC_8d423 
-CMakeFiles/cmTC_8d423.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_8d423.dir/build.make:86: recipe for target 'cmTC_8d423' failed
-make[1]: *** [cmTC_8d423] Error 1
-make[1]: Leaving directory '/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_8d423/fast' failed
-make: *** [cmTC_8d423/fast] Error 2
-
-File /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
->>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 /* */
 #include <pthread.h>
 
@@ -57,42 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-<<<<<<< HEAD
 Change Dir: /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_0bcc1/fast 
-/usr/bin/make -f CMakeFiles/cmTC_0bcc1.dir/build.make CMakeFiles/cmTC_0bcc1.dir/build
+Run Build Command(s):/usr/bin/make cmTC_369a9/fast 
+/usr/bin/make -f CMakeFiles/cmTC_369a9.dir/build.make CMakeFiles/cmTC_369a9.dir/build
 make[1]: Entering directory '/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0bcc1.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_0bcc1.dir/CheckFunctionExists.c.o   -c /home/gilberg96/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CheckFunctionExists.c
-Linking C executable cmTC_0bcc1
-/home/gilberg96/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0bcc1.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_0bcc1.dir/CheckFunctionExists.c.o  -o cmTC_0bcc1 -lpthreads 
+Building C object CMakeFiles/cmTC_369a9.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_369a9.dir/CheckFunctionExists.c.o   -c /home/gilberg96/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CheckFunctionExists.c
+Linking C executable cmTC_369a9
+/home/gilberg96/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_369a9.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_369a9.dir/CheckFunctionExists.c.o  -o cmTC_369a9 -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_0bcc1.dir/build.make:86: recipe for target 'cmTC_0bcc1' failed
-make[1]: *** [cmTC_0bcc1] Error 1
+CMakeFiles/cmTC_369a9.dir/build.make:86: recipe for target 'cmTC_369a9' failed
+make[1]: *** [cmTC_369a9] Error 1
 make[1]: Leaving directory '/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_0bcc1/fast' failed
-make: *** [cmTC_0bcc1/fast] Error 2
-=======
-Change Dir: /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command(s):/usr/bin/make cmTC_aed70/fast 
-/usr/bin/make -f CMakeFiles/cmTC_aed70.dir/build.make CMakeFiles/cmTC_aed70.dir/build
-make[1]: Entering directory '/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_aed70.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_aed70.dir/CheckFunctionExists.c.o   -c /home/thor/clion-2019.1.2/bin/cmake/linux/share/cmake-3.14/Modules/CheckFunctionExists.c
-Linking C executable cmTC_aed70
-/home/thor/clion-2019.1.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aed70.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_aed70.dir/CheckFunctionExists.c.o  -o cmTC_aed70 -lpthreads 
-/usr/bin/ld: cannot find -lpthreads
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_aed70.dir/build.make:86: recipe for target 'cmTC_aed70' failed
-make[1]: *** [cmTC_aed70] Error 1
-make[1]: Leaving directory '/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_aed70/fast' failed
-make: *** [cmTC_aed70/fast] Error 2
->>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
+Makefile:121: recipe for target 'cmTC_369a9/fast' failed
+make: *** [cmTC_369a9/fast] Error 2
 
 

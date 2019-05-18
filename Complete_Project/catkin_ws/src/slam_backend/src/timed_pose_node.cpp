@@ -6,7 +6,7 @@
 #include "std_msgs/Float32.h"
 #include "std_msgs/UInt16.h"
 
-#include <slam_backend/TimedPose.h>
+#include "geometry_msgs/TwistStamped.h"
 
 class TimedPose {
 public:

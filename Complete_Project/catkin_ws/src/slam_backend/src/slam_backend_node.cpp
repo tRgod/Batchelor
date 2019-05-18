@@ -1,9 +1,7 @@
 // ROS headers
 #include "ros/ros.h"
 #include "std_msgs/Float64.h"
-#include <geometry_msgs/PoseStamped.h>
-
-#include "slam_backend/TimedPose.h"
+#include <geometry_msgs/TwistStamped.h>
 
 #include <gtsam/geometry/Pose2.h>
 
@@ -23,7 +21,7 @@
 
 class iSAM2{
 public:
-    iSAM2(bool simulation){
+    iSAM2(){
 
         if(simulation == 0){
 
@@ -42,9 +40,8 @@ public:
         i++;
 
     }
-    void timedPoseCallback(const slam_backend::TimedPose::ConstPtr &msg){
-        double time = msg->time;
-        gtsam::Pose2 odometry(msg->dist, 0, msg->steer);
+    void timedPoseCallback(const geometry_msgs::TwistStamped::ConstPtr &msg){
+        gtsam::Pose2 odometry(msg->twist.linear.x, 0, msg->twist.angular.x);
 
         newFactors.push_back(gtsam::BetweenFactor<gtsam::Pose2>(i-1, i, odometry, odoNoise));
 
@@ -56,12 +53,11 @@ public:
 
     }
 
-    void timedPoseSimCallback(const geometry_msgs::PoseStamped::ConstPtr &msg){
-        double time = msg->header.stamp.toSec();
+    void timedPoseSimCallback(const geometry_msgs::TwistStamped::ConstPtr &msg){
+
     }
 
     void timedRangeBearingCallback(const std_msgs::Float64::ConstPtr &msg){
-
     }
 
     void run(){
@@ -94,7 +90,7 @@ int main(int argc, char** argv) {
 
     ros::init(argc, argv, "slam_backend");
 
-    iSAM2 backend(1);
+    iSAM2 backend();
 
     ros::Rate loop_rate(10);
 

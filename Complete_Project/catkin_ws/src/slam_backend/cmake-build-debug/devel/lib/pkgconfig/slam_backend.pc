@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 prefix=/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel
-=======
-prefix=/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel
->>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
 
 Name: slam_backend
 Description: Description of slam_backend
 Version: 0.0.0
-<<<<<<< HEAD
-Cflags: -I/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel/include
+Cflags: 
 Libs: -L/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel/lib 
-=======
-Cflags: -I/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel/include
-Libs: -L/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel/lib 
->>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
-Requires: roscpp std_msgs message_runtime
+Requires: 
