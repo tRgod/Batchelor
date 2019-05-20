@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
+/home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver/src/transformreciver.cpp
+=======
 /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/transformreciver/src/transformReceiver.cpp
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 ros/ros.h
 -
 geometry_msgs/TransformStamped.h

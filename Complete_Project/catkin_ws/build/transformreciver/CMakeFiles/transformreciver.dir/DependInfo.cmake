@@ -4,7 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+<<<<<<< HEAD
+  "/home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver/src/transformreciver.cpp" "/home/thor/Batchelor/Complete_Project/catkin_ws/build/transformreciver/CMakeFiles/transformreciver.dir/src/transformreciver.cpp.o"
+=======
   "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/transformreciver/src/transformReceiver.cpp" "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/transformreciver/CMakeFiles/transformreciver.dir/src/transformReceiver.cpp.o"
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/gilberg96/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/thor/clion-2019.1.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/gilberg96/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/thor/clion-2019.1.2/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/transformreciver
+CMAKE_SOURCE_DIR = /home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/transformreciver/cmake-build-debug
+CMAKE_BINARY_DIR = /home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/transformreciver.dir/depend.make
@@ -57,6 +57,20 @@ include CMakeFiles/transformreciver.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/transformreciver.dir/flags.make
 
+<<<<<<< HEAD
+CMakeFiles/transformreciver.dir/src/transformreciver.cpp.o: CMakeFiles/transformreciver.dir/flags.make
+CMakeFiles/transformreciver.dir/src/transformreciver.cpp.o: ../src/transformreciver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/transformreciver.dir/src/transformreciver.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/transformreciver.dir/src/transformreciver.cpp.o -c /home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver/src/transformreciver.cpp
+
+CMakeFiles/transformreciver.dir/src/transformreciver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/transformreciver.dir/src/transformreciver.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver/src/transformreciver.cpp > CMakeFiles/transformreciver.dir/src/transformreciver.cpp.i
+
+CMakeFiles/transformreciver.dir/src/transformreciver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/transformreciver.dir/src/transformreciver.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver/src/transformreciver.cpp -o CMakeFiles/transformreciver.dir/src/transformreciver.cpp.s
+=======
 CMakeFiles/transformreciver.dir/src/transformReceiver.cpp.o: CMakeFiles/transformreciver.dir/flags.make
 CMakeFiles/transformreciver.dir/src/transformReceiver.cpp.o: ../src/transformReceiver.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/transformreciver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/transformreciver.dir/src/transformReceiver.cpp.o"
@@ -69,6 +83,7 @@ CMakeFiles/transformreciver.dir/src/transformReceiver.cpp.i: cmake_force
 CMakeFiles/transformreciver.dir/src/transformReceiver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/transformreciver.dir/src/transformReceiver.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/transformreciver/src/transformReceiver.cpp -o CMakeFiles/transformreciver.dir/src/transformReceiver.cpp.s
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
 # Object files for target transformreciver
 transformreciver_OBJECTS = \
@@ -103,7 +118,7 @@ transformreciver: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 transformreciver: /usr/lib/x86_64-linux-gnu/libpthread.so
 transformreciver: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 transformreciver: CMakeFiles/transformreciver.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/transformreciver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable transformreciver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable transformreciver"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/transformreciver.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -116,6 +131,6 @@ CMakeFiles/transformreciver.dir/clean:
 .PHONY : CMakeFiles/transformreciver.dir/clean
 
 CMakeFiles/transformreciver.dir/depend:
-	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/transformreciver/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/transformreciver /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/transformreciver /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/transformreciver/cmake-build-debug /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/transformreciver/cmake-build-debug /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/transformreciver/cmake-build-debug/CMakeFiles/transformreciver.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver /home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver /home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver/cmake-build-debug /home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver/cmake-build-debug /home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver/cmake-build-debug/CMakeFiles/transformreciver.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/transformreciver.dir/depend
 
