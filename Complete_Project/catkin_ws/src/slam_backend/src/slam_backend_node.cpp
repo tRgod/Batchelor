@@ -1,9 +1,13 @@
 // ROS headers
 #include "ros/ros.h"
-#include "std_msgs/Float64.h"
-#include <geometry_msgs/PoseStamped.h>
 
-#include "slam_backend/TimedPose.h"
+#include <tf2_ros/buffer.h>
+#include <tf2_ros/transform_listener.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
+#include <tf2/utils.h>
+
+#include <geometry_msgs/TwistStamped.h>
+#include <geometry_msgs/TransformStamped.h>
 
 #include <gtsam/geometry/Pose2.h>
 
@@ -23,28 +27,30 @@
 
 class iSAM2{
 public:
-    iSAM2(bool simulation){
+    iSAM2(): transformListener(tfBuffer) {
+        geometry_msgs::TransformStamped transformStamped;
 
-        if(simulation == 0){
+        timedPose_sub = n.subscribe("twist_stamped", 10, &iSAM2::timedPoseCallback, this);
 
+        try {
+            transformStamped = tfBuffer.lookupTransform("velodyneVPL", "world", ros::Time::now(), ros::Duration(60));
         }
-        else {
-            timedPose_sub = n.subscribe("timed_Pose", 10, &iSAM2::timedPoseCallback, this);
-            timedRangeBearing_sub = n.subscribe("timedRangeBearing", 10, &iSAM2::timedRangeBearingCallback, this);
+        catch (tf2::TransformException &ex){
+            ROS_WARN("%s", ex.what());
         }
-        gtsam::Pose2 pose0 = gtsam::Pose2(0,0,0);
+        tf2::Stamped<tf2::Transform>  transform;
+        tf2::fromMsg(transformStamped, transform);
 
-        newFactors.push_back(gtsam::PriorFactor<gtsam::Pose2>(i,pose0, priorNoise));
-        initial.insert(i,pose0);
+        gtsam::Pose2 pose0 = gtsam::Pose2(transform.getOrigin().x(), transform.getOrigin().y(),tf2::getYaw(transform.getRotation()));
 
+        newFactors.push_back(gtsam::PriorFactor<gtsam::Pose2>(i, pose0, priorNoise));
+        initial.insert(i, pose0);
         lastPose = pose0;
-
         i++;
 
     }
-    void timedPoseCallback(const slam_backend::TimedPose::ConstPtr &msg){
-        double time = msg->time;
-        gtsam::Pose2 odometry(msg->dist, 0, msg->steer);
+    void timedPoseCallback(const geometry_msgs::TwistStamped::ConstPtr &msg){
+        gtsam::Pose2 odometry(msg->twist.linear.x, 0, msg->twist.angular.z);
 
         newFactors.push_back(gtsam::BetweenFactor<gtsam::Pose2>(i-1, i, odometry, odoNoise));
 
@@ -56,21 +62,17 @@ public:
 
     }
 
-    void timedPoseSimCallback(const geometry_msgs::PoseStamped::ConstPtr &msg){
-        double time = msg->header.stamp.toSec();
-    }
-
-    void timedRangeBearingCallback(const std_msgs::Float64::ConstPtr &msg){
-
-    }
-
     void run(){
+        initial.print();
     }
 
 private:
     ros::NodeHandle n;
     ros::Subscriber timedPose_sub;
     ros::Subscriber timedRangeBearing_sub;
+
+    tf2_ros::Buffer tfBuffer;
+    tf2_ros::TransformListener transformListener;
 
     gtsam::Vector priorSigmas = gtsam::Vector3( 1, 1, M_PI);
     gtsam::Vector odoSigmas = gtsam::Vector3(0.05, 0.01, 0.2);
@@ -88,13 +90,14 @@ private:
 
     gtsam::Pose2 lastPose;
 
+
 };
 
 int main(int argc, char** argv) {
 
     ros::init(argc, argv, "slam_backend");
 
-    iSAM2 backend(1);
+    iSAM2 backend;
 
     ros::Rate loop_rate(10);
 

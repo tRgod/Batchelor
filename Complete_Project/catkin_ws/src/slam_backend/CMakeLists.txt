@@ -11,7 +11,9 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
   geometry_msgs
-  message_generation
+  tf2
+  tf2_ros
+#  message_generation
 )
 
 #find_package(GTSAM REQUIRED)
@@ -51,10 +53,10 @@ find_package(Boost REQUIRED COMPONENTS system)
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-add_message_files(
-   FILES
-   TimedPose.msg
-)
+#add_message_files(
+#   FILES
+#   TimedPose.msg
+#)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -71,10 +73,10 @@ add_message_files(
 # )
 
 ## Generate added messages and services with any dependencies listed here
-generate_messages(
-   DEPENDENCIES
-   std_msgs
-)
+#generate_messages(
+#   DEPENDENCIES
+#   std_msgs
+#)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -108,7 +110,7 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES slam_backend
-   CATKIN_DEPENDS roscpp std_msgs message_runtime
+#   CATKIN_DEPENDS roscpp std_msgs message_runtime
 #  DEPENDS system_lib
 )
 
@@ -136,7 +138,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(timed_pose_node src/timed_pose_node.cpp)
+#add_executable(timed_pose_node src/timed_pose_node.cpp)
 add_executable(slam_backend_node src/slam_backend_node.cpp)
 
 
@@ -151,9 +153,9 @@ add_executable(slam_backend_node src/slam_backend_node.cpp)
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(timed_pose_node
-   ${catkin_LIBRARIES}
-)
+#target_link_libraries(timed_pose_node
+#   ${catkin_LIBRARIES}
+#)
 target_link_libraries(slam_backend_node
   tbb
   gtsam

@@ -5,7 +5,8 @@ project(transformreciver)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   geometry_msgs
-  tf
+  tf2
+  tf2_ros
 )
 
 include_directories(
@@ -13,5 +14,5 @@ include_directories(
         ${catkin_INCLUDE_DIRS}
         # ${PCL_INCLUDE_DIRS}
 )
-add_executable( transformreciver  src/transformreciver.cpp)
+add_executable( transformreciver  src/transformReceiver.cpp)
 target_link_libraries(transformreciver ${catkin_LIBRARIES})

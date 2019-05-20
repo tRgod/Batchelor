@@ -1,22 +1,24 @@
 /home/gilberg96/CLion-2019.1.2/clion-2019.1.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend
-CMake Error: Parse error in cache file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 2. Offending entry: <<<<<<< HEAD
-CMake Error: Parse error in cache file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 8. Offending entry: >>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
-CMake Error: Parse error in cache file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 365. Offending entry: <<<<<<< HEAD
-CMake Error: Parse error in cache file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 369. Offending entry: >>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
-CMake Error: Parse error in cache file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 384. Offending entry: <<<<<<< HEAD
-CMake Error: Parse error in cache file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 388. Offending entry: >>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
-CMake Error: Parse error in cache file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 394. Offending entry: <<<<<<< HEAD
-CMake Error: Parse error in cache file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 398. Offending entry: >>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
-CMake Error: Parse error in cache file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 453. Offending entry: <<<<<<< HEAD
-CMake Error: Parse error in cache file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 463. Offending entry: >>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
-CMake Error: Parse error in cache file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 489. Offending entry: <<<<<<< HEAD
-CMake Error: Parse error in cache file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 503. Offending entry: >>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
-CMake Error: Parse error in cache file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 592. Offending entry: <<<<<<< HEAD
-CMake Error: Parse error in cache file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 596. Offending entry: >>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
-CMake Error: Parse error in cache file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 664. Offending entry: <<<<<<< HEAD
-CMake Error: Parse error in cache file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 668. Offending entry: >>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
-CMake Error: Parse error in cache file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 673. Offending entry: <<<<<<< HEAD
-CMake Error: Parse error in cache file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt on line 677. Offending entry: >>>>>>> d62d2cc25972dd5ad7f6260987df40e03520bef5
-CMake Error: The current CMakeCache.txt directory /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/CMakeCache.txt is different than the directory /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
-CMake Error: The source "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/CMakeLists.txt" does not match the source "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/CMakeLists.txt" used to generate cache.  Re-run cmake with a different source directory.
-Cannot read project file /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/slam_backend.cbp
+-- Using CATKIN_DEVEL_PREFIX: /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel
+-- Using CMAKE_PREFIX_PATH: /home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel;/home/gilberg96/catkin_ws/devel;/opt/ros/melodic
+-- This workspace overlays: /home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel;/home/gilberg96/catkin_ws/devel;/opt/ros/melodic
+-- Found PythonInterp: /usr/bin/python2 (found suitable version "2.7.15", minimum required is "2") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python2
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/test_results
+-- Found gmock sources under '/usr/src/googletest': gmock will be built
+-- Found PythonInterp: /usr/bin/python2 (found version "2.7.15") 
+-- Found gtest sources under '/usr/src/googletest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.17
+-- BUILD_SHARED_LIBS is on
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Boost version: 1.67.0
+-- Found the following Boost libraries:
+--   system
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug

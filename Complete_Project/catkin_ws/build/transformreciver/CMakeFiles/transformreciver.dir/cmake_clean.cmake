@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/transformreciver.dir/src/transformreciver.cpp.o"
+  "CMakeFiles/transformreciver.dir/src/transformReceiver.cpp.o"
   "transformreciver.pdb"
   "transformreciver"
 )

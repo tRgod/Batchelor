@@ -66,17 +66,6 @@ public:
         }
         if (previousTime != transform.stamp_) {
 
-            /*
-            poseStamped.header.stamp = transform.stamp_;
-            poseStamped.header.frame_id = transform.frame_id_;
-            poseStamped.pose.position.x = transform.getOrigin().getX();
-            poseStamped.pose.position.y = transform.getOrigin().getY();
-            poseStamped.pose.position.z = transform.getOrigin().getZ();
-            poseStamped.pose.orientation.x = transform.getRotation().x();
-            poseStamped.pose.orientation.y = transform.getRotation().y();
-            poseStamped.pose.orientation.z = transform.getRotation().z();
-            poseStamped.pose.orientation.w = transform.getRotation().w();*/
-            //ROS_INFO("x1[%f] x0[%f] y1[%f] y0[%f] translation [%f] rotation [%f]",transform.getOrigin().getX(),  previousTransform.getOrigin().getX(),transform.getOrigin().getY(),previousTransform.getOrigin().getY(), translation, rotation);
             currentPose = calculatePose(transform);
             twistStamped.twist.linear.x = currentPose.changeDist;
             twistStamped.twist.angular.x = currentPose.changeOri;
@@ -84,6 +73,7 @@ public:
             transform_pub.publish(twistStamped);
             previousTransform = transform;
             previousTime = transform.stamp_;
+            ROS_INFO("Orientation [%f]", tf::getYaw(previousTransform.getRotation()));
         }
     }
 

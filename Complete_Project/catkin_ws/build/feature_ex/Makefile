@@ -48,13 +48,44 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/thor/Batchelor/Complete_Project/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/thor/Batchelor/Complete_Project/catkin_ws/build
+=======
+CMAKE_SOURCE_DIR = /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/feature_ex
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/feature_ex
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
@@ -78,6 +109,7 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+<<<<<<< HEAD
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -101,6 +133,8 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+=======
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -123,6 +157,7 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+<<<<<<< HEAD
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -140,11 +175,33 @@ all: cmake_check_build_system
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/thor/Batchelor/Complete_Project/catkin_ws/build/CMakeFiles /home/thor/Batchelor/Complete_Project/catkin_ws/build/feature_ex/CMakeFiles/progress.marks
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thor/Batchelor/Complete_Project/catkin_ws/build/CMakeFiles 0
+=======
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# The main all target
+all: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/feature_ex/CMakeFiles /home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/feature_ex/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/feature_ex/CMakeFiles 0
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 .PHONY : all
 
 # The main clean target
 clean:
+<<<<<<< HEAD
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/clean
+=======
+	$(MAKE) -f CMakeFiles/Makefile2 clean
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 .PHONY : clean
 
 # The main clean target
@@ -154,16 +211,25 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
+<<<<<<< HEAD
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/preinstall
+=======
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
+<<<<<<< HEAD
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/preinstall
+=======
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
+<<<<<<< HEAD
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -174,11 +240,22 @@ feature_ex/CMakeFiles/feature_ex.dir/rule:
 
 # Convenience name for target.
 feature_ex: feature_ex/CMakeFiles/feature_ex.dir/rule
+=======
+	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+.PHONY : depend
 
+#=============================================================================
+# Target rules for targets named feature_ex
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
+
+# Build rule for target.
+feature_ex: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 feature_ex
 .PHONY : feature_ex
 
 # fast build rule for target.
 feature_ex/fast:
+<<<<<<< HEAD
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/feature_ex.dir/build.make feature_ex/CMakeFiles/feature_ex.dir/build
 .PHONY : feature_ex/fast
 
@@ -189,11 +266,22 @@ feature_ex/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
 
 # Convenience name for target.
 tf2_msgs_generate_messages_nodejs: feature_ex/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+=======
+	$(MAKE) -f CMakeFiles/feature_ex.dir/build.make CMakeFiles/feature_ex.dir/build
+.PHONY : feature_ex/fast
 
+#=============================================================================
+# Target rules for targets named tf2_msgs_generate_messages_nodejs
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
+
+# Build rule for target.
+tf2_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_nodejs
 .PHONY : tf2_msgs_generate_messages_nodejs
 
 # fast build rule for target.
 tf2_msgs_generate_messages_nodejs/fast:
+<<<<<<< HEAD
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make feature_ex/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
 .PHONY : tf2_msgs_generate_messages_nodejs/fast
 
@@ -201,13 +289,34 @@ tf2_msgs_generate_messages_nodejs/fast:
 feature_ex/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
 .PHONY : feature_ex/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+=======
+	$(MAKE) -f CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+.PHONY : tf2_msgs_generate_messages_nodejs/fast
 
-# Convenience name for target.
-tf2_msgs_generate_messages_py: feature_ex/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+#=============================================================================
+# Target rules for targets named tf2_msgs_generate_messages_eus
 
-.PHONY : tf2_msgs_generate_messages_py
+# Build rule for target.
+tf2_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_eus
+.PHONY : tf2_msgs_generate_messages_eus
 
 # fast build rule for target.
+tf2_msgs_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+.PHONY : tf2_msgs_generate_messages_eus/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
+
+#=============================================================================
+# Target rules for targets named tf2_msgs_generate_messages_cpp
+
+# Build rule for target.
+tf2_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_cpp
+.PHONY : tf2_msgs_generate_messages_cpp
+
+# fast build rule for target.
+<<<<<<< HEAD
 tf2_msgs_generate_messages_py/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make feature_ex/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
 .PHONY : tf2_msgs_generate_messages_py/fast
@@ -216,14 +325,36 @@ tf2_msgs_generate_messages_py/fast:
 feature_ex/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
 .PHONY : feature_ex/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+=======
+tf2_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+.PHONY : tf2_msgs_generate_messages_cpp/fast
 
-# Convenience name for target.
-tf2_msgs_generate_messages_lisp: feature_ex/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_eus
 
+# Build rule for target.
+geometry_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_eus
+.PHONY : geometry_msgs_generate_messages_eus
+
+# fast build rule for target.
+geometry_msgs_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
+
+#=============================================================================
+# Target rules for targets named tf2_msgs_generate_messages_lisp
+
+# Build rule for target.
+tf2_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_lisp
 .PHONY : tf2_msgs_generate_messages_lisp
 
 # fast build rule for target.
 tf2_msgs_generate_messages_lisp/fast:
+<<<<<<< HEAD
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make feature_ex/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
@@ -234,10 +365,21 @@ feature_ex/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
 
 # Convenience name for target.
 tf2_msgs_generate_messages_eus: feature_ex/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+=======
+	$(MAKE) -f CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
+.PHONY : tf2_msgs_generate_messages_lisp/fast
 
-.PHONY : tf2_msgs_generate_messages_eus
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_gencfg
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
+
+# Build rule for target.
+dynamic_reconfigure_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_gencfg
+.PHONY : dynamic_reconfigure_gencfg
 
 # fast build rule for target.
+<<<<<<< HEAD
 tf2_msgs_generate_messages_eus/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make feature_ex/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
 .PHONY : tf2_msgs_generate_messages_eus/fast
@@ -246,13 +388,22 @@ tf2_msgs_generate_messages_eus/fast:
 feature_ex/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 .PHONY : feature_ex/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+=======
+dynamic_reconfigure_gencfg/fast:
+	$(MAKE) -f CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+.PHONY : dynamic_reconfigure_gencfg/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-tf2_msgs_generate_messages_cpp: feature_ex/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_nodejs
 
-.PHONY : tf2_msgs_generate_messages_cpp
+# Build rule for target.
+dynamic_reconfigure_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_nodejs
+.PHONY : dynamic_reconfigure_generate_messages_nodejs
 
 # fast build rule for target.
+<<<<<<< HEAD
 tf2_msgs_generate_messages_cpp/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make feature_ex/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
 .PHONY : tf2_msgs_generate_messages_cpp/fast
@@ -261,13 +412,22 @@ tf2_msgs_generate_messages_cpp/fast:
 feature_ex/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 .PHONY : feature_ex/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+=======
+dynamic_reconfigure_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-actionlib_msgs_generate_messages_py: feature_ex/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_lisp
 
-.PHONY : actionlib_msgs_generate_messages_py
+# Build rule for target.
+dynamic_reconfigure_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_lisp
+.PHONY : dynamic_reconfigure_generate_messages_lisp
 
 # fast build rule for target.
+<<<<<<< HEAD
 actionlib_msgs_generate_messages_py/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make feature_ex/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
 .PHONY : actionlib_msgs_generate_messages_py/fast
@@ -276,13 +436,22 @@ actionlib_msgs_generate_messages_py/fast:
 feature_ex/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
 .PHONY : feature_ex/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+=======
+dynamic_reconfigure_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-actionlib_msgs_generate_messages_nodejs: feature_ex/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+#=============================================================================
+# Target rules for targets named pcl_msgs_generate_messages_cpp
 
-.PHONY : actionlib_msgs_generate_messages_nodejs
+# Build rule for target.
+pcl_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcl_msgs_generate_messages_cpp
+.PHONY : pcl_msgs_generate_messages_cpp
 
 # fast build rule for target.
+<<<<<<< HEAD
 actionlib_msgs_generate_messages_nodejs/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make feature_ex/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
 .PHONY : actionlib_msgs_generate_messages_nodejs/fast
@@ -291,13 +460,22 @@ actionlib_msgs_generate_messages_nodejs/fast:
 feature_ex/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
 .PHONY : feature_ex/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+=======
+pcl_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build.make CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build
+.PHONY : pcl_msgs_generate_messages_cpp/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-actionlib_msgs_generate_messages_lisp: feature_ex/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
 
-.PHONY : actionlib_msgs_generate_messages_lisp
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
 
 # fast build rule for target.
+<<<<<<< HEAD
 actionlib_msgs_generate_messages_lisp/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make feature_ex/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
 .PHONY : actionlib_msgs_generate_messages_lisp/fast
@@ -309,10 +487,22 @@ feature_ex/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
 
 # Convenience name for target.
 actionlib_generate_messages_nodejs: feature_ex/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+=======
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
-.PHONY : actionlib_generate_messages_nodejs
+#=============================================================================
+# Target rules for targets named topic_tools_generate_messages_cpp
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
+
+# Build rule for target.
+topic_tools_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 topic_tools_generate_messages_cpp
+.PHONY : topic_tools_generate_messages_cpp
 
 # fast build rule for target.
+<<<<<<< HEAD
 actionlib_generate_messages_nodejs/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make feature_ex/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
 .PHONY : actionlib_generate_messages_nodejs/fast
@@ -321,13 +511,22 @@ actionlib_generate_messages_nodejs/fast:
 feature_ex/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/actionlib_generate_messages_eus.dir/rule
 .PHONY : feature_ex/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+=======
+topic_tools_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make CMakeFiles/topic_tools_generate_messages_cpp.dir/build
+.PHONY : topic_tools_generate_messages_cpp/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-actionlib_generate_messages_eus: feature_ex/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_py
 
-.PHONY : actionlib_generate_messages_eus
+# Build rule for target.
+std_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
+.PHONY : std_msgs_generate_messages_py
 
 # fast build rule for target.
+<<<<<<< HEAD
 actionlib_generate_messages_eus/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/actionlib_generate_messages_eus.dir/build.make feature_ex/CMakeFiles/actionlib_generate_messages_eus.dir/build
 .PHONY : actionlib_generate_messages_eus/fast
@@ -336,13 +535,22 @@ actionlib_generate_messages_eus/fast:
 feature_ex/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 .PHONY : feature_ex/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+=======
+std_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-tf_generate_messages_nodejs: feature_ex/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_eus
 
-.PHONY : tf_generate_messages_nodejs
+# Build rule for target.
+dynamic_reconfigure_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_eus
+.PHONY : dynamic_reconfigure_generate_messages_eus
 
 # fast build rule for target.
+<<<<<<< HEAD
 tf_generate_messages_nodejs/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/tf_generate_messages_nodejs.dir/build.make feature_ex/CMakeFiles/tf_generate_messages_nodejs.dir/build
 .PHONY : tf_generate_messages_nodejs/fast
@@ -351,13 +559,22 @@ tf_generate_messages_nodejs/fast:
 feature_ex/CMakeFiles/tf_generate_messages_lisp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/tf_generate_messages_lisp.dir/rule
 .PHONY : feature_ex/CMakeFiles/tf_generate_messages_lisp.dir/rule
+=======
+dynamic_reconfigure_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_eus/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-tf_generate_messages_lisp: feature_ex/CMakeFiles/tf_generate_messages_lisp.dir/rule
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_nodejs
 
-.PHONY : tf_generate_messages_lisp
+# Build rule for target.
+std_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
+.PHONY : std_msgs_generate_messages_nodejs
 
 # fast build rule for target.
+<<<<<<< HEAD
 tf_generate_messages_lisp/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/tf_generate_messages_lisp.dir/build.make feature_ex/CMakeFiles/tf_generate_messages_lisp.dir/build
 .PHONY : tf_generate_messages_lisp/fast
@@ -369,10 +586,22 @@ feature_ex/CMakeFiles/tf_generate_messages_cpp.dir/rule:
 
 # Convenience name for target.
 tf_generate_messages_cpp: feature_ex/CMakeFiles/tf_generate_messages_cpp.dir/rule
+=======
+std_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
 
-.PHONY : tf_generate_messages_cpp
+#=============================================================================
+# Target rules for targets named bond_generate_messages_lisp
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
+
+# Build rule for target.
+bond_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bond_generate_messages_lisp
+.PHONY : bond_generate_messages_lisp
 
 # fast build rule for target.
+<<<<<<< HEAD
 tf_generate_messages_cpp/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/tf_generate_messages_cpp.dir/build.make feature_ex/CMakeFiles/tf_generate_messages_cpp.dir/build
 .PHONY : tf_generate_messages_cpp/fast
@@ -381,14 +610,23 @@ tf_generate_messages_cpp/fast:
 feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
 .PHONY : feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+=======
+bond_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/bond_generate_messages_lisp.dir/build.make CMakeFiles/bond_generate_messages_lisp.dir/build
+.PHONY : bond_generate_messages_lisp/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_py: feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_py
 
+# Build rule for target.
+dynamic_reconfigure_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_py
 .PHONY : dynamic_reconfigure_generate_messages_py
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_py/fast:
+<<<<<<< HEAD
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_py/fast
 
@@ -399,10 +637,21 @@ feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
 
 # Convenience name for target.
 dynamic_reconfigure_generate_messages_eus: feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+=======
+	$(MAKE) -f CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_py/fast
 
-.PHONY : dynamic_reconfigure_generate_messages_eus
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_py
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
+
+# Build rule for target.
+geometry_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
+.PHONY : geometry_msgs_generate_messages_py
 
 # fast build rule for target.
+<<<<<<< HEAD
 dynamic_reconfigure_generate_messages_eus/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_eus/fast
@@ -411,13 +660,22 @@ dynamic_reconfigure_generate_messages_eus/fast:
 feature_ex/CMakeFiles/actionlib_generate_messages_py.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/actionlib_generate_messages_py.dir/rule
 .PHONY : feature_ex/CMakeFiles/actionlib_generate_messages_py.dir/rule
+=======
+geometry_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-actionlib_generate_messages_py: feature_ex/CMakeFiles/actionlib_generate_messages_py.dir/rule
+#=============================================================================
+# Target rules for targets named bond_generate_messages_eus
 
-.PHONY : actionlib_generate_messages_py
+# Build rule for target.
+bond_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bond_generate_messages_eus
+.PHONY : bond_generate_messages_eus
 
 # fast build rule for target.
+<<<<<<< HEAD
 actionlib_generate_messages_py/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/actionlib_generate_messages_py.dir/build.make feature_ex/CMakeFiles/actionlib_generate_messages_py.dir/build
 .PHONY : actionlib_generate_messages_py/fast
@@ -426,13 +684,22 @@ actionlib_generate_messages_py/fast:
 feature_ex/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
 .PHONY : feature_ex/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
+=======
+bond_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/bond_generate_messages_eus.dir/build.make CMakeFiles/bond_generate_messages_eus.dir/build
+.PHONY : bond_generate_messages_eus/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-topic_tools_generate_messages_nodejs: feature_ex/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
+#=============================================================================
+# Target rules for targets named clean_test_results
 
-.PHONY : topic_tools_generate_messages_nodejs
+# Build rule for target.
+clean_test_results: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results
+.PHONY : clean_test_results
 
 # fast build rule for target.
+<<<<<<< HEAD
 topic_tools_generate_messages_nodejs/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build.make feature_ex/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build
 .PHONY : topic_tools_generate_messages_nodejs/fast
@@ -444,10 +711,22 @@ feature_ex/CMakeFiles/pcl_ros_gencfg.dir/rule:
 
 # Convenience name for target.
 pcl_ros_gencfg: feature_ex/CMakeFiles/pcl_ros_gencfg.dir/rule
+=======
+clean_test_results/fast:
+	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
+.PHONY : clean_test_results/fast
 
-.PHONY : pcl_ros_gencfg
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_lisp
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
+
+# Build rule for target.
+sensor_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
+.PHONY : sensor_msgs_generate_messages_lisp
 
 # fast build rule for target.
+<<<<<<< HEAD
 pcl_ros_gencfg/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/pcl_ros_gencfg.dir/build.make feature_ex/CMakeFiles/pcl_ros_gencfg.dir/build
 .PHONY : pcl_ros_gencfg/fast
@@ -456,13 +735,22 @@ pcl_ros_gencfg/fast:
 feature_ex/CMakeFiles/nodelet_generate_messages_py.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/nodelet_generate_messages_py.dir/rule
 .PHONY : feature_ex/CMakeFiles/nodelet_generate_messages_py.dir/rule
+=======
+sensor_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-nodelet_generate_messages_py: feature_ex/CMakeFiles/nodelet_generate_messages_py.dir/rule
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_lisp
 
-.PHONY : nodelet_generate_messages_py
+# Build rule for target.
+roscpp_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
+.PHONY : roscpp_generate_messages_lisp
 
 # fast build rule for target.
+<<<<<<< HEAD
 nodelet_generate_messages_py/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/nodelet_generate_messages_py.dir/build.make feature_ex/CMakeFiles/nodelet_generate_messages_py.dir/build
 .PHONY : nodelet_generate_messages_py/fast
@@ -471,13 +759,22 @@ nodelet_generate_messages_py/fast:
 feature_ex/CMakeFiles/bond_generate_messages_nodejs.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/bond_generate_messages_nodejs.dir/rule
 .PHONY : feature_ex/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+=======
+roscpp_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-bond_generate_messages_nodejs: feature_ex/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+#=============================================================================
+# Target rules for targets named std_srvs_generate_messages_eus
 
-.PHONY : bond_generate_messages_nodejs
+# Build rule for target.
+std_srvs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_eus
+.PHONY : std_srvs_generate_messages_eus
 
 # fast build rule for target.
+<<<<<<< HEAD
 bond_generate_messages_nodejs/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/bond_generate_messages_nodejs.dir/build.make feature_ex/CMakeFiles/bond_generate_messages_nodejs.dir/build
 .PHONY : bond_generate_messages_nodejs/fast
@@ -486,13 +783,22 @@ bond_generate_messages_nodejs/fast:
 feature_ex/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 .PHONY : feature_ex/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+=======
+std_srvs_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/std_srvs_generate_messages_eus.dir/build.make CMakeFiles/std_srvs_generate_messages_eus.dir/build
+.PHONY : std_srvs_generate_messages_eus/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-actionlib_generate_messages_cpp: feature_ex/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_lisp
 
-.PHONY : actionlib_generate_messages_cpp
+# Build rule for target.
+geometry_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
+.PHONY : geometry_msgs_generate_messages_lisp
 
 # fast build rule for target.
+<<<<<<< HEAD
 actionlib_generate_messages_cpp/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make feature_ex/CMakeFiles/actionlib_generate_messages_cpp.dir/build
 .PHONY : actionlib_generate_messages_cpp/fast
@@ -504,10 +810,22 @@ feature_ex/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
 
 # Convenience name for target.
 sensor_msgs_generate_messages_nodejs: feature_ex/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+=======
+geometry_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
 
-.PHONY : sensor_msgs_generate_messages_nodejs
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_cpp
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
+
+# Build rule for target.
+std_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
+.PHONY : std_msgs_generate_messages_cpp
 
 # fast build rule for target.
+<<<<<<< HEAD
 sensor_msgs_generate_messages_nodejs/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make feature_ex/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
 .PHONY : sensor_msgs_generate_messages_nodejs/fast
@@ -516,13 +834,22 @@ sensor_msgs_generate_messages_nodejs/fast:
 feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
 .PHONY : feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+=======
+std_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+#=============================================================================
+# Target rules for targets named run_tests
 
-.PHONY : dynamic_reconfigure_generate_messages_lisp
+# Build rule for target.
+run_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests
+.PHONY : run_tests
 
 # fast build rule for target.
+<<<<<<< HEAD
 dynamic_reconfigure_generate_messages_lisp/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_lisp/fast
@@ -534,10 +861,22 @@ feature_ex/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule:
 
 # Convenience name for target.
 pcl_msgs_generate_messages_cpp: feature_ex/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
+=======
+run_tests/fast:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
+.PHONY : run_tests/fast
 
-.PHONY : pcl_msgs_generate_messages_cpp
+#=============================================================================
+# Target rules for targets named download_extra_data
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
+
+# Build rule for target.
+download_extra_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 download_extra_data
+.PHONY : download_extra_data
 
 # fast build rule for target.
+<<<<<<< HEAD
 pcl_msgs_generate_messages_cpp/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build.make feature_ex/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build
 .PHONY : pcl_msgs_generate_messages_cpp/fast
@@ -546,13 +885,22 @@ pcl_msgs_generate_messages_cpp/fast:
 feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
 .PHONY : feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+=======
+download_extra_data/fast:
+	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
+.PHONY : download_extra_data/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_nodejs: feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+#=============================================================================
+# Target rules for targets named pcl_msgs_generate_messages_eus
 
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
+# Build rule for target.
+pcl_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcl_msgs_generate_messages_eus
+.PHONY : pcl_msgs_generate_messages_eus
 
 # fast build rule for target.
+<<<<<<< HEAD
 dynamic_reconfigure_generate_messages_nodejs/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
@@ -561,13 +909,22 @@ dynamic_reconfigure_generate_messages_nodejs/fast:
 feature_ex/CMakeFiles/bond_generate_messages_eus.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/bond_generate_messages_eus.dir/rule
 .PHONY : feature_ex/CMakeFiles/bond_generate_messages_eus.dir/rule
+=======
+pcl_msgs_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/pcl_msgs_generate_messages_eus.dir/build.make CMakeFiles/pcl_msgs_generate_messages_eus.dir/build
+.PHONY : pcl_msgs_generate_messages_eus/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-bond_generate_messages_eus: feature_ex/CMakeFiles/bond_generate_messages_eus.dir/rule
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_cpp
 
-.PHONY : bond_generate_messages_eus
+# Build rule for target.
+roscpp_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
+.PHONY : roscpp_generate_messages_cpp
 
 # fast build rule for target.
+<<<<<<< HEAD
 bond_generate_messages_eus/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/bond_generate_messages_eus.dir/build.make feature_ex/CMakeFiles/bond_generate_messages_eus.dir/build
 .PHONY : bond_generate_messages_eus/fast
@@ -579,10 +936,22 @@ feature_ex/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
 
 # Convenience name for target.
 sensor_msgs_generate_messages_eus: feature_ex/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+=======
+roscpp_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_cpp.dir/build.make CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
 
-.PHONY : sensor_msgs_generate_messages_eus
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_nodejs
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
+
+# Build rule for target.
+sensor_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
+.PHONY : sensor_msgs_generate_messages_nodejs
 
 # fast build rule for target.
+<<<<<<< HEAD
 sensor_msgs_generate_messages_eus/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make feature_ex/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
 .PHONY : sensor_msgs_generate_messages_eus/fast
@@ -591,13 +960,22 @@ sensor_msgs_generate_messages_eus/fast:
 feature_ex/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 .PHONY : feature_ex/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+=======
+sensor_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: feature_ex/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_cpp
 
-.PHONY : sensor_msgs_generate_messages_cpp
+# Build rule for target.
+actionlib_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_cpp
+.PHONY : actionlib_generate_messages_cpp
 
 # fast build rule for target.
+<<<<<<< HEAD
 sensor_msgs_generate_messages_cpp/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make feature_ex/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
 .PHONY : sensor_msgs_generate_messages_cpp/fast
@@ -606,13 +984,22 @@ sensor_msgs_generate_messages_cpp/fast:
 feature_ex/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 .PHONY : feature_ex/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+=======
+actionlib_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/actionlib_generate_messages_cpp.dir/build.make CMakeFiles/actionlib_generate_messages_cpp.dir/build
+.PHONY : actionlib_generate_messages_cpp/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-actionlib_msgs_generate_messages_eus: feature_ex/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_nodejs
 
-.PHONY : actionlib_msgs_generate_messages_eus
+# Build rule for target.
+geometry_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_nodejs
+.PHONY : geometry_msgs_generate_messages_nodejs
 
 # fast build rule for target.
+<<<<<<< HEAD
 actionlib_msgs_generate_messages_eus/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make feature_ex/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
 .PHONY : actionlib_msgs_generate_messages_eus/fast
@@ -621,13 +1008,22 @@ actionlib_msgs_generate_messages_eus/fast:
 feature_ex/CMakeFiles/nodelet_generate_messages_lisp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
 .PHONY : feature_ex/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+=======
+geometry_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
 
-# Convenience name for target.
-nodelet_generate_messages_lisp: feature_ex/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+#=============================================================================
+# Target rules for targets named tests
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : nodelet_generate_messages_lisp
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
 
 # fast build rule for target.
+<<<<<<< HEAD
 nodelet_generate_messages_lisp/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make feature_ex/CMakeFiles/nodelet_generate_messages_lisp.dir/build
 .PHONY : nodelet_generate_messages_lisp/fast
@@ -639,10 +1035,22 @@ feature_ex/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule:
 
 # Convenience name for target.
 pcl_msgs_generate_messages_eus: feature_ex/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
+=======
+tests/fast:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+.PHONY : tests/fast
 
-.PHONY : pcl_msgs_generate_messages_eus
+#=============================================================================
+# Target rules for targets named nodelet_generate_messages_py
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
+
+# Build rule for target.
+nodelet_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_py
+.PHONY : nodelet_generate_messages_py
 
 # fast build rule for target.
+<<<<<<< HEAD
 pcl_msgs_generate_messages_eus/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/pcl_msgs_generate_messages_eus.dir/build.make feature_ex/CMakeFiles/pcl_msgs_generate_messages_eus.dir/build
 .PHONY : pcl_msgs_generate_messages_eus/fast
@@ -651,13 +1059,22 @@ pcl_msgs_generate_messages_eus/fast:
 feature_ex/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule
 .PHONY : feature_ex/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule
+=======
+nodelet_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/nodelet_generate_messages_py.dir/build.make CMakeFiles/nodelet_generate_messages_py.dir/build
+.PHONY : nodelet_generate_messages_py/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-pcl_msgs_generate_messages_py: feature_ex/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_py
 
-.PHONY : pcl_msgs_generate_messages_py
+# Build rule for target.
+sensor_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
+.PHONY : sensor_msgs_generate_messages_py
 
 # fast build rule for target.
+<<<<<<< HEAD
 pcl_msgs_generate_messages_py/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/pcl_msgs_generate_messages_py.dir/build.make feature_ex/CMakeFiles/pcl_msgs_generate_messages_py.dir/build
 .PHONY : pcl_msgs_generate_messages_py/fast
@@ -666,13 +1083,22 @@ pcl_msgs_generate_messages_py/fast:
 feature_ex/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 .PHONY : feature_ex/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+=======
+sensor_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: feature_ex/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+#=============================================================================
+# Target rules for targets named dynamic_reconfigure_generate_messages_cpp
 
-.PHONY : sensor_msgs_generate_messages_lisp
+# Build rule for target.
+dynamic_reconfigure_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_reconfigure_generate_messages_cpp
+.PHONY : dynamic_reconfigure_generate_messages_cpp
 
 # fast build rule for target.
+<<<<<<< HEAD
 sensor_msgs_generate_messages_lisp/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make feature_ex/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
 .PHONY : sensor_msgs_generate_messages_lisp/fast
@@ -681,13 +1107,35 @@ sensor_msgs_generate_messages_lisp/fast:
 feature_ex/CMakeFiles/std_srvs_generate_messages_eus.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
 .PHONY : feature_ex/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+=======
+dynamic_reconfigure_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
 
-# Convenience name for target.
-std_srvs_generate_messages_eus: feature_ex/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+#=============================================================================
+# Target rules for targets named tf_generate_messages_py
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : std_srvs_generate_messages_eus
+# Build rule for target.
+tf_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_py
+.PHONY : tf_generate_messages_py
 
 # fast build rule for target.
+tf_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/tf_generate_messages_py.dir/build.make CMakeFiles/tf_generate_messages_py.dir/build
+.PHONY : tf_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_eus
+
+# Build rule for target.
+std_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
+.PHONY : std_msgs_generate_messages_eus
+
+# fast build rule for target.
+<<<<<<< HEAD
 std_srvs_generate_messages_eus/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make feature_ex/CMakeFiles/std_srvs_generate_messages_eus.dir/build
 .PHONY : std_srvs_generate_messages_eus/fast
@@ -696,13 +1144,35 @@ std_srvs_generate_messages_eus/fast:
 feature_ex/CMakeFiles/tf_generate_messages_py.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/tf_generate_messages_py.dir/rule
 .PHONY : feature_ex/CMakeFiles/tf_generate_messages_py.dir/rule
+=======
+std_msgs_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_eus.dir/build.make CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
 
-# Convenience name for target.
-tf_generate_messages_py: feature_ex/CMakeFiles/tf_generate_messages_py.dir/rule
+#=============================================================================
+# Target rules for targets named topic_tools_generate_messages_eus
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : tf_generate_messages_py
+# Build rule for target.
+topic_tools_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 topic_tools_generate_messages_eus
+.PHONY : topic_tools_generate_messages_eus
 
 # fast build rule for target.
+topic_tools_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/topic_tools_generate_messages_eus.dir/build.make CMakeFiles/topic_tools_generate_messages_eus.dir/build
+.PHONY : topic_tools_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named pcl_msgs_generate_messages_nodejs
+
+# Build rule for target.
+pcl_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcl_msgs_generate_messages_nodejs
+.PHONY : pcl_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+<<<<<<< HEAD
 tf_generate_messages_py/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/tf_generate_messages_py.dir/build.make feature_ex/CMakeFiles/tf_generate_messages_py.dir/build
 .PHONY : tf_generate_messages_py/fast
@@ -711,13 +1181,35 @@ tf_generate_messages_py/fast:
 feature_ex/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 .PHONY : feature_ex/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+=======
+pcl_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build
+.PHONY : pcl_msgs_generate_messages_nodejs/fast
 
-# Convenience name for target.
-sensor_msgs_generate_messages_py: feature_ex/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+#=============================================================================
+# Target rules for targets named nodelet_generate_messages_nodejs
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : sensor_msgs_generate_messages_py
+# Build rule for target.
+nodelet_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_nodejs
+.PHONY : nodelet_generate_messages_nodejs
 
 # fast build rule for target.
+nodelet_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make CMakeFiles/nodelet_generate_messages_nodejs.dir/build
+.PHONY : nodelet_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_nodejs
+
+# Build rule for target.
+roscpp_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_nodejs
+.PHONY : roscpp_generate_messages_nodejs
+
+# fast build rule for target.
+<<<<<<< HEAD
 sensor_msgs_generate_messages_py/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make feature_ex/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 .PHONY : sensor_msgs_generate_messages_py/fast
@@ -726,13 +1218,35 @@ sensor_msgs_generate_messages_py/fast:
 feature_ex/CMakeFiles/topic_tools_generate_messages_py.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/topic_tools_generate_messages_py.dir/rule
 .PHONY : feature_ex/CMakeFiles/topic_tools_generate_messages_py.dir/rule
+=======
+roscpp_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+.PHONY : roscpp_generate_messages_nodejs/fast
 
-# Convenience name for target.
-topic_tools_generate_messages_py: feature_ex/CMakeFiles/topic_tools_generate_messages_py.dir/rule
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_lisp
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : topic_tools_generate_messages_py
+# Build rule for target.
+std_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
+.PHONY : std_msgs_generate_messages_lisp
 
 # fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_cpp
+
+# Build rule for target.
+sensor_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+<<<<<<< HEAD
 topic_tools_generate_messages_py/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/topic_tools_generate_messages_py.dir/build.make feature_ex/CMakeFiles/topic_tools_generate_messages_py.dir/build
 .PHONY : topic_tools_generate_messages_py/fast
@@ -741,13 +1255,35 @@ topic_tools_generate_messages_py/fast:
 feature_ex/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
 .PHONY : feature_ex/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+=======
+sensor_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
 
-# Convenience name for target.
-dynamic_reconfigure_gencfg: feature_ex/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_eus
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : dynamic_reconfigure_gencfg
+# Build rule for target.
+sensor_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_eus
+.PHONY : sensor_msgs_generate_messages_eus
 
 # fast build rule for target.
+sensor_msgs_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named pcl_ros_gencfg
+
+# Build rule for target.
+pcl_ros_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcl_ros_gencfg
+.PHONY : pcl_ros_gencfg
+
+# fast build rule for target.
+<<<<<<< HEAD
 dynamic_reconfigure_gencfg/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make feature_ex/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
 .PHONY : dynamic_reconfigure_gencfg/fast
@@ -756,13 +1292,35 @@ dynamic_reconfigure_gencfg/fast:
 feature_ex/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
 .PHONY : feature_ex/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
+=======
+pcl_ros_gencfg/fast:
+	$(MAKE) -f CMakeFiles/pcl_ros_gencfg.dir/build.make CMakeFiles/pcl_ros_gencfg.dir/build
+.PHONY : pcl_ros_gencfg/fast
 
-# Convenience name for target.
-pcl_msgs_generate_messages_lisp: feature_ex/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
+#=============================================================================
+# Target rules for targets named topic_tools_generate_messages_nodejs
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : pcl_msgs_generate_messages_lisp
+# Build rule for target.
+topic_tools_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 topic_tools_generate_messages_nodejs
+.PHONY : topic_tools_generate_messages_nodejs
 
 # fast build rule for target.
+topic_tools_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/topic_tools_generate_messages_nodejs.dir/build.make CMakeFiles/topic_tools_generate_messages_nodejs.dir/build
+.PHONY : topic_tools_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named tf2_msgs_generate_messages_py
+
+# Build rule for target.
+tf2_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_py
+.PHONY : tf2_msgs_generate_messages_py
+
+# fast build rule for target.
+<<<<<<< HEAD
 pcl_msgs_generate_messages_lisp/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build.make feature_ex/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build
 .PHONY : pcl_msgs_generate_messages_lisp/fast
@@ -771,13 +1329,35 @@ pcl_msgs_generate_messages_lisp/fast:
 feature_ex/CMakeFiles/topic_tools_generate_messages_eus.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
 .PHONY : feature_ex/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
+=======
+tf2_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+.PHONY : tf2_msgs_generate_messages_py/fast
 
-# Convenience name for target.
-topic_tools_generate_messages_eus: feature_ex/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_py
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : topic_tools_generate_messages_eus
+# Build rule for target.
+actionlib_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_py
+.PHONY : actionlib_generate_messages_py
 
 # fast build rule for target.
+actionlib_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/actionlib_generate_messages_py.dir/build.make CMakeFiles/actionlib_generate_messages_py.dir/build
+.PHONY : actionlib_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_py
+
+# Build rule for target.
+roscpp_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+<<<<<<< HEAD
 topic_tools_generate_messages_eus/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make feature_ex/CMakeFiles/topic_tools_generate_messages_eus.dir/build
 .PHONY : topic_tools_generate_messages_eus/fast
@@ -786,13 +1366,35 @@ topic_tools_generate_messages_eus/fast:
 feature_ex/CMakeFiles/nodelet_generate_messages_eus.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/nodelet_generate_messages_eus.dir/rule
 .PHONY : feature_ex/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+=======
+roscpp_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_py.dir/build.make CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
 
-# Convenience name for target.
-nodelet_generate_messages_eus: feature_ex/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_eus
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : nodelet_generate_messages_eus
+# Build rule for target.
+rosgraph_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_eus
+.PHONY : rosgraph_msgs_generate_messages_eus
 
 # fast build rule for target.
+rosgraph_msgs_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+.PHONY : rosgraph_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_lisp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+<<<<<<< HEAD
 nodelet_generate_messages_eus/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/nodelet_generate_messages_eus.dir/build.make feature_ex/CMakeFiles/nodelet_generate_messages_eus.dir/build
 .PHONY : nodelet_generate_messages_eus/fast
@@ -801,13 +1403,35 @@ nodelet_generate_messages_eus/fast:
 feature_ex/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
 .PHONY : feature_ex/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
+=======
+rosgraph_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
-# Convenience name for target.
-pcl_msgs_generate_messages_nodejs: feature_ex/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_nodejs
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : pcl_msgs_generate_messages_nodejs
+# Build rule for target.
+rosgraph_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_nodejs
+.PHONY : rosgraph_msgs_generate_messages_nodejs
 
 # fast build rule for target.
+rosgraph_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named nodelet_generate_messages_cpp
+
+# Build rule for target.
+nodelet_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_cpp
+.PHONY : nodelet_generate_messages_cpp
+
+# fast build rule for target.
+<<<<<<< HEAD
 pcl_msgs_generate_messages_nodejs/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build.make feature_ex/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build
 .PHONY : pcl_msgs_generate_messages_nodejs/fast
@@ -816,13 +1440,35 @@ pcl_msgs_generate_messages_nodejs/fast:
 feature_ex/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
 .PHONY : feature_ex/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+=======
+nodelet_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/nodelet_generate_messages_cpp.dir/build.make CMakeFiles/nodelet_generate_messages_cpp.dir/build
+.PHONY : nodelet_generate_messages_cpp/fast
 
-# Convenience name for target.
-nodelet_generate_messages_nodejs: feature_ex/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+#=============================================================================
+# Target rules for targets named bond_generate_messages_py
 
-.PHONY : nodelet_generate_messages_nodejs
+# Build rule for target.
+bond_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bond_generate_messages_py
+.PHONY : bond_generate_messages_py
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
 # fast build rule for target.
+bond_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/bond_generate_messages_py.dir/build.make CMakeFiles/bond_generate_messages_py.dir/build
+.PHONY : bond_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named std_srvs_generate_messages_nodejs
+
+# Build rule for target.
+std_srvs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_nodejs
+.PHONY : std_srvs_generate_messages_nodejs
+
+# fast build rule for target.
+<<<<<<< HEAD
 nodelet_generate_messages_nodejs/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make feature_ex/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
 .PHONY : nodelet_generate_messages_nodejs/fast
@@ -831,13 +1477,35 @@ nodelet_generate_messages_nodejs/fast:
 feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
 .PHONY : feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+=======
+std_srvs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+.PHONY : std_srvs_generate_messages_nodejs/fast
 
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_cpp
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : dynamic_reconfigure_generate_messages_cpp
+# Build rule for target.
+geometry_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
+.PHONY : geometry_msgs_generate_messages_cpp
 
 # fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_lisp
+
+# Build rule for target.
+actionlib_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_lisp
+.PHONY : actionlib_generate_messages_lisp
+
+# fast build rule for target.
+<<<<<<< HEAD
 dynamic_reconfigure_generate_messages_cpp/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make feature_ex/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_cpp/fast
@@ -846,13 +1514,35 @@ dynamic_reconfigure_generate_messages_cpp/fast:
 feature_ex/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
 .PHONY : feature_ex/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+=======
+actionlib_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/actionlib_generate_messages_lisp.dir/build.make CMakeFiles/actionlib_generate_messages_lisp.dir/build
+.PHONY : actionlib_generate_messages_lisp/fast
 
-# Convenience name for target.
-topic_tools_generate_messages_cpp: feature_ex/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+#=============================================================================
+# Target rules for targets named nodelet_generate_messages_eus
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : topic_tools_generate_messages_cpp
+# Build rule for target.
+nodelet_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_eus
+.PHONY : nodelet_generate_messages_eus
 
 # fast build rule for target.
+nodelet_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/nodelet_generate_messages_eus.dir/build.make CMakeFiles/nodelet_generate_messages_eus.dir/build
+.PHONY : nodelet_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named nodelet_generate_messages_lisp
+
+# Build rule for target.
+nodelet_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_lisp
+.PHONY : nodelet_generate_messages_lisp
+
+# fast build rule for target.
+<<<<<<< HEAD
 topic_tools_generate_messages_cpp/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make feature_ex/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
 .PHONY : topic_tools_generate_messages_cpp/fast
@@ -861,13 +1551,35 @@ topic_tools_generate_messages_cpp/fast:
 feature_ex/CMakeFiles/tf_generate_messages_eus.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/tf_generate_messages_eus.dir/rule
 .PHONY : feature_ex/CMakeFiles/tf_generate_messages_eus.dir/rule
+=======
+nodelet_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/nodelet_generate_messages_lisp.dir/build.make CMakeFiles/nodelet_generate_messages_lisp.dir/build
+.PHONY : nodelet_generate_messages_lisp/fast
 
-# Convenience name for target.
-tf_generate_messages_eus: feature_ex/CMakeFiles/tf_generate_messages_eus.dir/rule
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_eus
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : tf_generate_messages_eus
+# Build rule for target.
+roscpp_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_eus
+.PHONY : roscpp_generate_messages_eus
 
 # fast build rule for target.
+roscpp_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/roscpp_generate_messages_eus.dir/build.make CMakeFiles/roscpp_generate_messages_eus.dir/build
+.PHONY : roscpp_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_py
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+<<<<<<< HEAD
 tf_generate_messages_eus/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/tf_generate_messages_eus.dir/build.make feature_ex/CMakeFiles/tf_generate_messages_eus.dir/build
 .PHONY : tf_generate_messages_eus/fast
@@ -876,14 +1588,36 @@ tf_generate_messages_eus/fast:
 feature_ex/CMakeFiles/bond_generate_messages_cpp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/bond_generate_messages_cpp.dir/rule
 .PHONY : feature_ex/CMakeFiles/bond_generate_messages_cpp.dir/rule
+=======
+rosgraph_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
 
-# Convenience name for target.
-bond_generate_messages_cpp: feature_ex/CMakeFiles/bond_generate_messages_cpp.dir/rule
+#=============================================================================
+# Target rules for targets named actionlib_msgs_generate_messages_eus
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
+# Build rule for target.
+actionlib_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_eus
+.PHONY : actionlib_msgs_generate_messages_eus
+
+# fast build rule for target.
+actionlib_msgs_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+.PHONY : actionlib_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named bond_generate_messages_cpp
+
+# Build rule for target.
+bond_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bond_generate_messages_cpp
 .PHONY : bond_generate_messages_cpp
 
 # fast build rule for target.
 bond_generate_messages_cpp/fast:
+<<<<<<< HEAD
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/bond_generate_messages_cpp.dir/build.make feature_ex/CMakeFiles/bond_generate_messages_cpp.dir/build
 .PHONY : bond_generate_messages_cpp/fast
 
@@ -894,10 +1628,21 @@ feature_ex/CMakeFiles/bond_generate_messages_lisp.dir/rule:
 
 # Convenience name for target.
 bond_generate_messages_lisp: feature_ex/CMakeFiles/bond_generate_messages_lisp.dir/rule
+=======
+	$(MAKE) -f CMakeFiles/bond_generate_messages_cpp.dir/build.make CMakeFiles/bond_generate_messages_cpp.dir/build
+.PHONY : bond_generate_messages_cpp/fast
 
-.PHONY : bond_generate_messages_lisp
+#=============================================================================
+# Target rules for targets named bond_generate_messages_nodejs
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
+
+# Build rule for target.
+bond_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bond_generate_messages_nodejs
+.PHONY : bond_generate_messages_nodejs
 
 # fast build rule for target.
+<<<<<<< HEAD
 bond_generate_messages_lisp/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/bond_generate_messages_lisp.dir/build.make feature_ex/CMakeFiles/bond_generate_messages_lisp.dir/build
 .PHONY : bond_generate_messages_lisp/fast
@@ -906,13 +1651,35 @@ bond_generate_messages_lisp/fast:
 feature_ex/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
 .PHONY : feature_ex/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
+=======
+bond_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/bond_generate_messages_nodejs.dir/build.make CMakeFiles/bond_generate_messages_nodejs.dir/build
+.PHONY : bond_generate_messages_nodejs/fast
 
-# Convenience name for target.
-topic_tools_generate_messages_lisp: feature_ex/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
+#=============================================================================
+# Target rules for targets named topic_tools_generate_messages_py
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : topic_tools_generate_messages_lisp
+# Build rule for target.
+topic_tools_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 topic_tools_generate_messages_py
+.PHONY : topic_tools_generate_messages_py
 
 # fast build rule for target.
+topic_tools_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/topic_tools_generate_messages_py.dir/build.make CMakeFiles/topic_tools_generate_messages_py.dir/build
+.PHONY : topic_tools_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_msgs_generate_messages_nodejs
+
+# Build rule for target.
+actionlib_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_nodejs
+.PHONY : actionlib_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+<<<<<<< HEAD
 topic_tools_generate_messages_lisp/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make feature_ex/CMakeFiles/topic_tools_generate_messages_lisp.dir/build
 .PHONY : topic_tools_generate_messages_lisp/fast
@@ -921,14 +1688,36 @@ topic_tools_generate_messages_lisp/fast:
 feature_ex/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 .PHONY : feature_ex/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+=======
+actionlib_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
+.PHONY : actionlib_msgs_generate_messages_nodejs/fast
 
-# Convenience name for target.
-std_srvs_generate_messages_lisp: feature_ex/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+#=============================================================================
+# Target rules for targets named nodelet_topic_tools_gencfg
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
+# Build rule for target.
+nodelet_topic_tools_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nodelet_topic_tools_gencfg
+.PHONY : nodelet_topic_tools_gencfg
+
+# fast build rule for target.
+nodelet_topic_tools_gencfg/fast:
+	$(MAKE) -f CMakeFiles/nodelet_topic_tools_gencfg.dir/build.make CMakeFiles/nodelet_topic_tools_gencfg.dir/build
+.PHONY : nodelet_topic_tools_gencfg/fast
+
+#=============================================================================
+# Target rules for targets named std_srvs_generate_messages_lisp
+
+# Build rule for target.
+std_srvs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_lisp
 .PHONY : std_srvs_generate_messages_lisp
 
 # fast build rule for target.
 std_srvs_generate_messages_lisp/fast:
+<<<<<<< HEAD
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make feature_ex/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
 .PHONY : std_srvs_generate_messages_lisp/fast
 
@@ -936,13 +1725,34 @@ std_srvs_generate_messages_lisp/fast:
 feature_ex/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule
 .PHONY : feature_ex/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule
+=======
+	$(MAKE) -f CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+.PHONY : std_srvs_generate_messages_lisp/fast
 
-# Convenience name for target.
-nodelet_topic_tools_gencfg: feature_ex/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule
+#=============================================================================
+# Target rules for targets named topic_tools_generate_messages_lisp
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : nodelet_topic_tools_gencfg
+# Build rule for target.
+topic_tools_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 topic_tools_generate_messages_lisp
+.PHONY : topic_tools_generate_messages_lisp
 
 # fast build rule for target.
+topic_tools_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make CMakeFiles/topic_tools_generate_messages_lisp.dir/build
+.PHONY : topic_tools_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named doxygen
+
+# Build rule for target.
+doxygen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 doxygen
+.PHONY : doxygen
+
+# fast build rule for target.
+<<<<<<< HEAD
 nodelet_topic_tools_gencfg/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/nodelet_topic_tools_gencfg.dir/build.make feature_ex/CMakeFiles/nodelet_topic_tools_gencfg.dir/build
 .PHONY : nodelet_topic_tools_gencfg/fast
@@ -951,14 +1761,49 @@ nodelet_topic_tools_gencfg/fast:
 feature_ex/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
 .PHONY : feature_ex/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+=======
+doxygen/fast:
+	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
+.PHONY : doxygen/fast
 
-# Convenience name for target.
-actionlib_msgs_generate_messages_cpp: feature_ex/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+#=============================================================================
+# Target rules for targets named std_srvs_generate_messages_cpp
 
+# Build rule for target.
+std_srvs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_cpp
+.PHONY : std_srvs_generate_messages_cpp
+
+# fast build rule for target.
+std_srvs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+.PHONY : std_srvs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named tf_generate_messages_eus
+
+# Build rule for target.
+tf_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_eus
+.PHONY : tf_generate_messages_eus
+
+# fast build rule for target.
+tf_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/tf_generate_messages_eus.dir/build.make CMakeFiles/tf_generate_messages_eus.dir/build
+.PHONY : tf_generate_messages_eus/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
+
+#=============================================================================
+# Target rules for targets named actionlib_msgs_generate_messages_cpp
+
+# Build rule for target.
+actionlib_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_cpp
 .PHONY : actionlib_msgs_generate_messages_cpp
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_cpp/fast:
+<<<<<<< HEAD
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make feature_ex/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
 .PHONY : actionlib_msgs_generate_messages_cpp/fast
 
@@ -966,13 +1811,34 @@ actionlib_msgs_generate_messages_cpp/fast:
 feature_ex/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
 .PHONY : feature_ex/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+=======
+	$(MAKE) -f CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+.PHONY : actionlib_msgs_generate_messages_cpp/fast
 
-# Convenience name for target.
-std_srvs_generate_messages_cpp: feature_ex/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+#=============================================================================
+# Target rules for targets named std_srvs_generate_messages_py
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : std_srvs_generate_messages_cpp
+# Build rule for target.
+std_srvs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_py
+.PHONY : std_srvs_generate_messages_py
 
 # fast build rule for target.
+std_srvs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/std_srvs_generate_messages_py.dir/build.make CMakeFiles/std_srvs_generate_messages_py.dir/build
+.PHONY : std_srvs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named tf_generate_messages_lisp
+
+# Build rule for target.
+tf_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_lisp
+.PHONY : tf_generate_messages_lisp
+
+# fast build rule for target.
+<<<<<<< HEAD
 std_srvs_generate_messages_cpp/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make feature_ex/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
 .PHONY : std_srvs_generate_messages_cpp/fast
@@ -981,13 +1847,35 @@ std_srvs_generate_messages_cpp/fast:
 feature_ex/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
 .PHONY : feature_ex/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+=======
+tf_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/tf_generate_messages_lisp.dir/build.make CMakeFiles/tf_generate_messages_lisp.dir/build
+.PHONY : tf_generate_messages_lisp/fast
 
-# Convenience name for target.
-actionlib_generate_messages_lisp: feature_ex/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+#=============================================================================
+# Target rules for targets named tf_generate_messages_nodejs
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : actionlib_generate_messages_lisp
+# Build rule for target.
+tf_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_nodejs
+.PHONY : tf_generate_messages_nodejs
 
 # fast build rule for target.
+tf_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/tf_generate_messages_nodejs.dir/build.make CMakeFiles/tf_generate_messages_nodejs.dir/build
+.PHONY : tf_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named pcl_msgs_generate_messages_py
+
+# Build rule for target.
+pcl_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcl_msgs_generate_messages_py
+.PHONY : pcl_msgs_generate_messages_py
+
+# fast build rule for target.
+<<<<<<< HEAD
 actionlib_generate_messages_lisp/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make feature_ex/CMakeFiles/actionlib_generate_messages_lisp.dir/build
 .PHONY : actionlib_generate_messages_lisp/fast
@@ -996,13 +1884,35 @@ actionlib_generate_messages_lisp/fast:
 feature_ex/CMakeFiles/bond_generate_messages_py.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/bond_generate_messages_py.dir/rule
 .PHONY : feature_ex/CMakeFiles/bond_generate_messages_py.dir/rule
+=======
+pcl_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/pcl_msgs_generate_messages_py.dir/build.make CMakeFiles/pcl_msgs_generate_messages_py.dir/build
+.PHONY : pcl_msgs_generate_messages_py/fast
 
-# Convenience name for target.
-bond_generate_messages_py: feature_ex/CMakeFiles/bond_generate_messages_py.dir/rule
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_eus
 
-.PHONY : bond_generate_messages_py
+# Build rule for target.
+actionlib_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_eus
+.PHONY : actionlib_generate_messages_eus
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
 # fast build rule for target.
+actionlib_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/actionlib_generate_messages_eus.dir/build.make CMakeFiles/actionlib_generate_messages_eus.dir/build
+.PHONY : actionlib_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named pcl_msgs_generate_messages_lisp
+
+# Build rule for target.
+pcl_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcl_msgs_generate_messages_lisp
+.PHONY : pcl_msgs_generate_messages_lisp
+
+# fast build rule for target.
+<<<<<<< HEAD
 bond_generate_messages_py/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/bond_generate_messages_py.dir/build.make feature_ex/CMakeFiles/bond_generate_messages_py.dir/build
 .PHONY : bond_generate_messages_py/fast
@@ -1011,13 +1921,35 @@ bond_generate_messages_py/fast:
 feature_ex/CMakeFiles/nodelet_generate_messages_cpp.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
 .PHONY : feature_ex/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+=======
+pcl_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build.make CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build
+.PHONY : pcl_msgs_generate_messages_lisp/fast
 
-# Convenience name for target.
-nodelet_generate_messages_cpp: feature_ex/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+#=============================================================================
+# Target rules for targets named tf_generate_messages_cpp
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : nodelet_generate_messages_cpp
+# Build rule for target.
+tf_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_cpp
+.PHONY : tf_generate_messages_cpp
 
 # fast build rule for target.
+tf_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/tf_generate_messages_cpp.dir/build.make CMakeFiles/tf_generate_messages_cpp.dir/build
+.PHONY : tf_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_nodejs
+
+# Build rule for target.
+actionlib_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_nodejs
+.PHONY : actionlib_generate_messages_nodejs
+
+# fast build rule for target.
+<<<<<<< HEAD
 nodelet_generate_messages_cpp/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make feature_ex/CMakeFiles/nodelet_generate_messages_cpp.dir/build
 .PHONY : nodelet_generate_messages_cpp/fast
@@ -1026,13 +1958,35 @@ nodelet_generate_messages_cpp/fast:
 feature_ex/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 .PHONY : feature_ex/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+=======
+actionlib_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+.PHONY : actionlib_generate_messages_nodejs/fast
 
-# Convenience name for target.
-std_srvs_generate_messages_nodejs: feature_ex/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+#=============================================================================
+# Target rules for targets named actionlib_msgs_generate_messages_lisp
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : std_srvs_generate_messages_nodejs
+# Build rule for target.
+actionlib_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_lisp
+.PHONY : actionlib_msgs_generate_messages_lisp
 
 # fast build rule for target.
+actionlib_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+.PHONY : actionlib_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_msgs_generate_messages_py
+
+# Build rule for target.
+actionlib_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_msgs_generate_messages_py
+.PHONY : actionlib_msgs_generate_messages_py
+
+# fast build rule for target.
+<<<<<<< HEAD
 std_srvs_generate_messages_nodejs/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make feature_ex/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
 .PHONY : std_srvs_generate_messages_nodejs/fast
@@ -1041,16 +1995,69 @@ std_srvs_generate_messages_nodejs/fast:
 feature_ex/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 feature_ex/CMakeFiles/std_srvs_generate_messages_py.dir/rule
 .PHONY : feature_ex/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+=======
+actionlib_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+.PHONY : actionlib_msgs_generate_messages_py/fast
 
-# Convenience name for target.
-std_srvs_generate_messages_py: feature_ex/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+#=============================================================================
+# Target rules for targets named gmock_main
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-.PHONY : std_srvs_generate_messages_py
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
 
 # fast build rule for target.
+gmock_main/fast:
+	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+<<<<<<< HEAD
 std_srvs_generate_messages_py/fast:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/std_srvs_generate_messages_py.dir/build.make feature_ex/CMakeFiles/std_srvs_generate_messages_py.dir/build
 .PHONY : std_srvs_generate_messages_py/fast
+=======
+gmock/fast:
+	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
 src/feature_ex.o: src/feature_ex.cpp.o
 
@@ -1058,7 +2065,11 @@ src/feature_ex.o: src/feature_ex.cpp.o
 
 # target to build an object file
 src/feature_ex.cpp.o:
+<<<<<<< HEAD
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/feature_ex.dir/build.make feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o
+=======
+	$(MAKE) -f CMakeFiles/feature_ex.dir/build.make CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 .PHONY : src/feature_ex.cpp.o
 
 src/feature_ex.i: src/feature_ex.cpp.i
@@ -1067,7 +2078,11 @@ src/feature_ex.i: src/feature_ex.cpp.i
 
 # target to preprocess a source file
 src/feature_ex.cpp.i:
+<<<<<<< HEAD
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/feature_ex.dir/build.make feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex.cpp.i
+=======
+	$(MAKE) -f CMakeFiles/feature_ex.dir/build.make CMakeFiles/feature_ex.dir/src/feature_ex.cpp.i
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 .PHONY : src/feature_ex.cpp.i
 
 src/feature_ex.s: src/feature_ex.cpp.s
@@ -1076,7 +2091,11 @@ src/feature_ex.s: src/feature_ex.cpp.s
 
 # target to generate assembly for a file
 src/feature_ex.cpp.s:
+<<<<<<< HEAD
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(MAKE) -f feature_ex/CMakeFiles/feature_ex.dir/build.make feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex.cpp.s
+=======
+	$(MAKE) -f CMakeFiles/feature_ex.dir/build.make CMakeFiles/feature_ex.dir/src/feature_ex.cpp.s
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 .PHONY : src/feature_ex.cpp.s
 
 # Help Target
@@ -1085,72 +2104,101 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... feature_ex"
 	@echo "... tf2_msgs_generate_messages_nodejs"
-	@echo "... install/strip"
-	@echo "... tf2_msgs_generate_messages_py"
-	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... tf2_msgs_generate_messages_cpp"
-	@echo "... actionlib_msgs_generate_messages_py"
-	@echo "... actionlib_msgs_generate_messages_nodejs"
-	@echo "... actionlib_msgs_generate_messages_lisp"
-	@echo "... test"
-	@echo "... actionlib_generate_messages_nodejs"
-	@echo "... actionlib_generate_messages_eus"
-	@echo "... tf_generate_messages_nodejs"
-	@echo "... tf_generate_messages_lisp"
-	@echo "... tf_generate_messages_cpp"
-	@echo "... dynamic_reconfigure_generate_messages_py"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... actionlib_generate_messages_py"
-	@echo "... topic_tools_generate_messages_nodejs"
-	@echo "... pcl_ros_gencfg"
-	@echo "... nodelet_generate_messages_py"
-	@echo "... bond_generate_messages_nodejs"
-	@echo "... rebuild_cache"
-	@echo "... actionlib_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... tf2_msgs_generate_messages_lisp"
+	@echo "... dynamic_reconfigure_gencfg"
+	@echo "... dynamic_reconfigure_generate_messages_nodejs"
 	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... pcl_msgs_generate_messages_cpp"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... topic_tools_generate_messages_cpp"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... dynamic_reconfigure_generate_messages_eus"
+	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... bond_generate_messages_lisp"
+	@echo "... dynamic_reconfigure_generate_messages_py"
+	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... bond_generate_messages_eus"
-	@echo "... sensor_msgs_generate_messages_eus"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... actionlib_msgs_generate_messages_eus"
-	@echo "... nodelet_generate_messages_lisp"
-	@echo "... pcl_msgs_generate_messages_eus"
-	@echo "... pcl_msgs_generate_messages_py"
-	@echo "... install/local"
+	@echo "... clean_test_results"
 	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_srvs_generate_messages_eus"
-	@echo "... tf_generate_messages_py"
+	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... run_tests"
+	@echo "... download_extra_data"
+	@echo "... pcl_msgs_generate_messages_eus"
+	@echo "... roscpp_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... rebuild_cache"
+	@echo "... actionlib_generate_messages_cpp"
+	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... tests"
+	@echo "... nodelet_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... topic_tools_generate_messages_py"
-	@echo "... dynamic_reconfigure_gencfg"
-	@echo "... pcl_msgs_generate_messages_lisp"
+	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... tf_generate_messages_py"
+	@echo "... edit_cache"
+	@echo "... std_msgs_generate_messages_eus"
 	@echo "... topic_tools_generate_messages_eus"
-	@echo "... nodelet_generate_messages_eus"
 	@echo "... pcl_msgs_generate_messages_nodejs"
 	@echo "... nodelet_generate_messages_nodejs"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
-	@echo "... topic_tools_generate_messages_cpp"
-	@echo "... tf_generate_messages_eus"
-	@echo "... bond_generate_messages_cpp"
-	@echo "... bond_generate_messages_lisp"
-	@echo "... topic_tools_generate_messages_lisp"
-	@echo "... std_srvs_generate_messages_lisp"
-	@echo "... nodelet_topic_tools_gencfg"
-	@echo "... actionlib_msgs_generate_messages_cpp"
-	@echo "... std_srvs_generate_messages_cpp"
-	@echo "... actionlib_generate_messages_lisp"
-	@echo "... bond_generate_messages_py"
+	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_eus"
+	@echo "... pcl_ros_gencfg"
+	@echo "... topic_tools_generate_messages_nodejs"
+	@echo "... tf2_msgs_generate_messages_py"
+	@echo "... actionlib_generate_messages_py"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... nodelet_generate_messages_cpp"
+	@echo "... bond_generate_messages_py"
 	@echo "... std_srvs_generate_messages_nodejs"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... actionlib_generate_messages_lisp"
+	@echo "... nodelet_generate_messages_eus"
+	@echo "... nodelet_generate_messages_lisp"
+	@echo "... roscpp_generate_messages_eus"
+	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... actionlib_msgs_generate_messages_eus"
+	@echo "... bond_generate_messages_cpp"
+	@echo "... bond_generate_messages_nodejs"
+	@echo "... topic_tools_generate_messages_py"
+	@echo "... actionlib_msgs_generate_messages_nodejs"
+	@echo "... nodelet_topic_tools_gencfg"
+	@echo "... std_srvs_generate_messages_lisp"
+	@echo "... topic_tools_generate_messages_lisp"
+	@echo "... doxygen"
+	@echo "... std_srvs_generate_messages_cpp"
+	@echo "... tf_generate_messages_eus"
+	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... std_srvs_generate_messages_py"
+	@echo "... tf_generate_messages_lisp"
+	@echo "... tf_generate_messages_nodejs"
+	@echo "... pcl_msgs_generate_messages_py"
+	@echo "... actionlib_generate_messages_eus"
+	@echo "... pcl_msgs_generate_messages_lisp"
+	@echo "... tf_generate_messages_cpp"
+	@echo "... actionlib_generate_messages_nodejs"
+	@echo "... actionlib_msgs_generate_messages_lisp"
+	@echo "... actionlib_msgs_generate_messages_py"
+	@echo "... gmock_main"
+	@echo "... gmock"
+	@echo "... gtest_main"
+	@echo "... gtest"
 	@echo "... src/feature_ex.o"
 	@echo "... src/feature_ex.i"
 	@echo "... src/feature_ex.s"
@@ -1165,6 +2213,10 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+<<<<<<< HEAD
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+=======
+	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+>>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 .PHONY : cmake_check_build_system
 
