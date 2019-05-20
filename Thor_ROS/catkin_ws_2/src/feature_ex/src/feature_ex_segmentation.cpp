@@ -17,6 +17,7 @@
 #include <pcl/filters/plane_clipper3D.h>
 #include <tf/transform_listener.h>
 #include <geometry_msgs/Pose2D.h>
+#include <Eigen/Dense>
 #include <pcl/segmentation/extract_clusters.h>
 
 
@@ -155,9 +156,10 @@ void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
 
 
                 cloud_cone->header = input->header;
-
-                pub_pointcloud.publish(cloud_cone);
-                pub_posemsgs.publish(madausneedthis);
+                if(cloud_cone->points.size()>100) {
+                    pub_pointcloud.publish(cloud_cone);
+                    pub_posemsgs.publish(madausneedthis);
+                }
             }
         }
 

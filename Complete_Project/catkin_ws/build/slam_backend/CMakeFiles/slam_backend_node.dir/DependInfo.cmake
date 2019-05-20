@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/src/slam_backend_node.cpp" "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend/CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o"
+  "/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/src/slam_backend_node.cpp" "/home/thor/Batchelor/Complete_Project/catkin_ws/build/slam_backend/CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,7 +17,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/include"
+  "/home/thor/Batchelor/Complete_Project/catkin_ws/devel/include"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

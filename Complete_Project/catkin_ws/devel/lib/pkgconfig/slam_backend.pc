@@ -1,8 +1,8 @@
-prefix=/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel
+prefix=/home/thor/Batchelor/Complete_Project/catkin_ws/devel
 
 Name: slam_backend
 Description: Description of slam_backend
 Version: 0.0.0
-Cflags: -I/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/include
-Libs: -L/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/lib 
+Cflags: -I/home/thor/Batchelor/Complete_Project/catkin_ws/devel/include
+Libs: -L/home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib 
 Requires: roscpp std_msgs message_runtime

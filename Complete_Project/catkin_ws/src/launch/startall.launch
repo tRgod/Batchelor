@@ -1,5 +1,5 @@
 <launch>
-	<param name="/use_sim_time" value="1"/>
+	<param name="/use_sim_time" value="true"/>
 	<include file="$(find feature_ex)/launch/feature_ex.launch"/>
 	<include file="$(find lidarsubmsg)/launch/lidarsubmsg.launch"/>
 	<include file="$(find slam_backend)/launch/slam_backend.launch"/>
