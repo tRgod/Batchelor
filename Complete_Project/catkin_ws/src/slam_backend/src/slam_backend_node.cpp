@@ -33,6 +33,7 @@ public:
         geometry_msgs::TransformStamped transformStamped;
 
         timedPose_sub = n.subscribe("twist_stamped", 10, &iSAM2::timedPoseCallback, this);
+        bearingRange_sub = n.subscribe("pose", 10, &iSAM2::rangeBearingCallback, this);
 
         try {
             transformStamped = tfBuffer.lookupTransform("velodyneVPL", "world", ros::Time::now(), ros::Duration(60));
@@ -45,27 +46,34 @@ public:
 
         gtsam::Pose2 pose0 = gtsam::Pose2(transform.getOrigin().x(), transform.getOrigin().y(),tf2::getYaw(transform.getRotation()));
 
-        newFactors.push_back(gtsam::PriorFactor<gtsam::Pose2>(i, pose0, priorNoise));
-        initial.insert(i, pose0);
+        newFactors.push_back(gtsam::PriorFactor<gtsam::Pose2>(gtsam::symbol('x',i), pose0, priorNoise));
+        initial.insert(gtsam::symbol('x',i), pose0);
         lastPose = pose0;
         i++;
 
     }
     void timedPoseCallback(const geometry_msgs::TwistStamped::ConstPtr &msg){
-        gtsam::Pose2 odometry(msg->twist.linear.x, 0, msg->twist.angular.z);
+        gtsam::Pose2 odometry(msg->twist.linear.x, 0, msg->twist.angular.z);;
 
-        newFactors.push_back(gtsam::BetweenFactor<gtsam::Pose2>(i-1, i, odometry, odoNoise));
+        newFactors.push_back(gtsam::BetweenFactor<gtsam::Pose2>(gtsam::symbol('x', i-1), gtsam::symbol('x', i), odometry, odoNoise));
 
         gtsam::Pose2 predictedPose = lastPose.compose(odometry);
         lastPose = predictedPose;
-        initial.insert(i, predictedPose);
+        initial.insert(gtsam::symbol('x', i), predictedPose);
 
         i++;
 
     }
 
     void rangeBearingCallback(const geometry_msgs::Pose2D::ConstPtr &msg){
-        
+        double range = sqrt(pow(msg->x, 2)+ pow(msg->y, 2));
+        gtsam::Pose2 Point(range, 0, msg->theta);
+
+        newFactors.push_back(gtsam::BearingRangeFactor<gtsam::Pose2, gtsam::Point2>(gtsam::symbol('x', i-1), gtsam::symbol('l',k) , msg->theta, range, rangeNoise));
+        gtsam::Pose2 predictedPosition = lastPose.compose(Point);
+        gtsam::Point2 predictedPoint = gtsam::Point2(predictedPosition.t());
+        initial.insert(gtsam::symbol('l', k), predictedPoint);
+        k++;
     }
 
     void run(){
@@ -76,6 +84,7 @@ private:
     ros::NodeHandle n;
     ros::Subscriber timedPose_sub;
     ros::Subscriber timedRangeBearing_sub;
+    ros::Subscriber bearingRange_sub;
 
     tf2_ros::Buffer tfBuffer;
     tf2_ros::TransformListener transformListener;
