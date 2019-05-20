@@ -27,7 +27,7 @@ void cloud_cb (const sensor_msgs::PointCloudConstPtr& input)
     sensor_msgs::PointCloud2 outputCloud;
     sensor_msgs::PointCloud2 trans_cloud;
     sensor_msgs::PointCloud2 msg_cloud;
-    pcl::PCLPointCloud2 pcl2 ;
+    pcl::PCLPointCloud2 pcl2;
     inputcloud=*input;
    // inputcloud.header.frame_id="/velodyneVPL";
 

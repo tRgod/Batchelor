@@ -38,43 +38,98 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/slam_backend/msg" TYPE FILE FILES "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/msg/TimedPose.msg")
+  
+      if (NOT EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}")
+        file(MAKE_DIRECTORY "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}")
+      endif()
+      if (NOT EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/.catkin")
+        file(WRITE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/.catkin" "")
+      endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/slam_backend/cmake" TYPE FILE FILES "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend/catkin_generated/installspace/slam_backend-msg-paths.cmake")
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/install/_setup_util.py")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/install" TYPE PROGRAM FILES "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/include/slam_backend")
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/install/env.sh")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/install" TYPE PROGRAM FILES "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/share/roseus/ros/slam_backend")
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/install/setup.bash;/home/gilberg96/Batchelor/Complete_Project/catkin_ws/install/local_setup.bash")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/install" TYPE FILE FILES
+    "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend/catkin_generated/installspace/setup.bash"
+    "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend/catkin_generated/installspace/local_setup.bash"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/share/common-lisp/ros/slam_backend")
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/install/setup.sh;/home/gilberg96/Batchelor/Complete_Project/catkin_ws/install/local_setup.sh")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/install" TYPE FILE FILES
+    "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend/catkin_generated/installspace/setup.sh"
+    "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend/catkin_generated/installspace/local_setup.sh"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/share/gennodejs/ros/slam_backend")
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/install/setup.zsh;/home/gilberg96/Batchelor/Complete_Project/catkin_ws/install/local_setup.zsh")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/install" TYPE FILE FILES
+    "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend/catkin_generated/installspace/setup.zsh"
+    "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend/catkin_generated/installspace/local_setup.zsh"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/lib/python2.7/dist-packages/slam_backend")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/lib/python2.7/dist-packages/slam_backend")
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/install/.rosinstall")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/install" TYPE FILE FILES "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend/catkin_generated/installspace/.rosinstall")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend/catkin_generated/installspace/slam_backend.pc")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/slam_backend/cmake" TYPE FILE FILES "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend/catkin_generated/installspace/slam_backend-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -88,3 +143,19 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/slam_backend" TYPE FILE FILES "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/package.xml")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend/gtest/cmake_install.cmake")
+
+endif()
+
+if(CMAKE_INSTALL_COMPONENT)
+  set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
+else()
+  set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
+endif()
+
+string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
+file(WRITE "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend/${CMAKE_INSTALL_MANIFEST}"
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")

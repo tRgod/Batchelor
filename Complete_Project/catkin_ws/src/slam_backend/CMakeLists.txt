@@ -11,6 +11,8 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
   geometry_msgs
+  tf2
+  tf2_ros
 #  message_generation
 )
 
@@ -136,7 +138,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(timed_pose_node src/timed_pose_node.cpp)
+#add_executable(timed_pose_node src/timed_pose_node.cpp)
 add_executable(slam_backend_node src/slam_backend_node.cpp)
 
 
@@ -151,9 +153,9 @@ add_executable(slam_backend_node src/slam_backend_node.cpp)
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(timed_pose_node
-   ${catkin_LIBRARIES}
-)
+#target_link_libraries(timed_pose_node
+#   ${catkin_LIBRARIES}
+#)
 target_link_libraries(slam_backend_node
   tbb
   gtsam

@@ -15,6 +15,7 @@
 -- Using Python nosetests: /usr/bin/nosetests-2.7
 -- catkin 0.7.17
 -- BUILD_SHARED_LIBS is on
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- Boost version: 1.67.0
 -- Found the following Boost libraries:
 --   system
