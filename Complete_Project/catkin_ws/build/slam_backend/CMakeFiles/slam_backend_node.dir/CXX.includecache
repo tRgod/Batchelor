@@ -21,7 +21,11 @@ geometry_msgs/TwistStamped.h
 -
 geometry_msgs/TransformStamped.h
 -
+geometry_msgs/Pose2D.h
+-
 gtsam/geometry/Pose2.h
+-
+gtsam/geometry/Point2.h
 -
 gtsam/inference/Symbol.h
 -
@@ -154,6 +158,22 @@ ros/message_operations.h
 geometry_msgs/Point.h
 -
 geometry_msgs/Quaternion.h
+-
+
+/opt/ros/melodic/include/geometry_msgs/Pose2D.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
 -
 
 /opt/ros/melodic/include/geometry_msgs/PoseStamped.h

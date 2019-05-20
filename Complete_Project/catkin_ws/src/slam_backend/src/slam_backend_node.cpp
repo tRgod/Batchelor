@@ -8,8 +8,10 @@
 
 #include <geometry_msgs/TwistStamped.h>
 #include <geometry_msgs/TransformStamped.h>
+#include <geometry_msgs/Pose2D.h>
 
 #include <gtsam/geometry/Pose2.h>
+#include <gtsam/geometry/Point2.h>
 
 #include <gtsam/inference/Symbol.h>
 
@@ -62,6 +64,10 @@ public:
 
     }
 
+    void rangeBearingCallback(const geometry_msgs::Pose2D::ConstPtr &msg){
+        
+    }
+
     void run(){
         initial.print();
     }
@@ -76,9 +82,11 @@ private:
 
     gtsam::Vector priorSigmas = gtsam::Vector3( 1, 1, M_PI);
     gtsam::Vector odoSigmas = gtsam::Vector3(0.05, 0.01, 0.2);
+    gtsam::Vector rangeSigmas = gtsam::Vector2(0.1, 0.2);
 
     const gtsam::noiseModel::Base::shared_ptr priorNoise = gtsam::noiseModel::Diagonal::Sigmas(priorSigmas);
     const gtsam::noiseModel::Base::shared_ptr odoNoise = gtsam::noiseModel::Diagonal::Sigmas(odoSigmas);
+    const gtsam::noiseModel::Base::shared_ptr rangeNoise = gtsam::noiseModel::Diagonal::Sigmas(rangeSigmas);
 
     gtsam::NonlinearFactorGraph newFactors;
 
@@ -87,6 +95,7 @@ private:
     gtsam::Values initial;
 
     int i = 0;
+    int k = 0;
 
     gtsam::Pose2 lastPose;
 
