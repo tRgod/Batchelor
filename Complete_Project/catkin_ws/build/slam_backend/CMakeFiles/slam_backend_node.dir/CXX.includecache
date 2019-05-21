@@ -6,9 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/src/slam_backend_node.cpp
+/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/src/slam_backend_node.cpp
 ros/ros.h
+<<<<<<< HEAD
 /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/src/ros/ros.h
+=======
+/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/src/ros/ros.h
+>>>>>>> 238f51670f91350568dffdd185728a188bfeb272
 tf2_ros/buffer.h
 -
 tf2_ros/transform_listener.h

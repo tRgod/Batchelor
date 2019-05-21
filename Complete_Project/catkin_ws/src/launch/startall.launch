@@ -3,7 +3,7 @@
 	<include file="$(find feature_ex)/launch/feature_ex.launch"/>
 	<include file="$(find lidarsubmsg)/launch/lidarsubmsg.launch"/>
 	<include file="$(find slam_backend)/launch/slam_backend.launch"/>
-	<include file="$(find transformreciver)/launch/transformrevicer.launch"/>
+	<include file="$(find transform_receiver)/launch/transform_receiver.launch"/>
 
 
 </launch>
