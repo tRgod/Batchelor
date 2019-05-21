@@ -67,13 +67,8 @@ set(slam_backend_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-<<<<<<< HEAD
-  set(slam_backend_SOURCE_PREFIX /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend)
-  set(slam_backend_DEVEL_PREFIX /home/thor/Batchelor/Complete_Project/catkin_ws/devel)
-=======
   set(slam_backend_SOURCE_PREFIX /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend)
   set(slam_backend_DEVEL_PREFIX /home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend)
->>>>>>> 238f51670f91350568dffdd185728a188bfeb272
   set(slam_backend_INSTALL_PREFIX "")
   set(slam_backend_PREFIX ${slam_backend_DEVEL_PREFIX})
 else()

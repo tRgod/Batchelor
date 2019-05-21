@@ -47,6 +47,10 @@ geometry_msgs/Pose2D.h
 -
 pcl/segmentation/extract_clusters.h
 -
+iostream
+-
+fstream
+-
 
 /opt/ros/melodic/include/boost_161_condition_variable.h
 boost/thread/detail/platform.hpp
