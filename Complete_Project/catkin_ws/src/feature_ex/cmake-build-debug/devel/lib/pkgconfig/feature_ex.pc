@@ -1,8 +1,0 @@
-prefix=/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/devel
-
-Name: feature_ex
-Description: Description of feature_ex
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/thor/Batchelor/Thor_ROS/catkin_ws_2/src/feature_ex/cmake-build-debug/devel/lib 
-Requires: 
