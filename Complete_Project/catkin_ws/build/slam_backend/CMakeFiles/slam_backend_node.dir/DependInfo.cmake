@@ -17,10 +17,6 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-<<<<<<< HEAD
-  "/home/thor/Batchelor/Complete_Project/catkin_ws/devel/include"
-=======
->>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

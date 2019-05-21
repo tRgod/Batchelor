@@ -6,26 +6,19 @@
 
 #IncludeRegexTransform: 
 
-<<<<<<< HEAD
-/home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver/src/transformreciver.cpp
-=======
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/transformreciver/src/transformReceiver.cpp
->>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
+/home/thor/Batchelor/Complete_Project/catkin_ws/src/transformreciver/src/transformReceiver.cpp
 ros/ros.h
 -
 geometry_msgs/TransformStamped.h
 -
 tf2/utils.h
 -
-<<<<<<< HEAD
-=======
 tf2_ros/transform_listener.h
 -
 tf2_geometry_msgs/tf2_geometry_msgs.h
 -
 tf2_msgs/TFMessage.h
 -
->>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 geometry_msgs/TwistStamped.h
 -
 

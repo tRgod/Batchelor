@@ -43,50 +43,31 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/thor/Batchelor/Complete_Project/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/thor/Batchelor/Complete_Project/catkin_ws/build
-=======
-CMAKE_SOURCE_DIR = /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend
->>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
 # Include any dependencies generated for this target.
-include CMakeFiles/slam_backend_node.dir/depend.make
+include slam_backend/CMakeFiles/slam_backend_node.dir/depend.make
 
 # Include the progress variables for this target.
-include CMakeFiles/slam_backend_node.dir/progress.make
+include slam_backend/CMakeFiles/slam_backend_node.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include CMakeFiles/slam_backend_node.dir/flags.make
+include slam_backend/CMakeFiles/slam_backend_node.dir/flags.make
 
-<<<<<<< HEAD
 slam_backend/CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o: slam_backend/CMakeFiles/slam_backend_node.dir/flags.make
 slam_backend/CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o: /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/src/slam_backend_node.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/thor/Batchelor/Complete_Project/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object slam_backend/CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o"
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build/slam_backend && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o -c /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/src/slam_backend_node.cpp
-=======
-CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o: CMakeFiles/slam_backend_node.dir/flags.make
-CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o: /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/src/slam_backend_node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o -c /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/src/slam_backend_node.cpp
->>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.i: cmake_force
+slam_backend/CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.i"
-<<<<<<< HEAD
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build/slam_backend && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/src/slam_backend_node.cpp > CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.i
-=======
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/src/slam_backend_node.cpp > CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.i
->>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
-CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.s: cmake_force
+slam_backend/CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.s"
-<<<<<<< HEAD
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build/slam_backend && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/src/slam_backend_node.cpp -o CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.s
 
 slam_backend/CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o.requires:
@@ -99,9 +80,6 @@ slam_backend/CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o.provid
 
 slam_backend/CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o.provides.build: slam_backend/CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o
 
-=======
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend/src/slam_backend_node.cpp -o CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.s
->>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 
 # Object files for target slam_backend_node
 slam_backend_node_OBJECTS = \
@@ -110,9 +88,11 @@ slam_backend_node_OBJECTS = \
 # External object files for target slam_backend_node
 slam_backend_node_EXTERNAL_OBJECTS =
 
-<<<<<<< HEAD
 /home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/slam_backend/slam_backend_node: slam_backend/CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o
 /home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/slam_backend/slam_backend_node: slam_backend/CMakeFiles/slam_backend_node.dir/build.make
+/home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/libtf2_ros.so
+/home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/libactionlib.so
+/home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/libmessage_filters.so
 /home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/libroscpp.so
 /home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/slam_backend/slam_backend_node: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 /home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/slam_backend/slam_backend_node: /usr/lib/x86_64-linux-gnu/libboost_signals.so
@@ -122,6 +102,7 @@ slam_backend_node_EXTERNAL_OBJECTS =
 /home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/slam_backend/slam_backend_node: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
 /home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/slam_backend/slam_backend_node: /usr/lib/x86_64-linux-gnu/libboost_regex.so
 /home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/libtf2.so
 /home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/libroscpp_serialization.so
 /home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/librostime.so
 /home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/libcpp_common.so
@@ -138,43 +119,9 @@ slam_backend_node_EXTERNAL_OBJECTS =
 
 # Rule to build all files generated by this target.
 slam_backend/CMakeFiles/slam_backend_node.dir/build: /home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/slam_backend/slam_backend_node
-=======
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: CMakeFiles/slam_backend_node.dir/build.make
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/libtf2_ros.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/libactionlib.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/libmessage_filters.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/libroscpp.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/librosconsole.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/librosconsole_log4cxx.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/libtf2.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/libroscpp_serialization.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/librostime.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /opt/ros/melodic/lib/libcpp_common.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node: CMakeFiles/slam_backend_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node"
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/slam_backend_node.dir/link.txt --verbose=$(VERBOSE)
 
-# Rule to build all files generated by this target.
-CMakeFiles/slam_backend_node.dir/build: /home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node
->>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
+.PHONY : slam_backend/CMakeFiles/slam_backend_node.dir/build
 
-.PHONY : CMakeFiles/slam_backend_node.dir/build
-
-<<<<<<< HEAD
 slam_backend/CMakeFiles/slam_backend_node.dir/requires: slam_backend/CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o.requires
 
 .PHONY : slam_backend/CMakeFiles/slam_backend_node.dir/requires
@@ -186,13 +133,4 @@ slam_backend/CMakeFiles/slam_backend_node.dir/clean:
 slam_backend/CMakeFiles/slam_backend_node.dir/depend:
 	cd /home/thor/Batchelor/Complete_Project/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thor/Batchelor/Complete_Project/catkin_ws/src /home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend /home/thor/Batchelor/Complete_Project/catkin_ws/build /home/thor/Batchelor/Complete_Project/catkin_ws/build/slam_backend /home/thor/Batchelor/Complete_Project/catkin_ws/build/slam_backend/CMakeFiles/slam_backend_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : slam_backend/CMakeFiles/slam_backend_node.dir/depend
-=======
-CMakeFiles/slam_backend_node.dir/clean:
-	$(CMAKE_COMMAND) -P CMakeFiles/slam_backend_node.dir/cmake_clean.cmake
-.PHONY : CMakeFiles/slam_backend_node.dir/clean
-
-CMakeFiles/slam_backend_node.dir/depend:
-	cd /home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend /home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/slam_backend /home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend /home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend /home/gilberg96/Batchelor/Complete_Project/catkin_ws/build/slam_backend/CMakeFiles/slam_backend_node.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : CMakeFiles/slam_backend_node.dir/depend
->>>>>>> 95afdaab6e2362bec00b7f8a7587b542660402d7
 

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/feature_ex/src/feature_ex.cpp
+/home/thor/Batchelor/Complete_Project/catkin_ws/src/feature_ex/src/feature_ex.cpp
 ros/ros.h
 -
 iostream
@@ -46,6 +46,10 @@ tf/transform_listener.h
 geometry_msgs/Pose2D.h
 -
 pcl/segmentation/extract_clusters.h
+-
+iostream
+-
+fstream
 -
 
 /opt/ros/melodic/include/boost_161_condition_variable.h

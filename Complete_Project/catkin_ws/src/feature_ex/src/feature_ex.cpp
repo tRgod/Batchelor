@@ -18,13 +18,19 @@
 #include <tf/transform_listener.h>
 #include <geometry_msgs/Pose2D.h>
 #include <pcl/segmentation/extract_clusters.h>
+#include <iostream>
+#include <fstream>
 
 
 ros::Publisher pub_pointcloud;
 ros::Publisher pub_posemsgs;
+std::fstream logstuff;
 
 void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
 {
+    ros::WallTime start_,end_;
+    logstuff.open("loog.txt" , std::ofstream::app);
+    start_=ros::WallTime::now();
     geometry_msgs::Pose2D madausneedthis;
     pcl::PassThrough<pcl::PointXYZ> pass;
     pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> ne;
@@ -84,7 +90,8 @@ void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
     seg.setModelType(pcl::SACMODEL_NORMAL_PLANE);
     seg.setNormalDistanceWeight(0.1);
     seg.setMethodType(pcl::SAC_RANSAC);
-    seg.setMaxIterations(100);
+    seg.setMaxIterations(150);
+
     seg.setDistanceThreshold(0.15 );
     seg.setInputCloud(cloud_filtered4);
     seg.setInputNormals(cloud_normals);
@@ -117,19 +124,22 @@ void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
             seg.setOptimizeCoefficients(true);
             seg.setModelType(pcl::SACMODEL_CONE);
             seg.setMethodType(pcl::SAC_RANSAC);
-            seg.setNormalDistanceWeight(0.1);
-            seg.setMaxIterations(150);
+            seg.setNormalDistanceWeight(0.05);
+            seg.setAxis(Eigen::Vector3f(0,0,1));
+            seg.setEpsAngle(0.1);
+            seg.setMaxIterations(1100);
             seg.setDistanceThreshold(0.005);
             seg.setRadiusLimits(0, 0.4);
             seg.setMinMaxOpeningAngle(0.4, 0.8);
 
-            while (cloud_filtered4->points.size() >0.6*nr_points) {
+     //       while (cloud_filtered4->points.size() >0.5*nr_points) {
                 seg.setInputCloud(cloud_filtered4);
                 seg.setInputNormals(cloud_normals2);
                 seg.segment(*inliners_cone, *coefficients_cone);
+
                 if(inliners_cone->indices.size() ==0)
                 {
-                    break;
+                   // break;
                 }
                 std::cout << *coefficients_cone << std::endl;
                 if (coefficients_cone->values[0] < 100 && coefficients_cone->values[0] > 0) {
@@ -142,8 +152,10 @@ void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
                 extract.setIndices(inliners_cone);
                 extract.setNegative(false);
                 //create cone cloud
-                pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_cone(new pcl::PointCloud<pcl::PointXYZ>());
+
+               pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_cone(new pcl::PointCloud<pcl::PointXYZ>());
                 extract.filter(*cloud_cone);
+             /*
                 extract.setNegative(true);
                 extract.filter(*cloud_f);
                 *cloud_filtered4=*cloud_f;
@@ -152,16 +164,30 @@ void cloud_cb(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& input)
                 ne.setKSearch(50);
                 ne.compute(*cloud_normals);
                 cloud_normals2=cloud_normals;
-
+             */
 
                 cloud_cone->header = input->header;
-
-                pub_pointcloud.publish(cloud_cone);
-                pub_posemsgs.publish(madausneedthis);
+              //  if(cloud_cone->points.size()<100)
+              //  {
+                //    std::cout<<"breaking"<<" with points "<<cloud_cone->points.size()<<std::endl;
+                  //  break;
+               // }
+               // else {
+                    pub_pointcloud.publish(cloud_cone);
+                    pub_posemsgs.publish(madausneedthis);
+            end_=ros::WallTime::now();
+            double execution_time=(end_-start_).toNSec()*1e-06;
+            ROS_INFO_STREAM("Execution time (ms): " <<execution_time);
+            logstuff<<madausneedthis.x<< " "<< madausneedthis.y<< " "<< execution_time<<std::endl;
+            logstuff.close();
+               // }
             }
-        }
+        //}
 
-    }
+
+}
+
+
 
 
 
