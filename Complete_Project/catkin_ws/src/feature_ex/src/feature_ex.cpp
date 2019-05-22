@@ -281,7 +281,7 @@ int main (int argc, char** argv)
 
     ros::init (argc,argv,"Feature_ekstractor");
 
-    FeatureExtractor featureExtractor(1);
+    FeatureExtractor featureExtractor(0);
 
     ros::spin();
 
