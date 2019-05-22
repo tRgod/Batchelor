@@ -1,7 +1,9 @@
 #include <ros/ros.h>
 #include <iostream>
+#include <pcl/io/pcd_io.h>
 #include <pcl_ros/point_cloud.h>
-#include <pcl/point_types.h>
+#include <pcl/registration/icp.h>
+#include <pcl/registration/correspondence_estimation.h>
 #include <pcl/point_types.h>
 #include <pcl/sample_consensus/ransac.h>
 #include <pcl/features/normal_3d.h>
@@ -71,7 +73,35 @@ public:
         extract.filter(*output_f);
         cloud.swap(output_f);
 
+        pcl::KdTreeFLANN<pcl::PointXYZ>::Ptr kdTree(new pcl::KdTreeFLANN<pcl::PointXYZ>);
+        kdTree->setInputCloud(cloud);
+
         /*
+        if(firstRun == true){
+            previousCloud = cloud;
+            firstRun = false;
+        }
+        else {
+            pcl::CorrespondencesPtr correspondences(new pcl::Correspondences);
+            pcl::registration::CorrespondenceEstimation<pcl::PointXYZ, pcl::PointXYZ>::Ptr estimation(new pcl::registration::CorrespondenceEstimation<pcl::PointXYZ, pcl::PointXYZ>);
+            estimation->setInputSource(cloud);
+            estimation->setInputTarget(previousCloud);
+            estimation->determineCorrespondences(*correspondences, 0.5);
+            std::cout << correspondences->size() << std::endl;
+
+            pcl::IterativeClosestPoint<pcl::PointXYZ, pcl::PointXYZ> icp;
+            icp.setInputSource(cloud);
+            icp.setInputTarget(previousCloud);
+
+            pcl::PointCloud<pcl::PointXYZ> final;
+            icp.align(final);
+            std::cout << "Has converged: " << icp.hasConverged() << " Fitness score: " << icp.getFitnessScore() << std::endl;
+            std::cout << icp.getFinalTransformation() << std::endl;
+
+            previousCloud = cloud;
+        }*/
+
+
         //Creating the KdTree object for the search method of the extraction
         pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(new pcl::search::KdTree<pcl::PointXYZ>);
         tree->setInputCloud(cloud);
@@ -94,7 +124,6 @@ public:
             cloud_cluster->is_dense = true;
             pub_pointcloud.publish(cloud_cluster);
         }
-        */
 
         pub_pointcloud.publish(cloud);
 
@@ -266,8 +295,9 @@ private:
     ros::Subscriber sub1;
     ros::Publisher pub_pointcloud;
     ros::Publisher pub_posemsgs;
+    bool firstRun = 1;
 
-    pcl::PointCloud<pcl::PointXYZ>::Ptr previousCloud(new pcl::PointCloud<pcl::PointXYZ>);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr previousCloud;
     bool mathias;
 };
 
