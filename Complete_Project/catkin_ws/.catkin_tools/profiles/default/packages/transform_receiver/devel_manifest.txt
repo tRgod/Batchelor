@@ -1,2 +1,0 @@
-transform_receiver
-/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/transform_receiver/cmake.lock /home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/./cmake.lock
