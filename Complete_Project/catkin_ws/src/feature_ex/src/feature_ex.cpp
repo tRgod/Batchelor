@@ -18,6 +18,7 @@
 #include <pcl/sample_consensus/sac_model_plane.h>
 #include <pcl/filters/plane_clipper3D.h>
 #include <tf/transform_listener.h>
+#include <geometry_msgs/PointStamped.h>
 #include <geometry_msgs/Pose2D.h>
 #include <pcl/segmentation/extract_clusters.h>
 #include <iostream>
@@ -35,14 +36,15 @@ public:
 
         if(mathias == true){
             sub1 =nh1.subscribe("/output",10, &FeatureExtractor::pointCloudCallback, this);
+            pub_posemsgs=nh1.advertise<geometry_msgs::PointStamped>("/pose",1);
 
         }
         else {
             sub1 = nh1.subscribe("/output", 1, &FeatureExtractor::cloud_cb, this);
+            pub_posemsgs=nh1.advertise<geometry_msgs::Pose2D>("/pose",1);
         }
 
         pub_pointcloud=nh1.advertise<sensor_msgs::PointCloud2>("/features",1);
-        pub_posemsgs=nh1.advertise<geometry_msgs::Pose2D>("/pose",1);
 
     }
 
@@ -87,7 +89,7 @@ public:
         pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(new pcl::search::KdTree<pcl::PointXYZ>);
         tree->setInputCloud(cloud);
 
-        /*
+
         pcl::PointCloud<pcl::Normal>::Ptr cloud_normals (new pcl::PointCloud<pcl::Normal>);
         pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> normalEstimation;
         pcl::SACSegmentationFromNormals<pcl::PointXYZ, pcl::Normal> segmentationFromNormals;
@@ -107,49 +109,19 @@ public:
         segmentationFromNormals.setOptimizeCoefficients(true);
         segmentationFromNormals.setModelType(pcl::SACMODEL_CONE);
         segmentationFromNormals.setMethodType(pcl::SAC_RANSAC);
-        segmentationFromNormals.setNormalDistanceWeight(0.1);
-        segmentationFromNormals.setMaxIterations(1000);
-        segmentationFromNormals.setDistanceThreshold(0.05);
-        segmentationFromNormals.setRadiusLimits(0, 0.1);
-        segmentationFromNormals.setInputCloud(cloud_filtered);
-        segmentationFromNormals.setInputNormals(cloud_normals);
+        segmentationFromNormals.setNormalDistanceWeight(0.05);
+        segmentationFromNormals.setAxis(Eigen::Vector3f(0,0,1));
+        segmentationFromNormals.setEpsAngle(0.1);
+        segmentationFromNormals.setMaxIterations(1100);
+        segmentationFromNormals.setDistanceThreshold(0.005);
+        segmentationFromNormals.setRadiusLimits(0, 0.4);
+        segmentationFromNormals.setMinMaxOpeningAngle(0.4, 0.8);
 
-        segmentationFromNormals.segment(*cone_inliers, *cone_coefficents);
 
-        extract.setInputCloud(cloud_filtered);
-        extract.setIndices(cone_inliers);
-        extract.setNegative(false);
 
         pcl::PointCloud<pcl::PointXYZ>::Ptr cone_cloud (new pcl::PointCloud<pcl::PointXYZ>);
-        extract.filter(*cone_cloud);*/
+        extract.filter(*cone_cloud);
 
-
-
-
-        /*
-        if(firstRun == true){
-            previousCloud = cloud;
-            firstRun = false;
-        }
-        else {
-            pcl::CorrespondencesPtr correspondences(new pcl::Correspondences);
-            pcl::registration::CorrespondenceEstimation<pcl::PointXYZ, pcl::PointXYZ>::Ptr estimation(new pcl::registration::CorrespondenceEstimation<pcl::PointXYZ, pcl::PointXYZ>);
-            estimation->setInputSource(cloud);
-            estimation->setInputTarget(previousCloud);
-            estimation->determineCorrespondences(*correspondences, 0.5);
-            std::cout << correspondences->size() << std::endl;
-
-            pcl::IterativeClosestPoint<pcl::PointXYZ, pcl::PointXYZ> icp;
-            icp.setInputSource(cloud);
-            icp.setInputTarget(previousCloud);
-
-            pcl::PointCloud<pcl::PointXYZ> final;
-            icp.align(final);
-            std::cout << "Has converged: " << icp.hasConverged() << " Fitness score: " << icp.getFitnessScore() << std::endl;
-            std::cout << icp.getFinalTransformation() << std::endl;
-
-            previousCloud = cloud;
-        }*/
 
         std::vector<pcl::PointIndices> cluster_indices;
         pcl::EuclideanClusterExtraction<pcl::PointXYZ> ec;
@@ -161,15 +133,31 @@ public:
         ec.extract(cluster_indices);
 
         std::cout << input->header.stamp << " " <<cluster_indices.size() << std::endl;
+        geometry_msgs::PointStamped TimedCoordinates;
 
         for (std::vector<pcl::PointIndices>::const_iterator it = cluster_indices.begin();  it != cluster_indices.end() ; ++it) {
             pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_cluster(new pcl::PointCloud<pcl::PointXYZ>);
             for (std::vector<int>::const_iterator pit = it->indices.begin (); pit != it->indices.end (); ++pit)
                 cloud_cluster->points.push_back (cloud->points[*pit]);
+            cloud_cluster->width = cloud_cluster->points.size ();
+            cloud_cluster->height = 1;
+            cloud_cluster->is_dense = true;
+                normalEstimation.setInputCloud(cloud_cluster);
+                normalEstimation.compute(*cloud_normals);
+                segmentationFromNormals.setInputNormals(cloud_normals);
+                segmentationFromNormals.setInputCloud(cloud_cluster);
+               segmentationFromNormals.segment(*cone_inliers,*cone_coefficents);
 
             //cloud_cluster.swap(cloud_cluster);
+            std::cout<< cloud_cluster->size()<<std::endl;
             cloud_cluster->header.frame_id = cloud->header.frame_id;
+            std::cout<<cloud_cluster->header.frame_id <<" x: "<< cone_coefficents->values[0]<<" y: "<< cone_coefficents->values[1]<< std::endl;
+            TimedCoordinates.header=input->header;
+            TimedCoordinates.point.x=cone_coefficents->values[0];
+            TimedCoordinates.point.y=cone_coefficents->values[1];
+            TimedCoordinates.point.z=0;
 
+            pub_posemsgs.publish(TimedCoordinates);
             pub_pointcloud.publish(cloud_cluster);
         }
 
@@ -242,7 +230,6 @@ public:
         seg.setNormalDistanceWeight(0.1);
         seg.setMethodType(pcl::SAC_RANSAC);
         seg.setMaxIterations(150);
-
         seg.setDistanceThreshold(0.15 );
         seg.setInputCloud(cloud_filtered4);
         seg.setInputNormals(cloud_normals);

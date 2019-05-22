@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o"
-  "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node.pdb"
-  "/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node"
+  "/home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/slam_backend/slam_backend_node.pdb"
+  "/home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/slam_backend/slam_backend_node"
 )
 
 # Per-language clean rules from dependency scanning.
