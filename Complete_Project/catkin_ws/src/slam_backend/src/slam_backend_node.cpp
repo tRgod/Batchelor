@@ -8,7 +8,7 @@
 
 #include <geometry_msgs/TwistStamped.h>
 #include <geometry_msgs/TransformStamped.h>
-#include <geometry_msgs/Pose2D.h>
+#include <geometry_msgs/PointStamped.h>
 
 #include <gtsam/geometry/Pose2.h>
 #include <gtsam/geometry/Point2.h>
@@ -26,6 +26,7 @@
 #include <gtsam/slam/BetweenFactor.h>
 #include <gtsam/sam/BearingRangeFactor.h>
 
+typedef boost::tuple<ros::Time, double, double> TimedBearingRange;
 
 class iSAM2{
 public:
@@ -53,29 +54,43 @@ public:
 
     }
     void timedPoseCallback(const geometry_msgs::TwistStamped::ConstPtr &msg){
-        gtsam::Pose2 odometry(msg->twist.linear.x, 0, msg->twist.angular.z);;
+        gtsam::Pose2 odometry(msg->twist.linear.x, 0, msg->twist.angular.z);
 
         newFactors.push_back(gtsam::BetweenFactor<gtsam::Pose2>(gtsam::symbol('x', i-1), gtsam::symbol('x', i), odometry, odoNoise));
 
         gtsam::Pose2 predictedPose = lastPose.compose(odometry);
+
         lastPose = predictedPose;
         initial.insert(gtsam::symbol('x', i), predictedPose);
 
+        while (k <= K && msg->header.stamp >= boost::get<0>(timedMeasurements[k])){
+            double x = boost::get<1>(timedMeasurements[k]), y = boost::get<2>(timedMeasurements[k]);
+            double range = sqrt(pow(x, 2)+pow(y,2));
+            double bearing = atan2(y, x);
+            newFactors.push_back(gtsam::BearingRangeFactor<gtsam::Pose2, gtsam::Point2>(gtsam::symbol('x', i), gtsam::symbol('l',k),bearing, range, rangeNoise));
+
+            gtsam::Point2 predictedPosition(cos(lastPose.theta())*x-sin(lastPose.theta())*y+lastPose.x(), sin(lastPose.theta())*x+cos(lastPose.theta()*y+lastPose.y()));
+            initial.insert(gtsam::symbol('l', k), predictedPosition);
+            k=k+1;
+            countK=countK+1;
+        }
+
+        if(countK > incK && k){
+            isam2.update(newFactors, initial);
+            gtsam::Values result = isam2.calculateEstimate();
+            lastPose = result.at<gtsam::Pose2>(i);
+            newFactors = gtsam::NonlinearFactorGraph();
+            initial = gtsam::Values();
+            countK = 0;
+        }
         i++;
 
     }
 
-    void rangeBearingCallback(const geometry_msgs::Pose2D::ConstPtr &msg){
-        double range = sqrt(pow(msg->x, 2)+ pow(msg->y, 2));
-        gtsam::Pose2 Point(range, 0, msg->theta);
+    void rangeBearingCallback(const geometry_msgs::PointStamped::ConstPtr &msg){
 
-        
-
-        newFactors.push_back(gtsam::BearingRangeFactor<gtsam::Pose2, gtsam::Point2>(gtsam::symbol('x', i-1), gtsam::symbol('l',k) , msg->theta, range, rangeNoise));
-        gtsam::Pose2 predictedPosition = lastPose.compose(Point);
-        gtsam::Point2 predictedPoint = gtsam::Point2(predictedPosition.t());
-        initial.insert(gtsam::symbol('l', k), predictedPoint);
-        k++;
+        timedMeasurements.push_back(TimedBearingRange(msg->header.stamp,msg->point.x,msg->point.y));
+        K++;
     }
 
     void run(){
@@ -107,8 +122,13 @@ private:
 
     int i = 0;
     int k = 0;
+    int K = 0;
+    int incK = 0;
+    int countK = 0;
 
     gtsam::Pose2 lastPose;
+
+    std::vector<TimedBearingRange> timedMeasurements;
 
 };
 
