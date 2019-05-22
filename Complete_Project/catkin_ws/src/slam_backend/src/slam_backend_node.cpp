@@ -69,6 +69,8 @@ public:
         double range = sqrt(pow(msg->x, 2)+ pow(msg->y, 2));
         gtsam::Pose2 Point(range, 0, msg->theta);
 
+        
+
         newFactors.push_back(gtsam::BearingRangeFactor<gtsam::Pose2, gtsam::Point2>(gtsam::symbol('x', i-1), gtsam::symbol('l',k) , msg->theta, range, rangeNoise));
         gtsam::Pose2 predictedPosition = lastPose.compose(Point);
         gtsam::Point2 predictedPoint = gtsam::Point2(predictedPosition.t());
@@ -107,7 +109,6 @@ private:
     int k = 0;
 
     gtsam::Pose2 lastPose;
-
 
 };
 

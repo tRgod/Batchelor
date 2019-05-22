@@ -54,8 +54,9 @@ public:
         pcl::ModelCoefficients::Ptr coefficients(new pcl::ModelCoefficients);
         pcl::PointIndices::Ptr inliers(new pcl::PointIndices);
 
+
+        //Pass through filter for filtering points behind LIDAR
         pcl::PassThrough<pcl::PointXYZ> pass;
-        //Pass through filter for filtering poiint behind LIDAR
         pass.setInputCloud(cloud);
         pass.setFilterFieldName("x");
         pass.setFilterLimits(0,10);
@@ -81,11 +82,12 @@ public:
 
         extract.setNegative(true);
         extract.filter(*output_f);
-        cloud_filtered.swap(output_f);
+        cloud.swap(output_f);
 
         pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(new pcl::search::KdTree<pcl::PointXYZ>);
-        tree->setInputCloud(cloud_filtered);
+        tree->setInputCloud(cloud);
 
+        /*
         pcl::PointCloud<pcl::Normal>::Ptr cloud_normals (new pcl::PointCloud<pcl::Normal>);
         pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> normalEstimation;
         pcl::SACSegmentationFromNormals<pcl::PointXYZ, pcl::Normal> segmentationFromNormals;
@@ -96,6 +98,32 @@ public:
         normalEstimation.setSearchMethod(tree);
         normalEstimation.setKSearch(50);
         normalEstimation.compute(*cloud_normals);
+
+        //Model
+        pcl::ModelCoefficients::Ptr cone_coefficents( new pcl::ModelCoefficients);
+        pcl::PointIndices::Ptr cone_inliers (new pcl::PointIndices);
+
+        //Cone segmentation
+        segmentationFromNormals.setOptimizeCoefficients(true);
+        segmentationFromNormals.setModelType(pcl::SACMODEL_CONE);
+        segmentationFromNormals.setMethodType(pcl::SAC_RANSAC);
+        segmentationFromNormals.setNormalDistanceWeight(0.1);
+        segmentationFromNormals.setMaxIterations(1000);
+        segmentationFromNormals.setDistanceThreshold(0.05);
+        segmentationFromNormals.setRadiusLimits(0, 0.1);
+        segmentationFromNormals.setInputCloud(cloud_filtered);
+        segmentationFromNormals.setInputNormals(cloud_normals);
+
+        segmentationFromNormals.segment(*cone_inliers, *cone_coefficents);
+
+        extract.setInputCloud(cloud_filtered);
+        extract.setIndices(cone_inliers);
+        extract.setNegative(false);
+
+        pcl::PointCloud<pcl::PointXYZ>::Ptr cone_cloud (new pcl::PointCloud<pcl::PointXYZ>);
+        extract.filter(*cone_cloud);*/
+
+
 
 
         /*
@@ -123,34 +151,29 @@ public:
             previousCloud = cloud;
         }*/
 
-
-        //Creating the KdTree object for the search method of the extraction
-
-
-
-        /*std::vector<pcl::PointIndices> cluster_indices;
+        std::vector<pcl::PointIndices> cluster_indices;
         pcl::EuclideanClusterExtraction<pcl::PointXYZ> ec;
-        ec.setClusterTolerance(0.02);
+        ec.setClusterTolerance(0.2);
         ec.setMinClusterSize(100);
         ec.setMaxClusterSize(25000);
         ec.setSearchMethod(tree);
-        ec.setInputCloud(cloud_filtered);
+        ec.setInputCloud(cloud);
         ec.extract(cluster_indices);
 
-        std::cout << cluster_indices.size() << std::endl;*/
+        std::cout << input->header.stamp << " " <<cluster_indices.size() << std::endl;
 
-        /*int j = 0;
         for (std::vector<pcl::PointIndices>::const_iterator it = cluster_indices.begin();  it != cluster_indices.end() ; ++it) {
             pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_cluster(new pcl::PointCloud<pcl::PointXYZ>);
             for (std::vector<int>::const_iterator pit = it->indices.begin (); pit != it->indices.end (); ++pit)
-                cloud_cluster->points.push_back (cloud->points[*pit]); //*
-            cloud_cluster->width = cloud_cluster->points.size ();
-            cloud_cluster->height = 1;
-            cloud_cluster->is_dense = true;
-            pub_pointcloud.publish(cloud_cluster);
-        }*/
+                cloud_cluster->points.push_back (cloud->points[*pit]);
 
-        pub_pointcloud.publish(cloud_filtered);
+            //cloud_cluster.swap(cloud_cluster);
+            cloud_cluster->header.frame_id = cloud->header.frame_id;
+
+            pub_pointcloud.publish(cloud_cluster);
+        }
+
+        //pub_pointcloud.publish(cloud);
 
     }
 
