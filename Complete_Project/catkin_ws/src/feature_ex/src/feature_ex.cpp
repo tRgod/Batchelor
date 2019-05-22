@@ -48,10 +48,20 @@ public:
 
     void pointCloudCallback( const sensor_msgs::PointCloud2ConstPtr &input){
         pcl::PointCloud<pcl::PointXYZ>::Ptr output_p (new pcl::PointCloud<pcl::PointXYZ>), output_f (new pcl::PointCloud<pcl::PointXYZ>), cloud(new pcl::PointCloud<pcl::PointXYZ>);
+        pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered (new pcl::PointCloud<pcl::PointXYZ>);
         pcl::fromROSMsg(*input,*cloud);
 
         pcl::ModelCoefficients::Ptr coefficients(new pcl::ModelCoefficients);
         pcl::PointIndices::Ptr inliers(new pcl::PointIndices);
+
+        pcl::PassThrough<pcl::PointXYZ> pass;
+        //Pass through filter for filtering poiint behind LIDAR
+        pass.setInputCloud(cloud);
+        pass.setFilterFieldName("x");
+        pass.setFilterLimits(0,10);
+        pass.setNegative(false);
+        pass.filter(*cloud_filtered);
+
 
         //create segmentation object
         pcl::SACSegmentation<pcl::PointXYZ> seg;
@@ -60,21 +70,33 @@ public:
         seg.setMethodType(pcl::SAC_RANSAC);
         seg.setMaxIterations(1000);
         seg.setDistanceThreshold(0.01);
-        seg.setInputCloud(cloud);
+        seg.setInputCloud(cloud_filtered);
         seg.segment(*inliers, *coefficients);
 
         pcl::ExtractIndices<pcl::PointXYZ> extract;
-        extract.setInputCloud(cloud);
+        extract.setInputCloud(cloud_filtered);
         extract.setIndices(inliers);
         extract.setNegative(false);
         extract.filter(*output_p);
 
         extract.setNegative(true);
         extract.filter(*output_f);
-        cloud.swap(output_f);
+        cloud_filtered.swap(output_f);
 
-        pcl::KdTreeFLANN<pcl::PointXYZ>::Ptr kdTree(new pcl::KdTreeFLANN<pcl::PointXYZ>);
-        kdTree->setInputCloud(cloud);
+        pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(new pcl::search::KdTree<pcl::PointXYZ>);
+        tree->setInputCloud(cloud_filtered);
+
+        pcl::PointCloud<pcl::Normal>::Ptr cloud_normals (new pcl::PointCloud<pcl::Normal>);
+        pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> normalEstimation;
+        pcl::SACSegmentationFromNormals<pcl::PointXYZ, pcl::Normal> segmentationFromNormals;
+        pcl::ExtractIndices<pcl::Normal> extractNormals;
+
+        //Estimate Point Normals
+        normalEstimation.setInputCloud(cloud_filtered);
+        normalEstimation.setSearchMethod(tree);
+        normalEstimation.setKSearch(50);
+        normalEstimation.compute(*cloud_normals);
+
 
         /*
         if(firstRun == true){
@@ -103,18 +125,21 @@ public:
 
 
         //Creating the KdTree object for the search method of the extraction
-        pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(new pcl::search::KdTree<pcl::PointXYZ>);
-        tree->setInputCloud(cloud);
-        std::vector<pcl::PointIndices> cluster_indices;
+
+
+
+        /*std::vector<pcl::PointIndices> cluster_indices;
         pcl::EuclideanClusterExtraction<pcl::PointXYZ> ec;
         ec.setClusterTolerance(0.02);
         ec.setMinClusterSize(100);
         ec.setMaxClusterSize(25000);
         ec.setSearchMethod(tree);
-        ec.setInputCloud(cloud);
+        ec.setInputCloud(cloud_filtered);
         ec.extract(cluster_indices);
 
-        int j = 0;
+        std::cout << cluster_indices.size() << std::endl;*/
+
+        /*int j = 0;
         for (std::vector<pcl::PointIndices>::const_iterator it = cluster_indices.begin();  it != cluster_indices.end() ; ++it) {
             pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_cluster(new pcl::PointCloud<pcl::PointXYZ>);
             for (std::vector<int>::const_iterator pit = it->indices.begin (); pit != it->indices.end (); ++pit)
@@ -123,9 +148,9 @@ public:
             cloud_cluster->height = 1;
             cloud_cluster->is_dense = true;
             pub_pointcloud.publish(cloud_cluster);
-        }
+        }*/
 
-        pub_pointcloud.publish(cloud);
+        pub_pointcloud.publish(cloud_filtered);
 
     }
 
@@ -311,7 +336,7 @@ int main (int argc, char** argv)
 
     ros::init (argc,argv,"Feature_ekstractor");
 
-    FeatureExtractor featureExtractor(0);
+    FeatureExtractor featureExtractor(1);
 
     ros::spin();
 
