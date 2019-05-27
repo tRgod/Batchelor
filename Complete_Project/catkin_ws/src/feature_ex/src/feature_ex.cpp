@@ -277,11 +277,11 @@ public:
             seg.setModelType(pcl::SACMODEL_CONE);
             seg.setMethodType(pcl::SAC_RANSAC);
             seg.setNormalDistanceWeight(0.05);
-            //seg.setAxis(Eigen::Vector3f(0,0,1));
-            //seg.setEpsAngle(0.1);
-            seg.setMaxIterations(1100);
+           seg.setAxis(Eigen::Vector3f(0,0,1.0));
+           seg.setEpsAngle(0.175);
+            seg.setMaxIterations(1000);
             seg.setDistanceThreshold(0.005);
-            seg.setRadiusLimits(0, 0.4);
+            seg.setRadiusLimits(0, 0.5);
             seg.setMinMaxOpeningAngle(0.4, 0.8);
 
             //       while (cloud_filtered4->points.size() >0.5*nr_points) {
