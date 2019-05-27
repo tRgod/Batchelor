@@ -47,6 +47,8 @@ pcl/filters/plane_clipper3D.h
 -
 tf/transform_listener.h
 -
+geometry_msgs/PointStamped.h
+-
 geometry_msgs/Pose2D.h
 -
 pcl/segmentation/extract_clusters.h

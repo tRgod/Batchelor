@@ -2,4 +2,4 @@
 source_root_dir = "/home/thor/Batchelor/Complete_Project/catkin_ws/src"
 whitelisted_packages = "".split(';') if "" != "" else []
 blacklisted_packages = "".split(';') if "" != "" else []
-underlay_workspaces = "/home/thor/Batchelor/Complete_Project/catkin_ws/devel;/opt/ros/melodic".split(';') if "/home/thor/Batchelor/Complete_Project/catkin_ws/devel;/opt/ros/melodic" != "" else []
+underlay_workspaces = "/opt/ros/melodic".split(';') if "/opt/ros/melodic" != "" else []

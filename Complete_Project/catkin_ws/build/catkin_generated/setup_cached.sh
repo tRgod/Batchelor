@@ -7,6 +7,9 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH="/opt/ros/melodic/lib"
-export PKG_CONFIG_PATH="/opt/ros/melodic/lib/pkgconfig"
+export CMAKE_PREFIX_PATH="/home/thor/Batchelor/Complete_Project/catkin_ws/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/thor/Batchelor/Complete_Project/catkin_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/thor/Batchelor/Complete_Project/catkin_ws/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/thor/Batchelor/Complete_Project/catkin_ws/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/thor/Batchelor/Complete_Project/catkin_ws/src:$ROS_PACKAGE_PATH"

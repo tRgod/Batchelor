@@ -28,6 +28,7 @@
 ros::Publisher pub_pointcloud;
 ros::Publisher pub_posemsgs;
 std::fstream logstuff;
+std::fstream timelog;
 
 class FeatureExtractor{
 public:
@@ -49,6 +50,11 @@ public:
     }
 
     void pointCloudCallback( const sensor_msgs::PointCloud2ConstPtr &input){
+        logstuff.open("landmark_log.txt");
+        timelog.open("time_log.txt");
+
+        ros::WallTime start_, end_;
+        start_=ros::WallTime::now();
         pcl::PointCloud<pcl::PointXYZ>::Ptr output_p (new pcl::PointCloud<pcl::PointXYZ>), output_f (new pcl::PointCloud<pcl::PointXYZ>), cloud(new pcl::PointCloud<pcl::PointXYZ>);
         pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered (new pcl::PointCloud<pcl::PointXYZ>);
         pcl::fromROSMsg(*input,*cloud);
@@ -126,7 +132,7 @@ public:
         std::vector<pcl::PointIndices> cluster_indices;
         pcl::EuclideanClusterExtraction<pcl::PointXYZ> ec;
         ec.setClusterTolerance(0.2);
-        ec.setMinClusterSize(100);
+        ec.setMinClusterSize(50);
         ec.setMaxClusterSize(25000);
         ec.setSearchMethod(tree);
         ec.setInputCloud(cloud);
@@ -159,8 +165,16 @@ public:
 
             pub_posemsgs.publish(TimedCoordinates);
             pub_pointcloud.publish(cloud_cluster);
+            logstuff<<TimedCoordinates.point.x<<" " << TimedCoordinates.point.y<< TimedCoordinates.header.seq<< std::endl;
+            logstuff.close();
         }
 
+        end_=ros::WallTime::now();
+
+        double execution_time =(end_- start_).toNSec()*1e-06;
+        timelog<<execution_time<<std::endl;
+        timelog.close();
+        ROS_INFO_STREAM("execution time (ms) :"<< execution_time);
         //pub_pointcloud.publish(cloud);
 
     }
@@ -263,8 +277,8 @@ public:
             seg.setModelType(pcl::SACMODEL_CONE);
             seg.setMethodType(pcl::SAC_RANSAC);
             seg.setNormalDistanceWeight(0.05);
-            seg.setAxis(Eigen::Vector3f(0,0,1));
-            seg.setEpsAngle(0.1);
+            //seg.setAxis(Eigen::Vector3f(0,0,1));
+            //seg.setEpsAngle(0.1);
             seg.setMaxIterations(1100);
             seg.setDistanceThreshold(0.005);
             seg.setRadiusLimits(0, 0.4);
@@ -316,7 +330,7 @@ public:
             end_=ros::WallTime::now();
             double execution_time=(end_-start_).toNSec()*1e-06;
             ROS_INFO_STREAM("Execution time (ms): " <<execution_time);
-            logstuff<<madausneedthis.x<< " "<< madausneedthis.y<< " "<< execution_time<<std::endl;
+            logstuff<<madausneedthis.x<< " "<< madausneedthis.y<< " "<< execution_time<< " "<<input->header.seq<<std::endl;
             logstuff.close();
             // }
         }
@@ -346,7 +360,7 @@ int main (int argc, char** argv)
 
     ros::init (argc,argv,"Feature_ekstractor");
 
-    FeatureExtractor featureExtractor(1);
+    FeatureExtractor featureExtractor(0);
 
     ros::spin();
 
