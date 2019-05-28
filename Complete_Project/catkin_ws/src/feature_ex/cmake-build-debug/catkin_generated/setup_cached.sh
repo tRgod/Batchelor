@@ -7,6 +7,11 @@
 # new environment variables
 
 # modified environment variables
+<<<<<<< HEAD
+export CMAKE_PREFIX_PATH="/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/feature_ex/cmake-build-debug/devel:$CMAKE_PREFIX_PATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/feature_ex/cmake-build-debug/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+=======
 export CMAKE_PREFIX_PATH="/home/thor/Batchelor/Complete_Project/catkin_ws/src/feature_ex/cmake-build-debug/devel:$CMAKE_PREFIX_PATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/thor/Batchelor/Complete_Project/catkin_ws/src/feature_ex/cmake-build-debug/devel/share/common-lisp"
+>>>>>>> master
 export ROS_PACKAGE_PATH="/home/gilberg96/Batchelor/Complete_Project/catkin_ws/src/feature_ex:/home/thor/Batchelor/Complete_Project/catkin_ws/src/feature_ex:$ROS_PACKAGE_PATH"
