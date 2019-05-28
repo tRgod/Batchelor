@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: data_log
+Description: Description of data_log
+Version: 0.0.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

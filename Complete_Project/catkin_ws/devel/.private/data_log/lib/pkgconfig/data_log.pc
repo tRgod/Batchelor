@@ -1,0 +1,8 @@
+prefix=/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/data_log
+
+Name: data_log
+Description: Description of data_log
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/data_log/lib 
+Requires: 

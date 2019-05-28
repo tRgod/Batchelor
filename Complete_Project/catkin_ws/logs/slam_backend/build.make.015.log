@@ -1,0 +1,5 @@
+[35m[1mScanning dependencies of target slam_backend_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/slam_backend_node.dir/src/slam_backend_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/slam_backend/lib/slam_backend/slam_backend_node[0m
+/usr/bin/ld: warning: libboost_system.so.1.67.0, needed by //usr/local/lib/libgtsam.so, may conflict with libboost_system.so.1.65.1
+[100%] Built target slam_backend_node
