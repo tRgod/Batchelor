@@ -1,0 +1,1 @@
+/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/.private/data_log/share/data_log/cmake/data_logConfig.cmake
