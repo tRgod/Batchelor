@@ -16,20 +16,14 @@ time3=logdata3(:,3);
 time4=logdata4(:,3);
 time5=logdata5(:,3);
 Mintime1= min(time1)
-Maxtime1=max(time1)
+Maxtime1=max(tim11)
 Meantim1=mean(time1)
 Mintime2=min(time2)
 Maxtime2=max(time2)
 Menatime2=mean(time2)
-Mintime3=min(time3)
-Maxtime3=max(time3)
-Meantime3=mean(time3)
-Mintime4=min(time4)
-Maxtime4=max(time4)
-Meantime4=mean(time4)
-Mintime5=min(time5)
-Maxtime5=max(time5)
-Meantime5=mean(time5)
+Mintime3=
+Mintime4
+Mintime5
 
 
 
