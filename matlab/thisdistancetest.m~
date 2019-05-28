@@ -1,0 +1,55 @@
+clc;
+clear;
+close;
+log1data=importdata('loog3metergap.txt', ' ')
+log2data=importdata('loog4metergap.txt', ' ')
+log3data=importdata('loog5metergap.txt', ' ')
+log4data=importdata('loog6metergap.txt', ' ')
+
+groundtrouth=0.5:1:24;
+groundtrouthypos=[-1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 ];
+grountrouthneg=[1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 ];
+
+groundtrouthypos1=[2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 ];
+grountrouthneg1=[-2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 ];
+
+groundtrouthypos2=[2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5]
+grountrouthneg2=[-2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 ]
+
+groundtrouthypos3=[3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3]
+grountrouthneg3=[-3 -3 -3 -3 -3 -3 -3 -3 -3 -3 -3 -3 -3 -3 -3 -3 -3 -3 -3 -3 -3 -3 -3 -3]
+
+x1=log1data(:,1);
+y1=log1data(:,2);
+x2=log2data(:,1);
+y2=log2data(:,2);
+x3=log3data(:,1);
+y3=log3data(:,2);
+x4=log4data(:,1);
+y4=log4data(:,2);
+
+distvector=0:size(log1data)-1;
+
+distvector2=0:size(log1data)-1;
+distvector2=distvector2.*0.2
+
+x1korigeret=x1+distvector2';
+x2korigeret=x2+distvector2';
+x3korigeret=x3+distvector2';
+x4korigeret=x4+distvector2';
+
+hold on
+grid on
+grid minor
+
+plot(groundtrouth,groundtrouthypos1,'o k',groundtrouth,grountrouthneg1,'o k',groundtrouth,groundtrouthypos2,'o k',groundtrouth,grountrouthneg2,'o k')
+plot(groundtrouth,groundtrouthypos3,'o k',groundtrouth,grountrouthneg3,'o k')
+plot(groundtrouth,groundtrouthypos,'o k',groundtrouth,grountrouthneg,'o k')
+plot(x1korigeret,y1, '*')
+plot(x2korigeret,y2, '*')
+plot(x3korigeret,y3, '*')
+plot(x4korigeret,y4, '*')
+legend({'GroundTruthPos','GroundTruthNeg','GroundTruthPos','GroundTruthNeg','GroundTruthPos','GroundTruthNeg','GroundTruthPos','GroundTruthNeg','3 Meters','4 Meters','5 Meters', '6 Meters'},'Location','east')
+title('Pl')
+xlabel('Distance [m] ')
+ylabel('Distance [m]')
