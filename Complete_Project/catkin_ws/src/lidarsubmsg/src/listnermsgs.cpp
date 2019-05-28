@@ -61,7 +61,7 @@ int main (int argc, char** argv)
 	ros::NodeHandle nh;
 //	message_filters::Subscriber<sensor_msgs::PointCloudConstPtr> pointcloud_sub(nh,"/output",1);
 //	message_filters::Subscriber<geometry_msgs::Pose> pose_sub(nh,"/Transform_listner",1);
-//    message_filters::TimeSynchronizer<sensor_msgs::PointCloudConstPtr,geometry_msgs::Pose> sync(pointcloud_sub,pose_sub,10);
+//    message_filters::TimeSynchronizer<sensor_msgs::PointCloudConstPtr,gerometry_msgs::Pose> sync(pointcloud_sub,pose_sub,10);
   //  sync.registerCallback(boost::bind(&callback, _1,_2));
 	ros::Subscriber sub = nh.subscribe("/velodyne",1,cloud_cb);
     tf_listner = new tf::TransformListener();

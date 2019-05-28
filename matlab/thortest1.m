@@ -6,14 +6,14 @@ logdata=importdata('loognoAxisandEpsAngle100iterations.txt', ' ');
 log1data=importdata('loognoAxisandEpsAngle200iterations.txt', ' ');
 log2data=importdata('loognoAxisandEpsAngle400iterations.txt', ' ');
 log3data=importdata('loognoAxisandEpsAngle800iterations.txt', ' ');
-log4data=importdata('loog2.txt',' ');
-%log4data=importdata('loognoAxisandEpsAngle1000iterations.txt', ' ');
+%log4data=importdata('loog2.txt',' ');
+log4data=importdata('loognoAxisandEpsAngle1000iterations.txt', ' ');
 log5data=importdata('loognoAxisandEpsAngle1100iterations.txt', ' ');
 %logdata=importdata('loogwithEpsAngle.txt', ' ');
 %logdata=importdata('loog.txt',' ');
 %logdata=importdata('loogwithAxis.txt', ' ');
 %log1data=importdata('loog1.txt',' ');
-log100data=importdata('loog100.txt',' ');
+%log100data=importdata('loog100.txt',' ');
 
 % definning groundtrouth and the 
 x=logdata(:,1);
@@ -27,7 +27,7 @@ y3=log3data(:,2);
 x4=log4data(:,1);
 y4=log4data(:,2);
 x5=log5data(:,1);
-y5=log5data(:,2);
+y5=log5data(:,1);
 groundtrouth=0.5:1:24;
 groundtrouthypos=[-1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 ];
 grountrouthneg=[1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 1.5 ];
