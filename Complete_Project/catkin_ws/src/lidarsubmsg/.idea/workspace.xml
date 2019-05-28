@@ -2,79 +2,112 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
+<<<<<<< HEAD
       <config projectName="lidarsubmsg" targetName="gmock_main" />
       <config projectName="lidarsubmsg" targetName="nodelet_topic_tools_gencfg" />
       <config projectName="lidarsubmsg" targetName="bond_generate_messages_cpp" />
+=======
+>>>>>>> master
       <config projectName="lidarsubmsg" targetName="actionlib_msgs_generate_messages_py" />
-      <config projectName="lidarsubmsg" targetName="std_srvs_generate_messages_cpp" />
-      <config projectName="lidarsubmsg" targetName="pcl_msgs_generate_messages_lisp" />
-      <config projectName="lidarsubmsg" targetName="download_extra_data" />
-      <config projectName="lidarsubmsg" targetName="nodelet_generate_messages_lisp" />
-      <config projectName="lidarsubmsg" targetName="sensor_msgs_generate_messages_eus" />
-      <config projectName="lidarsubmsg" targetName="actionlib_msgs_generate_messages_nodejs" />
-      <config projectName="lidarsubmsg" targetName="actionlib_msgs_generate_messages_cpp" />
-      <config projectName="lidarsubmsg" targetName="roscpp_generate_messages_cpp" />
-      <config projectName="lidarsubmsg" targetName="nodelet_generate_messages_py" />
-      <config projectName="lidarsubmsg" targetName="tf2_msgs_generate_messages_py" />
-      <config projectName="lidarsubmsg" targetName="doxygen" />
-      <config projectName="lidarsubmsg" targetName="std_msgs_generate_messages_lisp" />
-      <config projectName="lidarsubmsg" targetName="dynamic_reconfigure_generate_messages_eus" />
+      <config projectName="lidarsubmsg" targetName="std_srvs_generate_messages_lisp" />
+      <config projectName="lidarsubmsg" targetName="roscpp_generate_messages_nodejs" />
+      <config projectName="lidarsubmsg" targetName="topic_tools_generate_messages_py" />
       <config projectName="lidarsubmsg" targetName="geometry_msgs_generate_messages_py" />
-      <config projectName="lidarsubmsg" targetName="pcl_msgs_generate_messages_cpp" />
-      <config projectName="lidarsubmsg" targetName="sensor_msgs_generate_messages_lisp" />
-      <config projectName="lidarsubmsg" targetName="geometry_msgs_generate_messages_nodejs" />
-      <config projectName="lidarsubmsg" targetName="topic_tools_generate_messages_lisp" />
+      <config projectName="lidarsubmsg" targetName="topic_tools_generate_messages_cpp" />
+      <config projectName="lidarsubmsg" targetName="geometry_msgs_generate_messages_lisp" />
+      <config projectName="lidarsubmsg" targetName="rosgraph_msgs_generate_messages_nodejs" />
+      <config projectName="lidarsubmsg" targetName="std_msgs_generate_messages_py" />
+      <config projectName="lidarsubmsg" targetName="actionlib_msgs_generate_messages_cpp" />
+      <config projectName="lidarsubmsg" targetName="sensor_msgs_generate_messages_eus" />
+      <config projectName="lidarsubmsg" targetName="tf_generate_messages_py" />
+      <config projectName="lidarsubmsg" targetName="actionlib_generate_messages_py" />
+      <config projectName="lidarsubmsg" targetName="actionlib_msgs_generate_messages_nodejs" />
+      <config projectName="lidarsubmsg" targetName="run_tests" />
+      <config projectName="lidarsubmsg" targetName="pcl_msgs_generate_messages_py" />
+      <config projectName="lidarsubmsg" targetName="std_msgs_generate_messages_lisp" />
+      <config projectName="lidarsubmsg" targetName="nodelet_topic_tools_gencfg" />
+      <config projectName="lidarsubmsg" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="lidarsubmsg" targetName="actionlib_generate_messages_cpp" />
+      <config projectName="lidarsubmsg" targetName="sensor_msgs_generate_messages_py" />
       <config projectName="lidarsubmsg" targetName="actionlib_generate_messages_lisp" />
       <config projectName="lidarsubmsg" targetName="nodelet_generate_messages_eus" />
-      <config projectName="lidarsubmsg" targetName="pcl_msgs_generate_messages_nodejs" />
-      <config projectName="lidarsubmsg" targetName="actionlib_generate_messages_cpp" />
-      <config projectName="lidarsubmsg" targetName="run_tests" />
-      <config projectName="lidarsubmsg" targetName="dynamic_reconfigure_gencfg" />
-      <config projectName="lidarsubmsg" targetName="std_srvs_generate_messages_nodejs" />
-      <config projectName="lidarsubmsg" targetName="dynamic_reconfigure_generate_messages_py" />
-      <config projectName="lidarsubmsg" targetName="topic_tools_generate_messages_py" />
-      <config projectName="lidarsubmsg" targetName="tf2_msgs_generate_messages_lisp" />
-      <config projectName="lidarsubmsg" targetName="std_srvs_generate_messages_eus" />
-      <config projectName="lidarsubmsg" targetName="nodelet_generate_messages_nodejs" />
+      <config projectName="lidarsubmsg" targetName="actionlib_msgs_generate_messages_eus" />
       <config projectName="lidarsubmsg" targetName="gtest_main" />
-      <config projectName="lidarsubmsg" targetName="sensor_msgs_generate_messages_cpp" />
-      <config projectName="lidarsubmsg" targetName="tf_generate_messages_py" />
-      <config projectName="lidarsubmsg" targetName="topic_tools_generate_messages_cpp" />
+      <config projectName="lidarsubmsg" targetName="tests" />
       <config projectName="lidarsubmsg" targetName="roscpp_generate_messages_lisp" />
+<<<<<<< HEAD
       <config projectName="lidarsubmsg" targetName="pcl_msgs_generate_messages_eus" />
       <config projectName="lidarsubmsg" targetName="geometry_msgs_generate_messages_eus" />
       <config projectName="lidarsubmsg" targetName="tf_generate_messages_nodejs" />
       <config projectName="lidarsubmsg" targetName="tf_generate_messages_lisp" />
       <config projectName="lidarsubmsg" targetName="std_srvs_generate_messages_lisp" />
+=======
+      <config projectName="lidarsubmsg" targetName="pcl_msgs_generate_messages_cpp" />
+      <config projectName="lidarsubmsg" targetName="bond_generate_messages_cpp" />
+      <config projectName="lidarsubmsg" targetName="std_srvs_generate_messages_py" />
+      <config projectName="lidarsubmsg" targetName="roscpp_generate_messages_eus" />
+      <config projectName="lidarsubmsg" targetName="dynamic_reconfigure_generate_messages_cpp" />
+      <config projectName="lidarsubmsg" targetName="tf2_msgs_generate_messages_py" />
+      <config projectName="lidarsubmsg" targetName="gmock" />
+>>>>>>> master
       <config projectName="lidarsubmsg" targetName="roscpp_generate_messages_py" />
-      <config projectName="lidarsubmsg" targetName="dynamic_reconfigure_generate_messages_nodejs" />
-      <config projectName="lidarsubmsg" targetName="tf2_msgs_generate_messages_cpp" />
-      <config projectName="lidarsubmsg" targetName="listnermsgs" />
-      <config projectName="lidarsubmsg" targetName="bond_generate_messages_nodejs" />
-      <config projectName="lidarsubmsg" targetName="sensor_msgs_generate_messages_nodejs" />
-      <config projectName="lidarsubmsg" targetName="std_msgs_generate_messages_cpp" />
-      <config projectName="lidarsubmsg" targetName="topic_tools_generate_messages_nodejs" />
-      <config projectName="lidarsubmsg" targetName="actionlib_generate_messages_nodejs" />
-      <config projectName="lidarsubmsg" targetName="gtest" />
-      <config projectName="lidarsubmsg" targetName="topic_tools_generate_messages_eus" />
-      <config projectName="lidarsubmsg" targetName="clean_test_results" />
-      <config projectName="lidarsubmsg" targetName="geometry_msgs_generate_messages_cpp" />
-      <config projectName="lidarsubmsg" targetName="rosgraph_msgs_generate_messages_lisp" />
-      <config projectName="lidarsubmsg" targetName="rosgraph_msgs_generate_messages_cpp" />
       <config projectName="lidarsubmsg" targetName="tf_generate_messages_eus" />
-      <config projectName="lidarsubmsg" targetName="sensor_msgs_generate_messages_py" />
-      <config projectName="lidarsubmsg" targetName="std_msgs_generate_messages_nodejs" />
-      <config projectName="lidarsubmsg" targetName="std_msgs_generate_messages_py" />
+      <config projectName="lidarsubmsg" targetName="bond_generate_messages_py" />
+      <config projectName="lidarsubmsg" targetName="tf_generate_messages_cpp" />
+      <config projectName="lidarsubmsg" targetName="actionlib_generate_messages_eus" />
+      <config projectName="lidarsubmsg" targetName="nodelet_generate_messages_py" />
       <config projectName="lidarsubmsg" targetName="dynamic_reconfigure_generate_messages_lisp" />
+      <config projectName="lidarsubmsg" targetName="actionlib_msgs_generate_messages_lisp" />
+      <config projectName="lidarsubmsg" targetName="sensor_msgs_generate_messages_lisp" />
+      <config projectName="lidarsubmsg" targetName="rosgraph_msgs_generate_messages_lisp" />
+      <config projectName="lidarsubmsg" targetName="rosgraph_msgs_generate_messages_eus" />
+      <config projectName="lidarsubmsg" targetName="geometry_msgs_generate_messages_cpp" />
+      <config projectName="lidarsubmsg" targetName="pcl_msgs_generate_messages_nodejs" />
+      <config projectName="lidarsubmsg" targetName="tf2_msgs_generate_messages_cpp" />
+      <config projectName="lidarsubmsg" targetName="pcl_msgs_generate_messages_eus" />
+      <config projectName="lidarsubmsg" targetName="gtest" />
+      <config projectName="lidarsubmsg" targetName="gmock_main" />
+      <config projectName="lidarsubmsg" targetName="dynamic_reconfigure_generate_messages_eus" />
+      <config projectName="lidarsubmsg" targetName="sensor_msgs_generate_messages_nodejs" />
+      <config projectName="lidarsubmsg" targetName="nodelet_generate_messages_nodejs" />
+      <config projectName="lidarsubmsg" targetName="std_srvs_generate_messages_cpp" />
+      <config projectName="lidarsubmsg" targetName="nodelet_generate_messages_lisp" />
+      <config projectName="lidarsubmsg" targetName="topic_tools_generate_messages_nodejs" />
+      <config projectName="lidarsubmsg" targetName="dynamic_reconfigure_gencfg" />
+      <config projectName="lidarsubmsg" targetName="bond_generate_messages_nodejs" />
+      <config projectName="lidarsubmsg" targetName="tf2_msgs_generate_messages_lisp" />
+      <config projectName="lidarsubmsg" targetName="actionlib_generate_messages_nodejs" />
+      <config projectName="lidarsubmsg" targetName="pcl_msgs_generate_messages_lisp" />
+      <config projectName="lidarsubmsg" targetName="std_msgs_generate_messages_nodejs" />
+      <config projectName="lidarsubmsg" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="lidarsubmsg" targetName="std_srvs_generate_messages_nodejs" />
+      <config projectName="lidarsubmsg" targetName="topic_tools_generate_messages_eus" />
       <config projectName="lidarsubmsg" targetName="bond_generate_messages_eus" />
+<<<<<<< HEAD
       <config projectName="lidarsubmsg" targetName="actionlib_generate_messages_py" />
       <config projectName="lidarsubmsg" targetName="pcl_msgs_generate_messages_py" />
       <config projectName="lidarsubmsg" targetName="tf2_msgs_generate_messages_nodejs" />
       <config projectName="lidarsubmsg" targetName="roscpp_generate_messages_nodejs" />
+=======
+      <config projectName="lidarsubmsg" targetName="dynamic_reconfigure_generate_messages_py" />
+      <config projectName="lidarsubmsg" targetName="geometry_msgs_generate_messages_eus" />
+      <config projectName="lidarsubmsg" targetName="tf_generate_messages_nodejs" />
+>>>>>>> master
       <config projectName="lidarsubmsg" targetName="tf2_msgs_generate_messages_eus" />
+      <config projectName="lidarsubmsg" targetName="bond_generate_messages_lisp" />
+      <config projectName="lidarsubmsg" targetName="sensor_msgs_generate_messages_cpp" />
+      <config projectName="lidarsubmsg" targetName="tf_generate_messages_lisp" />
+      <config projectName="lidarsubmsg" targetName="tf2_msgs_generate_messages_nodejs" />
       <config projectName="lidarsubmsg" targetName="rosgraph_msgs_generate_messages_py" />
-      <config projectName="lidarsubmsg" targetName="tests" />
+      <config projectName="lidarsubmsg" targetName="doxygen" />
+      <config projectName="lidarsubmsg" targetName="std_srvs_generate_messages_eus" />
+      <config projectName="lidarsubmsg" targetName="dynamic_reconfigure_generate_messages_nodejs" />
+      <config projectName="lidarsubmsg" targetName="geometry_msgs_generate_messages_nodejs" />
+      <config projectName="lidarsubmsg" targetName="download_extra_data" />
+      <config projectName="lidarsubmsg" targetName="listnermsgs" />
+      <config projectName="lidarsubmsg" targetName="rosgraph_msgs_generate_messages_cpp" />
       <config projectName="lidarsubmsg" targetName="std_msgs_generate_messages_eus" />
+<<<<<<< HEAD
       <config projectName="lidarsubmsg" targetName="bond_generate_messages_lisp" />
       <config projectName="lidarsubmsg" targetName="actionlib_msgs_generate_messages_eus" />
       <config projectName="lidarsubmsg" targetName="roscpp_generate_messages_eus" />
@@ -88,8 +121,12 @@
       <config projectName="lidarsubmsg" targetName="actionlib_generate_messages_eus" />
       <config projectName="lidarsubmsg" targetName="rosgraph_msgs_generate_messages_eus" />
       <config projectName="lidarsubmsg" targetName="tf_generate_messages_cpp" />
+=======
+      <config projectName="lidarsubmsg" targetName="clean_test_results" />
+      <config projectName="lidarsubmsg" targetName="topic_tools_generate_messages_lisp" />
+      <config projectName="lidarsubmsg" targetName="nodelet_generate_messages_cpp" />
+>>>>>>> master
       <config projectName="lidarsubmsg" targetName="pcl_ros_gencfg" />
-      <config projectName="lidarsubmsg" targetName="bond_generate_messages_py" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -99,6 +136,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ba80c6e-27cc-4af3-88d6-779b79345b37" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/../../.catkin_tools/profiles/default/devel_collisions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../.catkin_tools/profiles/default/devel_collisions.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../build/.built_by" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/.built_by" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../build/CATKIN_IGNORE" beforeDir="false" />
@@ -888,6 +926,18 @@
       <change beforePath="$PROJECT_DIR$/../slam_backend/cmake-build-debug/CMakeFiles/slam_backend_node.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../slam_backend/cmake-build-debug/CMakeFiles/slam_backend_node.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../slam_backend/src/slam_backend_node.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../slam_backend/src/slam_backend_node.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../transform_receiver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../transform_receiver/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/../../build/feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/feature_ex/CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../build/feature_ex/feature_ex" beforeDir="false" afterPath="$PROJECT_DIR$/../../build/feature_ex/feature_ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../feature_ex/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../feature_ex/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../feature_ex/cmake-build-debug/CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../feature_ex/cmake-build-debug/CMakeFiles/feature_ex.dir/src/feature_ex.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../feature_ex/cmake-build-debug/feature_ex" beforeDir="false" afterPath="$PROJECT_DIR$/../feature_ex/cmake-build-debug/feature_ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../feature_ex/cmake-build-debug/loog.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../feature_ex/src/feature_ex.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../feature_ex/src/feature_ex.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/listnermsgs.dir/src/listnermsgs.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../matlab/thortest1.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../matlab/thortest1.m" afterDir="false" />
+>>>>>>> master
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -914,11 +964,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/listnermsgs.cpp">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="390">
               <caret line="33" column="74" selection-start-line="33" selection-start-column="74" selection-end-line="33" selection-end-column="74" />
               <folding>
                 <element signature="e#46#81#0" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="291">
+              <caret line="63" column="74" selection-start-line="63" selection-start-column="74" selection-end-line="63" selection-end-column="74" />
+>>>>>>> master
             </state>
           </provider>
         </entry>
@@ -936,11 +991,17 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="288" />
     <option name="y" value="158" />
     <option name="width" value="1399" />
     <option name="height" value="791" />
+=======
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="width" value="982" />
+    <option name="height" value="1080" />
+>>>>>>> master
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -1039,12 +1100,27 @@
       <workItem from="1558352501900" duration="7419000" />
       <workItem from="1558432420895" duration="358000" />
       <workItem from="1558524926620" duration="2355000" />
+<<<<<<< HEAD
       <workItem from="1558881319692" duration="492000" />
+=======
+      <workItem from="1558690450811" duration="113000" />
+      <workItem from="1558690666649" duration="601000" />
+      <workItem from="1558803117664" duration="599000" />
+      <workItem from="1558877846467" duration="599000" />
+      <workItem from="1558936757667" duration="599000" />
+      <workItem from="1558940408614" duration="1159000" />
+      <workItem from="1558947591356" duration="294000" />
+      <workItem from="1558947898087" duration="9901000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="73178000" />
+=======
+    <option name="totallyTimeSpent" value="86551000" />
+>>>>>>> master
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1056,21 +1132,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="55" y="25" width="1865" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12424409" />
+=======
+    <frame x="0" y="0" width="982" height="1080" extended-state="4" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26276594" />
+>>>>>>> master
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38947368" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38883033" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39894736" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952693" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.41578948" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.41412014" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32952693" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
@@ -1121,11 +1204,16 @@
     <entry file="file://$USER_HOME$/man3/Source.cpp" />
     <entry file="file://$PROJECT_DIR$/src/listnermsgs.cpp">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="390">
           <caret line="33" column="74" selection-start-line="33" selection-start-column="74" selection-end-line="33" selection-end-column="74" />
           <folding>
             <element signature="e#46#81#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="291">
+          <caret line="63" column="74" selection-start-line="63" selection-start-column="74" selection-end-line="63" selection-end-column="74" />
+>>>>>>> master
         </state>
       </provider>
     </entry>

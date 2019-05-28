@@ -131,7 +131,11 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
+<<<<<<< HEAD
     foreach(path /home/gilberg96/Batchelor/Complete_Project/catkin_ws/install/lib;/home/gilberg96/Batchelor/Complete_Project/catkin_ws/devel/lib;/home/gilberg96/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+=======
+    foreach(path /home/thor/Batchelor/Complete_Project/catkin_ws/install/lib;/opt/ros/melodic/lib)
+>>>>>>> master
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
