@@ -1,8 +1,0 @@
-prefix=/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel
-
-Name: slam_backend
-Description: Description of slam_backend
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/thor/Batchelor/Complete_Project/catkin_ws/src/slam_backend/cmake-build-debug/devel/lib 
-Requires: 
