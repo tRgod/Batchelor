@@ -92,7 +92,7 @@ private:
     std::random_device rd{};
     std::mt19937 gen{rd()};
     std::normal_distribution<double> d{0.0,0.05};
-    std::normal_distribution<double> da{0.0, 0.005};
+    std::normal_distribution<double> da{0.0, 0.05};
 };
 
 int main(int argc, char** argv){

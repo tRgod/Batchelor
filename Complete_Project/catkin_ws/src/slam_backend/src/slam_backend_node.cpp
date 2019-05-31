@@ -55,7 +55,7 @@ public:
     }
 
 
-    int findCorrespondences(gtsam::Point2 &point){
+    /*int findCorrespondences(gtsam::Point2 &point){
 
         if (foundLandmarks.empty()==true) {
             foundLandmarks.push_back(point);
@@ -63,6 +63,7 @@ public:
             return 0;
         }
         for (int i = 0; i < foundLandmarks.size()-1; i++) {
+            gtsam::Point2 isam2;
             if(sqrt(pow(foundLandmarks[i].x()-point.x(),2)+pow(foundLandmarks[i].y()-point.y(),2)) < 0.5){
                 return i;
             }
@@ -71,6 +72,25 @@ public:
         initial.insert(gtsam::symbol('l', foundLandmarks.size()-1), point);
         return foundLandmarks.size()-1;
 
+
+    }*/
+
+    int findCorrespondences(gtsam::Point2 &point){
+        if(!landmarkEstimates.exists(gtsam::symbol('l',0))) {
+            initial.insert(gtsam::symbol('l', 0), point);
+            landmarkEstimates.insert(gtsam::symbol('l', 0), point);
+            k++;
+            return 0;
+        }
+        for (int j = 0; j < k-1; ++j) {
+            if(point.dist(landmarkEstimates.at<gtsam::Point2>(gtsam::symbol('l',j))) < 0.5 ) {
+                return j;
+            }
+        }
+        initial.insert(gtsam::symbol('l', k), point);
+        landmarkEstimates.insert(gtsam::symbol('l', k), point);
+        k++;
+        return k-1;
 
     }
 
@@ -95,6 +115,13 @@ public:
     void publishISAM2Pose(gtsam::Pose2 &pose, const ros::Time &time){
         geometry_msgs::PoseStamped iSAM2Pose;
         iSAM2Pose.header.stamp = time;
+        iSAM2Pose.pose.position.x = pose.x();
+        iSAM2Pose.pose.position.y = pose.y();
+        iSAM2Pose.pose.orientation.z = pose.theta();
+        iSAM2_pub.publish(iSAM2Pose);
+    }
+    void publishISAM2Pose(gtsam::Pose2 &pose){
+        geometry_msgs::PoseStamped iSAM2Pose;
         iSAM2Pose.pose.position.x = pose.x();
         iSAM2Pose.pose.position.y = pose.y();
         iSAM2Pose.pose.orientation.z = pose.theta();
@@ -132,7 +159,6 @@ public:
                                                                                                           landmarkId),
                                                                                             bearing, range,
                                                                                             rangeNoise));
-                k++;
                 countK++;
                 publishLandmarks(predictedPosition, cones->header.stamp, landmarkId);
             }
@@ -146,10 +172,28 @@ public:
                 gtsam::Values result = isam2.calculateEstimate();
                 lastPose = result.at<gtsam::Pose2>(gtsam::symbol('x',i));
                 newFactors = gtsam::NonlinearFactorGraph();
+                landmarkEstimates = gtsam::Values();
+                for (int l = 0; l < k; l++) {
+                    landmarkEstimates.insert(gtsam::symbol('l', l), result.at<gtsam::Point2>(gtsam::symbol('l',l)));
+                }
                 initial = gtsam::Values();
                 countK = 0;
             }
         }
+        /*isam2.update(newFactors, initial);
+        gtsam::Values result = isam2.calculateEstimate();
+        lastPose = result.at<gtsam::Pose2>(gtsam::symbol('x',i));
+        newFactors = gtsam::NonlinearFactorGraph();
+        initial = gtsam::Values();*/
+        /*if(i==20){
+            gtsam::Values results2 = isam2.calculateEstimate();
+            for (int j = 0; j < 20; ++j) {
+                gtsam::Pose2 sam = results2.at<gtsam::Pose2>(gtsam::symbol('x',j));
+                publishISAM2Pose(sam);
+
+            }
+        }*/
+
         i++;
 
     }
@@ -167,8 +211,6 @@ public:
         gtsam::Pose2 predictedPose = lastPose.compose(odometry);
 
         lastPose = predictedPose;
-
-        publishISAM2Pose(lastPose, msg->header.stamp);
 
         //Predicted pose odometry only
         gtsam::Pose2 predictedOdo = odoPose.compose(odometry);
@@ -212,6 +254,7 @@ public:
             isam2.update(newFactors, initial);
             gtsam::Values result = isam2.calculateEstimate();
             lastPose = result.at<gtsam::Pose2>(gtsam::symbol('x',i));
+            publishISAM2Pose(lastPose, msg->header.stamp);
             newFactors = gtsam::NonlinearFactorGraph();
             initial = gtsam::Values();
             countK = 0;
@@ -226,10 +269,6 @@ public:
         timedMeasurements.push_back(TimedBearingRange(msg->header.stamp,msg->point.x,msg->point.y));
         //std::cout << msg->header.stamp.toSec() << " " << msg->point.x << " " << msg->point.y << std::endl;
         receivedLandmarks++;
-    }
-
-    void localize(){
-
     }
 
 private:
@@ -249,7 +288,7 @@ private:
     tf2_ros::Buffer tfBuffer;
     tf2_ros::TransformListener transformListener;
 
-    gtsam::Vector priorSigmas = gtsam::Vector3( 1, 1, 0.05);
+    gtsam::Vector priorSigmas = gtsam::Vector3( 0, 0, 0);
     gtsam::Vector odoSigmas = gtsam::Vector3(0.05, 0, 0.05);
     gtsam::Vector rangeSigmas = gtsam::Vector2(0.05, 0.1);
 
@@ -263,13 +302,15 @@ private:
 
     gtsam::Values initial;
 
+    gtsam::Values landmarkEstimates;
+
     int i = 0;
     int processedLandmarks = 0;
     int k = 0;
     int receivedLandmarks = 0;
     int incK = 5;
     int countK = 0;
-    int minK = 25;
+    int minK = 20;
 
     bool initialized = false;
 
