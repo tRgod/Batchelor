@@ -18,11 +18,13 @@
 #include <pcl/sample_consensus/sac_model_plane.h>
 #include <pcl/filters/plane_clipper3D.h>
 #include <tf/transform_listener.h>
+#include <geometry_msgs/Point.h>
 #include <geometry_msgs/PointStamped.h>
 #include <geometry_msgs/Pose2D.h>
 #include <pcl/segmentation/extract_clusters.h>
 #include <iostream>
 #include <fstream>
+#include <cone_data_msgs/ConeData.h>
 
 
 ros::Publisher pub_pointcloud;
@@ -37,7 +39,7 @@ public:
 
         if(mathias == true){
             sub1 =nh1.subscribe("/output",10, &FeatureExtractor::pointCloudCallback, this);
-            pub_posemsgs=nh1.advertise<geometry_msgs::PointStamped>("/pose",1);
+            pub_conemsgs = nh1.advertise<cone_data_msgs::ConeData>("/cone_data",1);
 
         }
         else {
@@ -139,10 +141,12 @@ public:
         ec.extract(cluster_indices);
 
         std::cout << input->header.stamp << " " <<cluster_indices.size() << std::endl;
-        geometry_msgs::PointStamped TimedCoordinates;
+        //geometry_msgs::PointStamped TimedCoordinates;
+        cone_data_msgs::ConeData coneData;
 
         for (std::vector<pcl::PointIndices>::const_iterator it = cluster_indices.begin();  it != cluster_indices.end() ; ++it) {
             pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_cluster(new pcl::PointCloud<pcl::PointXYZ>);
+            geometry_msgs::Point coordinates;
             for (std::vector<int>::const_iterator pit = it->indices.begin (); pit != it->indices.end (); ++pit)
                 cloud_cluster->points.push_back (cloud->points[*pit]);
             cloud_cluster->width = cloud_cluster->points.size ();
@@ -158,16 +162,21 @@ public:
             std::cout<< cloud_cluster->size()<<std::endl;
             cloud_cluster->header.frame_id = cloud->header.frame_id;
             std::cout<<cloud_cluster->header.frame_id <<" x: "<< cone_coefficents->values[0]<<" y: "<< cone_coefficents->values[1]<< std::endl;
-            TimedCoordinates.header=input->header;
+            coordinates.x=cone_coefficents->values[0];
+            coordinates.y=cone_coefficents->values[1];
+            coneData.point.push_back(coordinates);
+            /*TimedCoordinates.header=input->header;
             TimedCoordinates.point.x=cone_coefficents->values[0];
             TimedCoordinates.point.y=cone_coefficents->values[1];
             TimedCoordinates.point.z=0;
 
             pub_posemsgs.publish(TimedCoordinates);
-            pub_pointcloud.publish(cloud_cluster);
-            logstuff<<TimedCoordinates.point.x<<" " << TimedCoordinates.point.y<< TimedCoordinates.header.seq<< std::endl;
+            pub_pointcloud.publish(cloud_cluster);*/
+            logstuff<<coordinates.x<<" " << coordinates.y<< std::endl;
             logstuff.close();
         }
+        coneData.header.stamp = input->header.stamp;
+        pub_conemsgs.publish(coneData);
 
         end_=ros::WallTime::now();
 
@@ -344,6 +353,7 @@ private:
     ros::Subscriber sub1;
     ros::Publisher pub_pointcloud;
     ros::Publisher pub_posemsgs;
+    ros::Publisher pub_conemsgs;
     bool firstRun = 1;
 
     pcl::PointCloud<pcl::PointXYZ>::Ptr previousCloud;
@@ -360,7 +370,7 @@ int main (int argc, char** argv)
 
     ros::init (argc,argv,"Feature_ekstractor");
 
-    FeatureExtractor featureExtractor(0);
+    FeatureExtractor featureExtractor(1);
 
     ros::spin();
 

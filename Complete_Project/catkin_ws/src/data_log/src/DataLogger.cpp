@@ -30,7 +30,7 @@ public:
     }
 
     void landmarkCallback(const geometry_msgs::PointStamped::ConstPtr &msg){
-        landmarks << msg->header.stamp.toSec() << " " << msg->point.x << " " << msg->point.y << std::endl;
+        landmarks << msg->header.stamp.toSec() << " " << msg->point.z << " " << msg->point.x << " " << msg->point.y << std::endl;
     }
 
     void predictedPoseCallback(const geometry_msgs::PoseStamped::ConstPtr &msg){

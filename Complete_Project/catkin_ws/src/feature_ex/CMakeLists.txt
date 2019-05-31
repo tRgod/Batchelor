@@ -9,6 +9,7 @@ find_package( catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
   geometry_msgs
+  cone_data_msgs
 )
 
 #add_definitions(${PCL_DEFINITIONS})

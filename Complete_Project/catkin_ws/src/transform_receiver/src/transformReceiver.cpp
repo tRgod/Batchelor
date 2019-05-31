@@ -9,6 +9,9 @@
 #include <tf2_msgs/TFMessage.h>
 #include <geometry_msgs/TwistStamped.h>
 
+#include <chrono>
+#include <random>
+
 class TransformReceiver{
 public:
     TransformReceiver():tfListener(tfBuffer), transform_sub(n.subscribe("/stamped_transform", 10, &TransformReceiver::transformStampedCallback, this)){
@@ -24,6 +27,7 @@ public:
         tf2::fromMsg(transformStamped,previousTransform);*/
 
     }
+
     void publishTransform(ros::Time &now){
         geometry_msgs::TransformStamped transformStamped;
         geometry_msgs::TwistStamped twistStamped;
@@ -39,7 +43,7 @@ public:
 
         twistStamped.header.stamp = transform.stamp_;
         twistStamped.twist.angular.z = tf2::getYaw(transform.inverseTimes(previousTransform).getRotation());
-        twistStamped.twist.linear.x = sqrt(pow(transform.getOrigin().x()-previousTransform.getOrigin().x(),2)+pow(transform.getOrigin().y()-previousTransform.getOrigin().y(),2));
+        twistStamped.twist.linear.x = sqrt(pow(transform.getOrigin().x()-previousTransform.getOrigin().x(),2)+pow(transform.getOrigin().y()-previousTransform.getOrigin().y(),2))+d(gen);
         twist_pub.publish(twistStamped);
         previousTransform = transform;
 
@@ -70,8 +74,8 @@ public:
         else{
             tf2::fromMsg(*msg,transform);
             twistStamped.header.stamp = transform.stamp_;
-            twistStamped.twist.angular.z = tf2::getYaw(transform.inverseTimes(previousTransform).getRotation());
-            twistStamped.twist.linear.x = sqrt(pow(transform.getOrigin().x()-previousTransform.getOrigin().x(),2)+pow(transform.getOrigin().y()-previousTransform.getOrigin().y(),2));
+            twistStamped.twist.angular.z = tf2::getYaw(transform.inverseTimes(previousTransform).getRotation())+da(gen);
+            twistStamped.twist.linear.x = sqrt(pow(transform.getOrigin().x()-previousTransform.getOrigin().x(),2)+pow(transform.getOrigin().y()-previousTransform.getOrigin().y(),2))+d(gen);
             twist_pub.publish(twistStamped);
             previousTransform = transform;
         }
@@ -85,10 +89,15 @@ private:
     ros::Publisher twist_pub = n.advertise<geometry_msgs::TwistStamped>("twist_stamped", 10);
     ros::Subscriber transform_sub;
 
+    std::random_device rd{};
+    std::mt19937 gen{rd()};
+    std::normal_distribution<double> d{0.0,0.05};
+    std::normal_distribution<double> da{0.0, 0.005};
 };
 
 int main(int argc, char** argv){
     ros::init(argc, argv, "transform_receiver");
+
     TransformReceiver transformReceiver;
 
     ros::spin();
